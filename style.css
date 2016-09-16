@@ -48,9 +48,9 @@
     font-family: "San Francisco" ; 
 }
 
-
 html{
 	max-width: 100%;
+	margin: .5em;
 }
 
 body {
@@ -62,6 +62,8 @@ body {
 	line-height: 1.4;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	max-width: 40em;
+	margin: auto;
 }
 
 strong {
@@ -78,14 +80,17 @@ a {
 	font-weight: 600;
 }
 
+ul {
+	list-style: none;
+}
+
 nav {
-	float: left;
-	width: 18em;
-	margin-top: 3em;
 }
 
 nav ul {
 	list-style: none;
+	directiondis
+	
 }
 
 footer {
