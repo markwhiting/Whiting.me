@@ -80,7 +80,8 @@ a {
 
 nav {
 	float: left;
-	width: 10em;
+	width: 18em;
+	margin-top: 3em;
 }
 
 nav ul {
