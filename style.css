@@ -45,12 +45,16 @@
 }
 
 * {
-    font-family: "San Francisco" ; 
+    font-family: "San Francisco"; 
 }
 
 html{
 	max-width: 100%;
-	margin: .5em;
+	margin: .7em;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
 }
 
 body {
@@ -62,8 +66,9 @@ body {
 	line-height: 1.4;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	max-width: 40em;
+	max-width: 39em;
 	margin: auto;
+	text-align: justify;
 }
 
 strong {
