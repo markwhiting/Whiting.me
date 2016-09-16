@@ -24,7 +24,7 @@
 }
 
 /** Medium */
-@font-face {
+/* @font-face { */
   font-family: "San Francisco";
   font-weight: 500;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
@@ -79,6 +79,10 @@ h1 {
 	font-size: 1.5em;
 }
 
+h2 {
+	font-size: 1.2em;
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
@@ -99,7 +103,10 @@ nav ul {
 }
 
 footer {
-	position: absolute;
-	bottom: .2em;
-	right: .5em;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: .3em;
+	border-radius: .2em 0 0 0;
+	background-color: inherit;
 }
