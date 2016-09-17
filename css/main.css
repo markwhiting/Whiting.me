@@ -210,6 +210,10 @@ a:hover{
 	font-weight: 300;
 }
 
+.right {
+	float: right;
+}
+
 footer, footer a {
 	text-align: center;
 	font-weight: 200;
