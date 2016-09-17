@@ -210,7 +210,7 @@ nav ul {
 	
 }
 
-footer {
+footer, footer a {
 	text-align: center;
 	font-weight: 200;
 }
