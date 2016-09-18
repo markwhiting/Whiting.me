@@ -32,8 +32,35 @@
 		<p>This site is <a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">under construction</a>, so please check back soon for updates, or find out more about me by reading my <a href="CV.pdf" target="_blank">résumé</a> and by stalking me on <a href="http://facebook.com/markwhiting" target="_blank">Facebook</a> and <a href="http://twitter.com/markwhiting" target="_blank">Twitter</a>.
 		<p><a class="heading" href="http://whiting.me">Mark Whiting</a><span class="copyright"> © <span id="year"></span></span></p>
 		<script>
-			document.getElementById("year").innerHTML = Date(Date.now()).slice(11,15) ;
-			document.getElementById("modified").innerHTML = Date(document.lastModified).slice(4,10) + ", " + Date(document.lastModified).slice(11,15) ;
+			var m = new Date(document.lastModified) ;
+			var month;
+			switch (m.getMonth()) {
+			    case 0: month = "January";
+			        break;
+			    case 1: month = "February";
+			        break;
+			    case 2: month = "March";
+			        break;
+			    case 3: month = "April";
+			        break;
+			    case 4: month = "May";
+			        break;
+			    case 5: month = "June";
+			        break;
+			    case 6: month = "July";
+			        break;
+			    case 7: month = "August";
+			        break;
+			    case 8: month = "September";
+			        break;
+			    case 9: month = "October";
+			        break;
+			    case 10: month = "November";
+			        break;
+			    case 11: month = "December";
+			}
+			document.getElementById("year").innerHTML = new Date().getFullYear();
+			document.getElementById("modified").innerHTML =  month +" "+ m.getDate() + ", " + m.getFullYear() ;
 		</script>
 	</section>
 	</div>
