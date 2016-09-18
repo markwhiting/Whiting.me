@@ -3,11 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Mark Whiting -- all -- @markwhiting
 
 # TECHNOLOGY COLOPHON
 
