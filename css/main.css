@@ -15,11 +15,13 @@
 }
 
 /** Thin */
+/*
 @font-face {
   font-family: "San Francisco";
   font-weight: 200;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
 }
+*/
 
 /** Regular */
 @font-face {
@@ -29,18 +31,22 @@
 }
 
 /** Medium */
+/*
 @font-face {
   font-family: "San Francisco";
   font-weight: 500;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
 }
+*/
 
 /** Semi Bold */
+/*
 @font-face {
   font-family: "San Francisco";
   font-weight: 600;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
 }
+*/
 
 /** Bold */ 
 @font-face {
@@ -49,15 +55,11 @@
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
 }
 
-
-
-
 * {
-/* font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
 /* 	font-family: "Helvetica Neue"; */
 /* 	font-family: Times; */
-	font-family: 'Inconsolata', monospace;
-	font-family: 'Source Code Pro', monospace;
+/* 	font-family: 'Source Code Pro', monospace; */
 
 
 
@@ -177,7 +179,7 @@ a:hover{
 #content {
 	background-color: #fff;
 	border-radius: .2em;
-	font-size: .8em;
+	font-size: 1em;
 	padding: 1em;
 	margin: 1em 0;
 /* 	text-align: justify; */
@@ -196,7 +198,7 @@ a:hover{
 
 .copyright {
 /* 	font-size: .75em; */
-	font-weight: 200;
+	font-weight: 100;
 }
 
 .right {
@@ -205,7 +207,7 @@ a:hover{
 
 footer, footer a {
 	text-align: center;
-	font-weight: 200;
+	font-weight: 100;
 }
 
 
