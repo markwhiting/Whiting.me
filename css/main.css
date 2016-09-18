@@ -6,9 +6,6 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
-/**
- * http://applemusic.tumblr.com/
- */
 
 /** Ultra Light */
 @font-face {
@@ -52,9 +49,18 @@
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
 }
 
+
+
+
 * {
-/*     font-family: monospace; */
-    font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+/* 	font-family: "Helvetica Neue"; */
+/* 	font-family: Times; */
+	font-family: 'Inconsolata', monospace;
+	font-family: 'Source Code Pro', monospace;
+
+
+
 }
 
 /* ==========================================================================
@@ -63,20 +69,12 @@
 
 html {
     color: #222;
-    font-size: 1em;
+    font-size: .9em;
     line-height: 1.4;
     max-width: 100%;
 	margin: .7em;
 	background-color: #eee;
 }
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -154,8 +152,7 @@ body {
 
 	color: #333;
 	font-weight: 400;
-	font-size: .9em;
-	line-height: 1.4;
+	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	max-width: 40em;
@@ -163,22 +160,13 @@ body {
 }
 
 strong {
-	font-weight: 500;
-}
-
-h1 {
-	font-size: 1.5em;
-	display: inline-block;
-}
-
-h2 {
-	font-size: 1.2em;
-	display: inline-block;
+	font-weight: 700;
 }
 
 a {
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: 700;
+/* 	font-weight: bold; */
 	color: inherit;
 }
 
@@ -189,9 +177,10 @@ a:hover{
 #content {
 	background-color: #fff;
 	border-radius: .2em;
+	font-size: .8em;
 	padding: 1em;
 	margin: 1em 0;
-	text-align: justify;
+/* 	text-align: justify; */
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
@@ -200,14 +189,14 @@ a:hover{
 }
 
 .heading {
-	font-size: 1.2em;
-	font-weight: 400;
+/* 	font-size: 1.2em; */
+	font-weight: 600;
 	color: inherit;
 }
 
 .copyright {
-	font-size: .75em;
-	font-weight: 300;
+/* 	font-size: .75em; */
+	font-weight: 200;
 }
 
 .right {
