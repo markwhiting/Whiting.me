@@ -205,6 +205,37 @@ a:hover{
 	float: right;
 }
 
+.tooltip {
+    position: relative;
+/*     display: inline-block; */
+/*     border-bottom: 1px dotted black; */
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    border-radius: .2em;
+    width: 15em;
+    background-color: #333;
+    color: #eee;
+    padding: .5em;
+    font-weight: 400;
+    -webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+/* 	box-shadow: 0px 1px 4px rgba(100, 100, 100, 0.5); */
+
+    /* Position the tooltip */
+    position: absolute;
+    top: -.62em;
+    left: -.5em;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
 footer, footer a {
 	text-align: center;
 	font-weight: 100;
