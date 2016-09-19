@@ -214,7 +214,7 @@ a:hover{
 .tooltip .tooltiptext {
     visibility: hidden;
     border-radius: .2em;
-    width: 15em;
+    width: 10em;
     background-color: #333;
     color: #eee;
     padding: .5em;
@@ -350,8 +350,7 @@ footer, footer a {
     *:first-letter,
     *:first-line {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+        color: #000 !important;
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -361,9 +360,11 @@ footer, footer a {
         text-decoration: underline;
     }
 
+/*
     a[href]:after {
         content: " (" attr(href) ")";
     }
+*/
 
     abbr[title]:after {
         content: " (" attr(title) ")";
