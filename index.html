@@ -20,7 +20,7 @@
     <![endif]-->
 
     <nav class="copyright no-print">
-		<p><a onclick="moveTo(detail.value-1)">Less detail</a><input type="range" id="detail" min="1" value="3" max="4" step="1" oninput="updateDetail()"><a onclick="moveTo(detail.value+1)">More detail</a></p>
+		<p><a onclick="moveTo(detail.value-1)">Less detail</a><input type="range" id="detail" min="1" value="3" max="4" step="1" oninput="updateDetail()"><a onclick="moveTo(detail.value-(-1))">More detail</a></p>
 		<!-- Add hover effects to hint adjustments -->
 	</nav>
     
@@ -144,7 +144,7 @@
 					title = "M.E. Whiting CV"
 					destination = "http://whiting.me/#cv";
 					break;
-				default: moveTo(4);
+				default: moveTo(3) ;
 				}
 			window.document.title = title;
 			window.history.pushState({path: destination}, title, destination);
@@ -163,7 +163,6 @@
 		       case "short": moveTo(2); break;
 		       case "cv": moveTo(4); break;
 		       default: moveTo(3);
-
 	       }
 		}
 		goToURL()
