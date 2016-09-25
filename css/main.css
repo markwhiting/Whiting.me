@@ -14,13 +14,11 @@
 }
 
 /** Thin */
-/*
 @font-face {
   font-family: "San Francisco";
   font-weight: 200;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
 }
-*/
 
 /** Regular */
 @font-face {
@@ -30,22 +28,18 @@
 }
 
 /** Medium */
-/*
 @font-face {
   font-family: "San Francisco";
   font-weight: 500;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
 }
-*/
 
 /** Semi Bold */
-/*
 @font-face {
   font-family: "San Francisco";
   font-weight: 600;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
 }
-*/
 
 /** Bold */ 
 @font-face {
@@ -56,7 +50,7 @@
 
 * {
 font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
-/* 	font-family: "Helvetica Neue"; */
+/* 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
 /* 	font-family: Times; */
 /* 	font-family: 'Source Code Pro', monospace; */
 
@@ -167,7 +161,6 @@ strong {
 a {
 	text-decoration: none;
 	font-weight: 700;
-/* 	font-weight: bold; */
 	color: inherit;
 }
 
@@ -181,7 +174,6 @@ a:hover{
 	font-size: 1em;
 	padding: 1em;
 	margin: 1em 0;
-/* 	text-align: justify; */
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
@@ -190,19 +182,16 @@ a:hover{
 }
 
 .heading {
-/* 	font-size: 1.2em; */
 	font-weight: 600;
 	color: inherit;
 }
 
 .copyright {
-/* 	font-size: .75em; */
-	font-weight: 100;
+	font-weight: 200;
 }
 
 .copyright a{
-	text-decoration: none;
-	font-weight: 100;
+	font-weight: inherit;
 }
 
 .right {
@@ -216,19 +205,20 @@ nav {
 input[type=range] {
 	-webkit-appearance: none;
 	width: 15em;
+	height: .7em;
 	background-color: #ddd;
 	box-shadow: inset 0px 1px 2px 0px rgba(100, 100, 100, 0.2);
 	vertical-align: middle;
 	margin: 0 .5em;
-	border-radius: .5em;
+	border-radius: .2em;
 
 }
 
 input[type=range]::-webkit-slider-thumb{
 	-webkit-appearance: none;
 	background-color: #fff;
-	width: 20px;
-	height: 20px;
+	width: 1.3em;
+	height: 1.3em;
 	border: none;
 	box-shadow: 0px 1px 2px rgba(100, 100, 100, 0.3);
 	border-radius: .5em;
@@ -278,7 +268,7 @@ input[type=range]::-webkit-slider-thumb{
 
 footer, footer a {
 	text-align: center;
-	font-weight: 100;
+	font-weight: 200;
 }
 
 
