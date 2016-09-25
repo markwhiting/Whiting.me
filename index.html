@@ -21,7 +21,7 @@
 
     <nav class="copyright">
 	    <p>How much detail do you need?</p>
-	    <a onclick="moveTo(1)">Less</a><input type="range" id="detail" min="1" value="3" max="4" step="1" onchange="updateDetail()"><a onclick="moveTo(4)">More</a>
+		<p><a onclick="moveTo(1)">Less</a><input type="range" id="detail" min="1" value="3" max="4" step="1" onchange="updateDetail()"><a onclick="moveTo(4)">More</a></p>
 		<!-- Add hover effects to hint adjustments -->
 	</nav>
     
@@ -33,7 +33,6 @@
 		<div id="text">
 		<p>
 			<span id="hi" class="heading">Hi, </span>
-			<span class="copyright right">Modified September 24, 2016<!-- <span id="modified"></span>--></span>
 		</p>		
 		<p><span class="2">I'm working to enable computers to design using computational representations of intuition.</span> Though nascent, this field stands to be an important aspect of the way we make creative decisions soon.</p>
 		
@@ -53,7 +52,9 @@
 		<div id="CV" style="display: none" >CV coming soon!</div>
 	</section>
 	</div>
-	<footer>Mark E. Whiting © <span id="year"></span></footer>
+	<footer>Updated September 25, <span id="year"></span> © Mark E. Whiting<!-- <span id="modified"></span>-->
+
+	</footer>
 	<script>
 		function updateDetail() {
 			var rangePosition = document.getElementById("detail").value ;
@@ -93,9 +94,8 @@
 					title = "M.E. Whiting CV"
 					destination = "http://whiting.me/#cv";
 					break;
-				default: 
-					document.getElementById("hi").innerHTML = "Error";
-			}
+				default: moveTo(4);
+				}
 			window.document.title = title;
 			window.history.pushState({path: destination}, title, destination);
 		}
