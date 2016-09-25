@@ -67,7 +67,7 @@
 					document.getElementById("CV").style.display = "none";
 					document.getElementById("short").style.display = "none";
 					title = "M.E. Whiting 🤖";
-					destination = "http://whiting.me/emoji";
+					destination = "http://whiting.me/#emoji";
 					break;
 				case "2": 
 					document.getElementById("emoji").style.display = "none" ;
@@ -75,7 +75,7 @@
 					document.getElementById("CV").style.display = "none";
 					document.getElementById("short").style.display = "inline";
 					title = "M.E. Whiting Short";
-					destination = "http://whiting.me/short";
+					destination = "http://whiting.me/#short";
 					break;
 				case "3": 
 					document.getElementById("emoji").style.display = "none" ;
@@ -91,7 +91,7 @@
 					document.getElementById("CV").style.display = "inline";
 					document.getElementById("short").style.display = "none";
 					title = "M.E. Whiting CV"
-					destination = "http://whiting.me/cv";
+					destination = "http://whiting.me/#cv";
 					break;
 				default: 
 					document.getElementById("hi").innerHTML = "Error";
@@ -107,7 +107,7 @@
 		}
 		function goToURL() {
 	       var currentLocation = "" + window.location;
-	       var query = currentLocation.split(".me/")
+	       var query = currentLocation.split("#")
 	       switch (query[1].toLowerCase()) {
 		       case "emoji": moveTo(1); break;
 		       case "short": moveTo(2); break;
