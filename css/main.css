@@ -260,10 +260,13 @@ input[type=range]::-webkit-slider-thumb{
 }
 
 #emoji {
-	text-align: center; 
-	font-size: 5em; 
-	margin: 0; 
-	padding: 0;
+	text-align: center;
+}
+
+img {
+	width: 100%;
+	margin: 0 auto;
+	border-radius: .3em;
 }
 
 footer, footer a {
