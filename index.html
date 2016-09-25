@@ -20,8 +20,7 @@
     <![endif]-->
 
     <nav class="copyright no-print">
-	    <p>How much detail do you need?</p>
-		<p><a onclick="moveTo(1)">Less</a><input type="range" id="detail" min="1" value="3" max="4" step="1" onchange="updateDetail()"><a onclick="moveTo(4)">More</a></p>
+		<p><a onclick="moveTo(detail.value-1)">Less detail</a><input type="range" id="detail" min="1" value="3" max="4" step="1" oninput="updateDetail()"><a onclick="moveTo(detail.value+1)">More detail</a></p>
 		<!-- Add hover effects to hint adjustments -->
 	</nav>
     
