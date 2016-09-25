@@ -19,7 +19,7 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <nav class="copyright">
+    <nav class="copyright no-print">
 	    <p>How much detail do you need?</p>
 		<p><a onclick="moveTo(1)">Less</a><input type="range" id="detail" min="1" value="3" max="4" step="1" onchange="updateDetail()"><a onclick="moveTo(4)">More</a></p>
 		<!-- Add hover effects to hint adjustments -->
@@ -28,9 +28,10 @@
 	<div id="content">
 	<section>
 		<div id="emoji" style="display: none"><p>🤖👉🎨</p></div>
-		<div id="short" style="display: none"><p>Mark Whiting is PhD candidate advised by <a class="tooltip" href="http://www.cmu.edu/me/idig/index.html" target="_blank"><span class="tooltiptext"><strong>Jon Cagan</strong> leads the Integrated Design Innovation Group (IDIG)</span>Jon Cagan</a> and <a class="tooltip" href="http://www.andrew.cmu.edu/user/prl/" target="_blank"><span class="tooltiptext"><strong>Phil Leduc</strong> leads a lab focused on cellular mechanics</span>Phil Leduc</a> at <a class="tooltip" href="http://www.cmu.edu" target="_blank"><span class="tooltiptext">Carnegie Mellon University</span>CMU</a>. His work focuses on making creative decisions computationally.
-		</p></div>
-		<div id="text">
+		<div id="short" style="display: none">
+			<p>Mark Whiting is PhD candidate advised by <a class="tooltip" href="http://www.cmu.edu/me/idig/index.html" target="_blank"><span class="tooltiptext"><strong>Jon Cagan</strong> leads the Integrated Design Innovation Group (IDIG)</span>Jon Cagan</a> and <a class="tooltip" href="http://www.andrew.cmu.edu/user/prl/" target="_blank"><span class="tooltiptext"><strong>Phil Leduc</strong> leads a lab focused on cellular mechanics</span>Phil Leduc</a> at <a class="tooltip" href="http://www.cmu.edu" target="_blank"><span class="tooltiptext">Carnegie Mellon University</span>CMU</a>. His work focuses on making creative decisions computationally.</p>
+		</div>
+		<div id="text" style="display: inline">
 		<p>
 			<span id="hi" class="heading">Hi, </span>
 		</p>		
@@ -49,8 +50,54 @@
 		<p class="notTweet">Though this work may seem to explore many unrelated topics, there is a central notion I feel is of utmost importance. The way we as a society and as individuals make creative decisions is one of our most human aspects. Through understanding grammar rule induction from design, learning to make individual agents in a crowd perform sophisticated judgments and creative tasks, and developing ways to better communicate about subtle design topics, I am developing a method for automating design. This site will continue to reflect my work in this area, so please check back soon for updates, or find out more by stalking me on <a href="http://facebook.com/markwhiting" target="_blank">Facebook</a> and <a href="http://twitter.com/markwhiting" target="_blank">Twitter</a> where I occasionally post.</p>
 		<p><span class="heading">Mark E. Whiting </span></p>
 		</div>
-		<div id="CV" style="display: none" >CV coming soon!
-			
+		<div id="CV" style="display: none" >
+			<p class="heading">Mark Whiting - <a href="mailto:mwhiting@andrew.cmu.edu">MWhiting@andrew.cmu.edu</a>, American and Australian citizen</p>
+			<h2>Education</h2>
+			<table>
+				<tr>
+				<td>
+					Carnegie Mellon University
+					<br>PhD in progress in Mechanical Engineering
+					<br>Advised by Jon Cagan & Phil Leduc
+				</td>
+				<td>Pittsburgh, PA</td>
+				<td>2017 expected</td>
+				</tr>
+				<tr>
+				<td>
+					Korean Advanced Institute of Science and Technology
+					<br>MS in Industrial Design 
+					<br>Advised by Lim Youn-Kyung & Name Tek-Jin
+				</td>
+				<td>Daejeon, Korea</td>
+				<td>2010</td>
+				</tr>
+				<tr>
+				<td>
+					Royal Melbourne Institute of Technology
+					<br>BDes with highest honors in Industrial Design
+					<br>Advised by Malte Wagenfeld
+				</td>
+				<td>Melbourne, Australia</td>
+				<td>2007</td>
+				</tr>
+				<tr>
+				<td>
+					Zhejiang University
+					<br>Exchange Student for 1 year in Industrial Design
+				</td>
+				<td>Hangzhou, China</td>
+				<td>2006</td>
+				</tr>
+			</table>
+			<h2>Publications</h2>
+			<ol>
+				<li>Whiting, Mark E., Dilrukshi Gamage, Aaron Gilbee, Snehal Gaikwad, Shirish Goyal, Alipta Ballav, Dinesh Majeti, Nalin Chhibber, Freddie Vargus, Teo Moura, Angela Richmond-Fuller, Varshine Chandrakanthan, Gabriel Bayomi Tinoco Kalejaiye, Tejas Seshadri Sarma, Yoni Dayan, Adam Ginzberg, Mohammed Hashim Kambal, Kristy Milland, Sayna Parsi, Catherine A. Mullings, Henrique Orefice, Sekandar Matin, Vibhor Sehgal, Sharon Zhou, Akshansh Sinha, Jeff Regino, Rajan Vaish, Michael S. Bernstein. <strong>Crowd Guilds: Worker-led Reputation and Feedback on Crowdsourcing Platforms</strong>. CSCW, ACM. 2017. <strong>Accepted</strong></li>
+				<li>Gaikwad, S.S., D. Morina, A. Ginzberg, C. Mullings, S. Goyal, D. Gamage, C. Diemert, M. Burton, S. Zhou, M. E. Whiting, K. Ziulkoski, A. Ballav, A. Gilbee, S.S. Niranga, V. Sehgal, J. Lin, L. Kristianto, A. Richmond-Fuller, J. Regino, N. Chhibber, D. Majeti, S. Sharma, K. Mananova, D. Dhakal, W. Dai, V. Purynova, S. Sandeep, V. Chandrakanthan, T. Sarma, S. Matin, A. Nassar, R. Nistala, A. Stolzoff, K. Milland, V. Mathur, R. Vaish, M.S. Bernstein. <strong>Boomerang: Rebounding the Consequences of Reputation Feedback on Crowdsourcing Platforms</strong>. UIST, ACM. 2017. <strong>Accepted</strong></li>
+				<li>Whiting, M. E., J. Cagan, & P.R. LeDuc, <strong>Automated Induction of General Grammars for Design</strong>. Design Computation and Cognition. 2016.</li>
+				<li>Lee, J.H., Park, H.J, Lim, S., Kim, S.J., Jung, H. & Whiting, M. E. <strong>A Formal Approach for the Interpretation of Cultural Content: Evolution of a Korean traditional pattern, Bosangwhamun</strong>. Proceedings of Computer Aided Architectural Design in Asia (CAADRIA), Hong-Kong Mar. 2010.</li>
+				<li>Whiting, M. E. & Varadarajan, S. <strong>Early Exploration of Cloud Computing for Design Practice & Education</strong>. Proceedings of International Association of Societies of Design Research (IASDR), Seoul Nov. 2009.</li>
+			<ol>
 		</div>
 	</section>
 	</div>
