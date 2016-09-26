@@ -103,7 +103,8 @@
 		</div>
 	</section>
 	</div>
-	<footer><a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">Updated</a> September 25, <span id="year"></span> © <a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a>
+	<footer><a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">Last updated</a>: <span id="updated"></span>
+	<br><a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>.
 	</footer>
 	<script>
 		function updateDetail() {
@@ -178,24 +179,40 @@
 		});
 	</script>
 	<script>
-		var m = new Date(document.lastModified) ;
-		var month;
-		switch (m.getMonth()) {
-		    case 0: month = "January"; break;
-		    case 1: month = "February"; break;
-		    case 2: month = "March"; break;
-		    case 3: month = "April"; break;
-		    case 4: month = "May"; break;
-		    case 5: month = "June"; break;
-		    case 6: month = "July"; break;
-		    case 7: month = "August"; break;
-		    case 8: month = "September"; break;
-		    case 9: month = "October"; break;
-		    case 10: month = "November"; break;
-		    case 11: month = "December";
+		var xmlhttp = new XMLHttpRequest();
+		var url = "https://api.github.com/repos/markwhiting/Whiting.me/events";
+		xmlhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		        var events = JSON.parse(this.responseText);
+		        lastUpdated(events);
+		    }
+		};
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+	
+		function lastUpdated(events) {
+			var latestEvent = events[0];
+			var date = new Date(latestEvent.created_at);
+			var month;
+			switch (date.getMonth()) {
+			    case 0: month = "January"; break;
+			    case 1: month = "February"; break;
+			    case 2: month = "March"; break;
+			    case 3: month = "April"; break;
+			    case 4: month = "May"; break;
+			    case 5: month = "June"; break;
+			    case 6: month = "July"; break;
+			    case 7: month = "August"; break;
+			    case 8: month = "September"; break;
+			    case 9: month = "October"; break;
+			    case 10: month = "November"; break;
+			    case 11: month = "December";
+			}
+			var fullDate = "" + month + " " + date.getDate() + ", " + date.getFullYear();
+			var commit = latestEvent.payload.commits[0];
+			document.getElementById("updated").innerHTML =  fullDate + ", <a href=https://github.com/markwhiting/Whiting.me/commit/" + commit.sha + ">" + commit.message.toLowerCase() + "</a>";
 		}
 		document.getElementById("year").innerHTML = new Date().getFullYear();
-		document.getElementById("modified").innerHTML =  month +" "+ m.getDate() + ", " + m.getFullYear() ;
 	</script>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
