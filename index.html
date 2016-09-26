@@ -103,8 +103,8 @@
 		</div>
 	</section>
 	</div>
-	<footer><a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">Last updated</a>: <span id="updated"></span>
-	<br><a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>.
+	<footer><a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">Last updated</a>: <span id="updated"></span>.
+	<br><a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
 	</footer>
 	<script>
 		function updateDetail() {
@@ -210,7 +210,7 @@
 			}
 			var fullDate = "" + month + " " + date.getDate() + ", " + date.getFullYear();
 			var commit = latestEvent.payload.commits[0];
-			document.getElementById("updated").innerHTML =  fullDate + ", <a href=https://github.com/markwhiting/Whiting.me/commit/" + commit.sha + ">" + commit.message.toLowerCase() + "</a>";
+			document.getElementById("updated").innerHTML =  fullDate + ', <a target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>";
 		}
 		document.getElementById("year").innerHTML = new Date().getFullYear();
 	</script>
