@@ -20,7 +20,7 @@
     <![endif]-->
 
     <nav class="copyright no-print">
-		<p><a onclick="moveTo(detail.value-1)">Less detail</a><input type="range" id="detail" min="1" value="3" max="4" step="1" oninput="updateDetail()"><a onclick="moveTo(detail.value-(-1))">More detail</a></p>
+		<p><a onclick="moveTo(detail.value-1)">← Less text</a><input type="range" id="detail" min="1" value="3" max="4" step="1" oninput="updateDetail()"><a onclick="moveTo(detail.value-(-1))">More text →</a></p>
 		<!-- Add hover effects to hint adjustments -->
 	</nav>
     
@@ -165,7 +165,17 @@
 		       default: moveTo(3);
 	       }
 		}
-		goToURL()
+		goToURL();
+	</script>
+	<script>
+		document.addEventListener('keydown', function(event) {
+		    if(event.keyCode == 37) {
+				moveTo(detail.value-1);
+		    }
+		    else if(event.keyCode == 39) {
+		        moveTo(detail.value-(-1));
+		    }
+		});
 	</script>
 	<script>
 		var m = new Date(document.lastModified) ;

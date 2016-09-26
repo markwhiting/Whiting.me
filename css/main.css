@@ -192,6 +192,7 @@ a:hover{
 
 .copyright a{
 	font-weight: inherit;
+	text-decoration: none;
 }
 
 .right {
