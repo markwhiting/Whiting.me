@@ -210,7 +210,12 @@ input[type=range] {
 	vertical-align: middle;
 	margin: 0 .5em;
 	border-radius: .2em;
+}
 
+@media screen and (max-width: 370px) {
+  input[type=range] {
+	width: 8em;
+  }
 }
 
 input[type=range]::-webkit-slider-thumb{
