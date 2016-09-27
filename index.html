@@ -20,33 +20,37 @@
     <![endif]-->
 
     <nav class="copyright no-print">
-		<p><a onclick="moveTo(detail.value-1)">← Less text</a><input type="range" id="detail" min="1" value="3" max="4" step="1" oninput="updateDetail()"><a onclick="moveTo(detail.value-(-1))">More text →</a></p>
+		<p><a onclick="moveTo(detail.value-1)">← Less text</a><input type="range" id="detail" min="1" value="4" max="5" step="1" oninput="updateDetail()"><a onclick="moveTo(detail.value-(-1))">More text →</a></p>
 		<!-- Add hover effects to hint adjustments -->
 	</nav>
     
 	<div id="content">
 	<section>
-		<div id="emoji" style="display: none">
+		<div id="portrait" style="display: none">
 			<img src="tile.png" alt="Portrait of Mark Whiting">
 			<p>This is what Mark looks like.</p>
 		</div>
-		<div id="short" style="display: none">
+		<div id="shortBio" style="display: none">
 			<p>Mark E. Whiting is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His work focuses on making creative decisions computationally.</p>
 		</div>
-		<div id="text" class="hiphen" style="display: inline">		
-		<p><span class="2">Mark E. Whiting is working to enable computers to design using computational representations of intuition.</span> Though nascent, this field stands to be an important aspect of the way we make creative decisions soon.</p>
-		
-		<p class="notTweet">Mark is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a>  in <a href="http://www.cmu.edu/me/" target="_blank">Mech Eng</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His thesis work is on the use of automated grammar induction (<a href="" target="_blank">DCC 2016</a>) for identifying structural patterns in design and biological domains, which is a critical step in more widespread automation of creative decision making.</p>
-		
-		<p class="notTweet">Mark is intrigued by the future of work and the roll it will have in improving societal productivity and creativity. The <a href="http://crowdresearch.stanford.edu" target="_blank">Stanford Crowd Research Initiative</a> is an active, large scale collaboration that Mark works with. Together they have improved worker reputation signals (<a href="" target="_blank" title="Whiting, M. E. et al. Crowd Guilds: Worker-led Reputation and Feedback on Crowdsourcing Platforms. CSCW, ACM. 2017. Accepted">CSCW 2017</a>) and introduced incentive compatibility for workers and requesters (<a href="http://hci.stanford.edu/publications/2016/boomerang/boomerang-uist.pdf" target="_blank">UIST 2016</a>). <a href="https://daemo.stanford.edu" target="_blank">Daemo</a>, their open source crowdsourcing platform (<a href="http://dl.acm.org/citation.cfm?id=2815739" target="_blank">UIST 2015</a>), is now live, and showcases a new approach to online open platform governance they developed.</p>
-		
-		<p class="notTweet">Mark mentors students at CMU and in the <a href="http://www.sis.pitt.edu/i3/" target="_blank">iSchool Inclusion Institute of Information Science</a> (i3) at the <a href="http://pitt.edu" target="_blank">University of Pittsburgh</a>. They have studied how product reviews can be used to innovate at scale (<a href="" target="_blank">iConference 2016</a>), how research on microtask crowdsourcing can be facilitated through abstraction (forthcoming), and how novice crowd workers can conduct advanced engineering design tasks.</p>
-		
-		<p class="notTweet">Mark has also collaborated with <a href="http://www.yosefshuman.com" target="_blank">Yosef Shuman</a> to develop a definitive (and popular) answer to the question: <a href="http://what-is-service-design.com" target="_blank">What is service design?</a> and with <a href="http://www.windfiredesigns.com" target="_blank">Windfire Designs</a> to develop the <a href="http://www.windfiredesigns.com/Tools/CircleTool/index.html" target="_blank">Windfire Circle Tool</a>, the best way for makers to cut circles.</p>
-		
-		<p class="notTweet">Mark previously studied Industrial Design (<a href="http://id.kaist.ac.kr" target="_blank" title="Master of Science in Industrial Design">MS</a>, <a href="http://kaist.edu" target="_blank" title="Korean Advanced Institute of Science and Technology">KAIST</a> in Korea; <a href="http://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bh104" target="_blank" title="Bachelors of Design in Industrial Design">BDes</a>, <a href="http://www.rmit.edu.au" target="_blank" title="Royal Melbourne Institute of Technology">RMIT</a> in Australia; exchange, <a href="http://www.zju.edu.cn" target="_blank" title="Zhejiang University in Hangzhou">ZJU</a> in China). He was honored with <a href="http://en.red-dot.org" target="_blank">Red Dot</a> awards in 2006 and 2009 for his design work.</p>
-		
-		<p class="notTweet">Though this work may seem to explore many unrelated topics, there is a central notion that is of utmost importance. The way we as a society and as individuals make creative decisions is one of our most human aspects. Through understanding grammar rule induction from design, learning to make individual agents in a crowd perform sophisticated judgments and creative tasks, and developing ways to better communicate about subtle design topics, Mark is developing a method for automating design.</p>
+		<div id="mediumBio" style="display: none">
+			<p>Mark E. Whiting is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His work focuses on making creative decisions computationally.</p>
+			<p>Mark also works with the <a href="http://crowdresearch.stanford.edu" target="_blank">Stanford Crowd Research Initiative</a>, and mentors students at CMU and in the <a href="http://www.sis.pitt.edu/i3/" target="_blank">iSchool Inclusion Institute of Information Science</a> (i3) at the <a href="http://pitt.edu" target="_blank">University of Pittsburgh</a> trying to understand the future of work, creativity and productivity.</p>
+		</div>
+		<div id="longBio" style="display: inline">		
+			<p><span class="2">Mark E. Whiting is working to enable computers to design using computational representations of intuition.</span> Though nascent, this field stands to be an important aspect of the way we make creative decisions soon.</p>
+			
+			<p class="notTweet">Mark is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a>  in <a href="http://www.cmu.edu/me/" target="_blank">Mech Eng</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His thesis work is on the use of automated grammar induction (<a href="" target="_blank">DCC 2016</a>) for identifying structural patterns in design and biological domains, which is a critical step in more widespread automation of creative decision making.</p>
+			
+			<p class="notTweet">Mark is intrigued by the future of work and the roll it will have in improving societal productivity and creativity. The <a href="http://crowdresearch.stanford.edu" target="_blank">Stanford Crowd Research Initiative</a> is an active, large scale collaboration that Mark works with. Together they have improved worker reputation signals (<a href="" target="_blank" title="Whiting, M. E. et al. Crowd Guilds: Worker-led Reputation and Feedback on Crowdsourcing Platforms. CSCW, ACM. 2017. Accepted">CSCW 2017</a>) and introduced incentive compatibility for workers and requesters (<a href="http://hci.stanford.edu/publications/2016/boomerang/boomerang-uist.pdf" target="_blank">UIST 2016</a>). <a href="https://daemo.stanford.edu" target="_blank">Daemo</a>, their open source crowdsourcing platform (<a href="http://dl.acm.org/citation.cfm?id=2815739" target="_blank">UIST 2015</a>), is now live, and showcases a new approach to online open platform governance they developed.</p>
+			
+			<p class="notTweet">Mark mentors students at CMU and in the <a href="http://www.sis.pitt.edu/i3/" target="_blank">iSchool Inclusion Institute of Information Science</a> (i3) at the <a href="http://pitt.edu" target="_blank">University of Pittsburgh</a>. They have studied how product reviews can be used to innovate at scale (<a href="" target="_blank">iConference 2016</a>), how research on microtask crowdsourcing can be facilitated through abstraction (forthcoming), and how novice crowd workers can conduct advanced engineering design tasks.</p>
+			
+			<p class="notTweet">Mark has also collaborated with <a href="http://www.yosefshuman.com" target="_blank">Yosef Shuman</a> to develop a definitive (and popular) answer to the question: <a href="http://what-is-service-design.com" target="_blank">What is service design?</a> and with <a href="http://www.windfiredesigns.com" target="_blank">Windfire Designs</a> to develop the <a href="http://www.windfiredesigns.com/Tools/CircleTool/index.html" target="_blank">Windfire Circle Tool</a>, the best way for makers to cut circles.</p>
+			
+			<p class="notTweet">Mark previously studied Industrial Design (<a href="http://id.kaist.ac.kr" target="_blank" title="Master of Science in Industrial Design">MS</a>, <a href="http://kaist.edu" target="_blank" title="Korean Advanced Institute of Science and Technology">KAIST</a> in Korea; <a href="http://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bh104" target="_blank" title="Bachelors of Design in Industrial Design">BDes</a>, <a href="http://www.rmit.edu.au" target="_blank" title="Royal Melbourne Institute of Technology">RMIT</a> in Australia; exchange, <a href="http://www.zju.edu.cn" target="_blank" title="Zhejiang University in Hangzhou">ZJU</a> in China). He was honored with <a href="http://en.red-dot.org" target="_blank">Red Dot</a> awards in 2006 and 2009 for his design work.</p>
+			
+			<p class="notTweet">Though this work may seem to explore many unrelated topics, there is a central notion that is of utmost importance. The way we as a society and as individuals make creative decisions is one of our most human aspects. Through understanding grammar rule induction from design, learning to make individual agents in a crowd perform sophisticated judgments and creative tasks, and developing ways to better communicate about subtle design topics, Mark is developing a method for automating design.</p>
 		</div>
 		<div id="CV" style="display: none" >
 			<h1>Mark E. Whiting</h1>
@@ -182,38 +186,51 @@
 			var destination = "http://whiting.me"
 			switch (rangePosition) {
 				case "1": 
-					document.getElementById("emoji").style.display = "inline" ;
-					document.getElementById("text").style.display = "none" ;
+					document.getElementById("portrait").style.display = "inline" ;
+					document.getElementById("shortBio").style.display = "none";
+					document.getElementById("mediumBio").style.display = "none";
+					document.getElementById("longBio").style.display = "none" ;
 					document.getElementById("CV").style.display = "none";
-					document.getElementById("short").style.display = "none";
-					title = "M.E. Whiting 🤖";
-					destination = "http://whiting.me/#emoji";
+					title = "M.E.Whiting Portrait";
+					destination = "http://whiting.me/#portrait";
 					break;
 				case "2": 
-					document.getElementById("emoji").style.display = "none" ;
-					document.getElementById("text").style.display = "none" ;
+					document.getElementById("portrait").style.display = "none" ;
+					document.getElementById("shortBio").style.display = "inline";
+					document.getElementById("mediumBio").style.display = "none";
+					document.getElementById("longBio").style.display = "none" ;
 					document.getElementById("CV").style.display = "none";
-					document.getElementById("short").style.display = "inline";
-					title = "M.E. Whiting Short";
+					title = "M.E.Whiting Short Bio";
 					destination = "http://whiting.me/#short";
 					break;
 				case "3": 
-					document.getElementById("emoji").style.display = "none" ;
-					document.getElementById("text").style.display = "inline" ;
+					document.getElementById("portrait").style.display = "none" ;
+					document.getElementById("shortBio").style.display = "none";
+					document.getElementById("mediumBio").style.display = "inline";
+					document.getElementById("longBio").style.display = "none" ;
 					document.getElementById("CV").style.display = "none";
-					document.getElementById("short").style.display = "none";
-					title = "M.E. Whiting";
-					destination = "http://whiting.me/";
+					title = "M.E.Whiting Medium Bio";
+					destination = "http://whiting.me/#medium";
 					break;
 				case "4": 
-					document.getElementById("emoji").style.display = "none";
-					document.getElementById("text").style.display = "none";
+					document.getElementById("portrait").style.display = "none" ;
+					document.getElementById("shortBio").style.display = "none";
+					document.getElementById("mediumBio").style.display = "none";
+					document.getElementById("longBio").style.display = "inline" ;
+					document.getElementById("CV").style.display = "none";
+					title = "M.E.Whiting Long Bio";
+					destination = "http://whiting.me/";
+					break;
+				case "5": 
+					document.getElementById("portrait").style.display = "none" ;
+					document.getElementById("shortBio").style.display = "none";
+					document.getElementById("mediumBio").style.display = "none";
+					document.getElementById("longBio").style.display = "none" ;
 					document.getElementById("CV").style.display = "inline";
-					document.getElementById("short").style.display = "none";
-					title = "M.E. Whiting CV"
+					title = "M.E.Whiting CV";
 					destination = "http://whiting.me/#cv";
 					break;
-				default: moveTo(3) ;
+				default: moveTo(4) ;
 				}
 			window.document.title = title;
 			window.history.pushState({path: destination}, title, destination);
@@ -228,10 +245,11 @@
 	       var currentLocation = "" + window.location;
 	       var query = currentLocation.split("#")
 	       switch (query[1].toLowerCase()) {
-		       case "emoji": moveTo(1); break;
+		       case "portrait": moveTo(1); break;
 		       case "short": moveTo(2); break;
-		       case "cv": moveTo(4); break;
-		       default: moveTo(3);
+		       case "medium": moveTo(3); break;
+		       case "cv": moveTo(5); break;
+		       default: moveTo(4);
 	       }
 		}
 		goToURL();
