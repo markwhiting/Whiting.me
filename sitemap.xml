@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset>
-<url>
-  <loc>http://whiting.me/</loc>
-  <changefreq>daily</changefreq>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+  <url> 
+    <loc>http://whiting.me/</loc> 
+    <image:image>
+       <image:loc>http://whiting.me/tile.png</image:loc>
+       <image:caption>Mark E. Whiting</image:caption>
+    </image:image>
+  </url>
 </urlset>
