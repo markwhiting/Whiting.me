@@ -9,12 +9,13 @@
 	<meta name="author" content="Mark E. Whiting">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">	
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="main.css">
 <!-- 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,700" rel="stylesheet"> -->
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
+	<div id="wrapper">
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -28,17 +29,17 @@
 	<section>
 		<div id="portrait" style="display: none">
 			<img src="tile.png" alt="Portrait of Mark Whiting">
-			<p>This is what Mark looks like.</p>
+			<p>This is what <a href="http://whiting.me">Mark E. Whiting</a> looks like.</p>
 		</div>
 		<div id="shortBio" style="display: none">
-			<p>Mark E. Whiting is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His work focuses on making creative decisions computationally.</p>
+			<p><a href="http://whiting.me">Mark E. Whiting</a> is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His work focuses on making creative decisions computationally.</p>
 		</div>
 		<div id="mediumBio" style="display: none">
-			<p>Mark E. Whiting is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His work focuses on making creative decisions computationally.</p>
+			<p><a href="http://whiting.me">Mark E. Whiting</a> is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His work focuses on making creative decisions computationally.</p>
 			<p>Mark also works with the <a href="http://crowdresearch.stanford.edu" target="_blank">Stanford Crowd Research Initiative</a>, and mentors students at CMU and in the <a href="http://www.sis.pitt.edu/i3/" target="_blank">iSchool Inclusion Institute of Information Science</a> (i3) at the <a href="http://pitt.edu" target="_blank">University of Pittsburgh</a> trying to understand the future of work, creativity and productivity.</p>
 		</div>
 		<div id="longBio" style="display: inline">		
-			<p><span class="2">Mark E. Whiting is working to enable computers to design using computational representations of intuition.</span> Though nascent, this field stands to be an important aspect of the way we make creative decisions soon.</p>
+			<p><span class="2"><a href="http://whiting.me">Mark E. Whiting</a> is working to enable computers to design using computational representations of intuition.</span> Though nascent, this field stands to be an important aspect of the way we make creative decisions soon.</p>
 			
 			<p class="notTweet">Mark is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a>  in <a href="http://www.cmu.edu/me/" target="_blank">Mech Eng</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His thesis work is on the use of automated grammar induction (<a href="" target="_blank">DCC 2016</a>) for identifying structural patterns in design and biological domains, which is a critical step in more widespread automation of creative decision making.</p>
 			
@@ -53,7 +54,7 @@
 			<p class="notTweet">Though this work may seem to explore many unrelated topics, there is a central notion that is of utmost importance. The way we as a society and as individuals make creative decisions is one of our most human aspects. Through understanding grammar rule induction from design, learning to make individual agents in a crowd perform sophisticated judgments and creative tasks, and developing ways to better communicate about subtle design topics, Mark is developing a method for automating design.</p>
 		</div>
 		<div id="CV" style="display: none" >
-			<h1>Mark E. Whiting</h1>
+			<h1><a href="http://whiting.me">Mark E. Whiting</a></h1>
 			<a href="mailto:mwhiting@andrew.cmu.edu">MWhiting@andrew.cmu.edu</a>
 			<br>Australian & American citizen
 			
@@ -176,8 +177,9 @@
 		</div>
 	</section>
 	</div>
-	<footer><span id="updated"></span><a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
+	<footer class="copyright"><span id="updated"></span><a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
 	</footer>
+	</div>
 	<script>
 		function updateDetail() {
 			var rangePosition = document.getElementById("detail").value ;
