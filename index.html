@@ -20,7 +20,7 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <nav class="copyright no-print">
+    <nav class="copyright no-print center">
 		<p><a onclick="moveTo(detail.value-1)">← Less text</a><input type="range" id="detail" min="1" value="4" max="5" step="1" oninput="updateDetail()"><a onclick="moveTo(detail.value-(-1))">More text →</a></p>
 		<!-- Add hover effects to hint adjustments -->
 	</nav>
@@ -29,7 +29,7 @@
 	<section>
 		<div id="portrait" style="display: none">
 			<img src="tile.png" alt="Portrait of Mark Whiting">
-			<p>This is what <a href="http://whiting.me">Mark E. Whiting</a> looks like.</p>
+			<p class="center">This is what <a href="http://whiting.me">Mark E. Whiting</a> looks like.</p>
 		</div>
 		<div id="shortBio" style="display: none">
 			<p><a href="http://whiting.me">Mark E. Whiting</a> is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His work focuses on making creative decisions computationally.</p>
@@ -54,10 +54,12 @@
 			<p class="notTweet">Though this work may seem to explore many unrelated topics, there is a central notion that is of utmost importance. The way we as a society and as individuals make creative decisions is one of our most human aspects. Through understanding grammar rule induction from design, learning to make individual agents in a crowd perform sophisticated judgments and creative tasks, and developing ways to better communicate about subtle design topics, Mark is developing a method for automating design.</p>
 		</div>
 		<div id="CV" style="display: none" >
+			<header class="center">
 			<h1><a href="http://whiting.me">Mark E. Whiting</a></h1>
 			<a href="mailto:mwhiting@andrew.cmu.edu">MWhiting@andrew.cmu.edu</a>
+			<br>+1 (352) 226-9212
 			<br>Australian & American citizen
-			
+			</header>
 			<h2>Education</h2>
 			<table>
 				<tr>
@@ -166,18 +168,74 @@
 				</tr>
 			</table>
 			
+			<h2>Teaching</h2>
+			<table>
+				<tr>
+					<td class="year">2013-2016</td>
+				<td>
+					<strong>Future Faculty Program</strong>
+					<br>Nearing completion of future faculty trading program.
+				</td>
+				<td class="right team">Eberly Center, CMU</td>
+				</tr>
+				<tr>
+					<td class="year">2013-2014</td>
+				<td>
+					<strong>Senior Design</strong>
+					<br>Teaching assistant, 2 semesters
+					<br>Helped student teams develop concepts into novel products. 
+					<br>Nominated for teaching assistance award.
+				</td>
+				<td class="right team">CMU</td>
+				</tr>
+				<tr>
+					<td class="year">2011</td>
+				<td>
+					<strong>Design Product System</strong>
+					<br>Teaching Assistant
+				</td>
+				<td class="right team">KAIST</td>
+				</tr>
+				<tr>
+					<td class="year">2009</td>
+				<td>
+					<strong>Emotional Design</strong>
+					<br>Teaching Assistant
+				</td>
+				<td class="right team">KAIST</td>
+				</tr>
+				<tr>
+					<td class="year">2004-2007</td>
+				<td>
+					<strong>Computer Aided Design</strong>
+					<br>Unofficial tutor & private classes
+				</td>
+				<td class="right team">RMIT</td>
+				</tr>
+			</table>
+			
 			<h2>Publications</h2>
-			<ol>
-				<li>Whiting, Mark E., Dilrukshi Gamage, Aaron Gilbee, Snehal Gaikwad, Shirish Goyal, Alipta Ballav, Dinesh Majeti, Nalin Chhibber, Freddie Vargus, Teo Moura, Angela Richmond-Fuller, Varshine Chandrakanthan, Gabriel Bayomi Tinoco Kalejaiye, Tejas Seshadri Sarma, Yoni Dayan, Adam Ginzberg, Mohammed Hashim Kambal, Kristy Milland, Sayna Parsi, Catherine A. Mullings, Henrique Orefice, Sekandar Matin, Vibhor Sehgal, Sharon Zhou, Akshansh Sinha, Jeff Regino, Rajan Vaish, Michael S. Bernstein. <strong>Crowd Guilds: Worker-led Reputation and Feedback on Crowdsourcing Platforms</strong>. CSCW, ACM. 2017. <strong>Accepted</strong></li>
-				<li>Gaikwad, S.S., D. Morina, A. Ginzberg, C. Mullings, S. Goyal, D. Gamage, C. Diemert, M. Burton, S. Zhou, M. E. Whiting, K. Ziulkoski, A. Ballav, A. Gilbee, S.S. Niranga, V. Sehgal, J. Lin, L. Kristianto, A. Richmond-Fuller, J. Regino, N. Chhibber, D. Majeti, S. Sharma, K. Mananova, D. Dhakal, W. Dai, V. Purynova, S. Sandeep, V. Chandrakanthan, T. Sarma, S. Matin, A. Nassar, R. Nistala, A. Stolzoff, K. Milland, V. Mathur, R. Vaish, M.S. Bernstein. <strong>Boomerang: Rebounding the Consequences of Reputation Feedback on Crowdsourcing Platforms</strong>. UIST, ACM. 2017. <strong>Accepted</strong></li>
-				<li>Whiting, M. E., J. Cagan, & P.R. LeDuc, <strong>Automated Induction of General Grammars for Design</strong>. Design Computation and Cognition. 2016.</li>
-				<li>Lee, J.H., Park, H.J, Lim, S., Kim, S.J., Jung, H. & Whiting, M. E. <strong>A Formal Approach for the Interpretation of Cultural Content: Evolution of a Korean traditional pattern, Bosangwhamun</strong>. Proceedings of Computer Aided Architectural Design in Asia (CAADRIA), Hong-Kong Mar. 2010.</li>
-				<li>Whiting, M. E. & Varadarajan, S. <strong>Early Exploration of Cloud Computing for Design Practice & Education</strong>. Proceedings of International Association of Societies of Design Research (IASDR), Seoul Nov. 2009.</li>
-			</ol>
+			<table>
+				<tr>
+					<td>Whiting, Mark E., Dilrukshi Gamage, Aaron Gilbee, Snehal Gaikwad, Shirish Goyal, Alipta Ballav, Dinesh Majeti, Nalin Chhibber, Freddie Vargus, Teo Moura, Angela Richmond-Fuller, Varshine Chandrakanthan, Gabriel Bayomi Tinoco Kalejaiye, Tejas Seshadri Sarma, Yoni Dayan, Adam Ginzberg, Mohammed Hashim Kambal, Kristy Milland, Sayna Parsi, Catherine A. Mullings, Henrique Orefice, Sekandar Matin, Vibhor Sehgal, Sharon Zhou, Akshansh Sinha, Jeff Regino, Rajan Vaish, Michael S. Bernstein. <strong>Crowd Guilds: Worker-led Reputation and Feedback on Crowdsourcing Platforms</strong>. CSCW, ACM. 2017. <strong>Accepted</strong></td>
+				</tr>
+				<tr>
+					<td>Gaikwad, S.S., D. Morina, A. Ginzberg, C. Mullings, S. Goyal, D. Gamage, C. Diemert, M. Burton, S. Zhou, M. E. Whiting, K. Ziulkoski, A. Ballav, A. Gilbee, S.S. Niranga, V. Sehgal, J. Lin, L. Kristianto, A. Richmond-Fuller, J. Regino, N. Chhibber, D. Majeti, S. Sharma, K. Mananova, D. Dhakal, W. Dai, V. Purynova, S. Sandeep, V. Chandrakanthan, T. Sarma, S. Matin, A. Nassar, R. Nistala, A. Stolzoff, K. Milland, V. Mathur, R. Vaish, M.S. Bernstein. <strong>Boomerang: Rebounding the Consequences of Reputation Feedback on Crowdsourcing Platforms</strong>. UIST, ACM. 2017. <strong>Accepted</strong></td>
+				</tr>
+				<tr>
+					<td>Whiting, M. E., J. Cagan, & P.R. LeDuc, <strong>Automated Induction of General Grammars for Design</strong>. Design Computation and Cognition. 2016.</td>
+				</tr>
+				<tr>
+					<td>Lee, J.H., Park, H.J, Lim, S., Kim, S.J., Jung, H. & Whiting, M. E. <strong>A Formal Approach for the Interpretation of Cultural Content: Evolution of a Korean traditional pattern, Bosangwhamun</strong>. Proceedings of Computer Aided Architectural Design in Asia (CAADRIA), Hong-Kong Mar. 2010.</td>
+				</tr>
+				<tr>
+					<td>Whiting, M. E. & Varadarajan, S. <strong>Early Exploration of Cloud Computing for Design Practice & Education</strong>. Proceedings of International Association of Societies of Design Research (IASDR), Seoul Nov. 2009.</td>
+				</tr>
+			</table>
 		</div>
 	</section>
 	</div>
-	<footer class="copyright"><span id="updated"></span><a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
+	<footer class="copyright center"><span id="updated"></span><a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
 	</footer>
 	</div>
 	<script>
