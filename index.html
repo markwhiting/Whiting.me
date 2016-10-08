@@ -280,7 +280,9 @@
 		</div>
 	</section>
 	</div>
-	<footer class="copyright center"><span id="updated"></span><a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
+	<footer class="copyright center">
+		<span id="updated"></span><a href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue.</a>
+		<br><a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
 	</footer>
 	</div>
 	<script>
@@ -401,7 +403,7 @@
 			}
 			var fullDate = "" + month + " " + date.getDate() + ", " + date.getFullYear();
 			var commit = latestEvent.payload.commits[0];
-			document.getElementById("updated").innerHTML =  '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">Last updated</a>: ' + fullDate + ', <a target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>.<br>";
+			document.getElementById("updated").innerHTML =  '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">Last updated</a>: ' + fullDate + ', <a target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>. ";
 		}
 		document.getElementById("year").innerHTML = new Date().getFullYear();
 	</script>
