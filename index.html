@@ -27,9 +27,9 @@
     
 	<div id="content">
 	<section>
-		<div id="portrait" style="display: none">
-			<img src="tile.png" alt="Portrait of Mark Whiting">
-			<p class="center">This is what <a href="http://whiting.me">Mark E. Whiting</a> looks like.</p>
+		<div id="portrait" style="height:43em; background-image: url('Headshot.png'); background-position: center bottom; background-size:contain; margin: 0; padding: 0; position: relative; background-repeat: no-repeat">
+<!-- 			<img src="Headshot.png" alt="Portrait of Mark Whiting"> -->
+			<p class="center" style="position: absolute; bottom:0; color: #eee; width: 100%;">Portrait of <a href="http://whiting.me">Mark E. Whiting</a><!--  <a class="no-print" href="tile.png" title="Download portrait of Mark Whiting" style="text-decoration: underline">⬇</a> --></p>
 		</div>
 		<div id="shortBio" style="display: none">
 			<p><a href="http://whiting.me">Mark E. Whiting</a> is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His work focuses on making creative decisions computationally.</p>
@@ -38,7 +38,7 @@
 			<p><a href="http://whiting.me">Mark E. Whiting</a> is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His work focuses on making creative decisions computationally.</p>
 			<p>Mark also works with the <a href="http://crowdresearch.stanford.edu" target="_blank">Stanford Crowd Research Initiative</a>, and mentors students at CMU and in the <a href="http://www.sis.pitt.edu/i3/" target="_blank">iSchool Inclusion Institute of Information Science</a> (i3) at the <a href="http://pitt.edu" target="_blank">University of Pittsburgh</a> trying to understand the future of work, creativity and productivity.</p>
 		</div>
-		<div id="longBio" style="display: inline">		
+		<div id="longBio" style="display: none">		
 			<p><span class="2"><a href="http://whiting.me">Mark E. Whiting</a> is working to enable computers to design using computational representations of intuition.</span> Though nascent, this field stands to be an important aspect of the way we make creative decisions soon.</p>
 			
 			<p class="notTweet">Mark is a PhD candidate advised by <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a>  in <a href="http://www.cmu.edu/me/" target="_blank">Mech Eng</a> at <a href="http://www.cmu.edu" target="_blank">CMU</a>. His thesis work is on the use of automated grammar induction (<a href="" target="_blank">DCC 2016</a>) for identifying structural patterns in design and biological domains, which is a critical step in more widespread automation of creative decision making.</p>
@@ -320,7 +320,7 @@
 	</section>
 	</div>
 	<footer class="copyright center">
-		<span id="updated"></span><a href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue.</a>
+		<span id="updated"></span><a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue.</a>
 		<br><a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
 	</footer>
 	</div>
@@ -448,7 +448,7 @@
 			}
 			var fullDate = "" + month + " " + date.getDate() + ", " + date.getFullYear();
 			var commit = latestEvent.payload.commits[0];
-			document.getElementById("updated").innerHTML =  '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">Last updated</a>: ' + fullDate + ', <a target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>. ";
+			document.getElementById("updated").innerHTML =  '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">Last updated</a>: ' + fullDate + '<span class="no-print">, <a   target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>. <spam>";
 		}
 		document.getElementById("year").innerHTML = new Date().getFullYear();
 	</script>
