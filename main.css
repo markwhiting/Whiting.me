@@ -320,6 +320,28 @@ img {
 	clear: none;
 }
 
+#portrait{
+	position: relative;
+	width: 50%;
+}
+
+#portrait:before{
+	content: "";
+	display: block;
+	padding-top: 100%;
+	background-image: url('Headshot.png');
+	background-position: center bottom;
+	background-size:contain;
+	background-repeat: no-repeat;
+}
+
+.overText {
+	position: absolute;
+	bottom:0;
+	color: #eee;
+	width: 100%;
+}
+
 footer, footer a {
 	margin:1em 0;
 }
