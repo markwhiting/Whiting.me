@@ -153,6 +153,10 @@ a:hover{
 	margin: 0 .7em;
 }
 
+section {
+	margin:0;
+	padding:0;
+}
 
 #content {
 	-webkit-backdrop-filter: saturate(1.8) blur(23px);
@@ -160,6 +164,8 @@ a:hover{
 	border-radius: .2em;
 	font-size: 1em;
 	box-shadow: 0px 1px 20px rgba(100, 100, 100, 0.5);
+	margin: 0;
+	padding: 0;
 
 }
 
@@ -262,25 +268,34 @@ img {
 }
 
 #portrait{
-	position: relative;
-	width: 50%;
+	position:  relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	
+	background-image: url('Headshot.png');
+	background-position: center bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+	
+/* 	bottom: ; */
 }
 
 #portrait:before{
 	content: "";
 	display: block;
+	margin: 0;
+	padding: 0;
 	padding-top: 100%;
-	background-image: url('Headshot.png');
-	background-position: center bottom;
-	background-size:contain;
-	background-repeat: no-repeat;
 }
 
 .overText {
 	position: absolute;
-	bottom:0;
+	left: 0;
+	right: 0;
+	bottom:1em;
+	
 	color: #eee;
-	width: 100%;
 }
 
 footer, footer a {
