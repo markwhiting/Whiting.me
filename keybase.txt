@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/markwhiting
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://whiting.me
+  * I am markwhiting (https://keybase.io/markwhiting) on keybase.
+  * I have a public key with fingerprint 02DA 2277 693E FA95 DE1D  2018 66B7 17D0 FB69 AE70
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01017e90076f1af8ba72bae3f834e90fab7c8929c8032621f5b12557c4c13b44f8a20a",
+            "fingerprint": "02da2277693efa95de1d201866b717d0fb69ae70",
+            "host": "keybase.io",
+            "key_id": "66b717d0fb69ae70",
+            "kid": "01017e90076f1af8ba72bae3f834e90fab7c8929c8032621f5b12557c4c13b44f8a20a",
+            "uid": "82980b8653fbab92fd3a7e1506de8719",
+            "username": "markwhiting"
+        },
+        "service": {
+            "hostname": "whiting.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1479360420,
+    "expire_in": 157680000,
+    "prev": "281671f21b2757c6ac7967030ce10426e3cfd709e36a4608f61489f96f095e12",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.58
+Comment: https://keybase.io/crypto
+
+yMI1AnicrZJtaBRHGMcvUc8k2CBiK1U/lNFoxcs5M3s7s3Nf0qqoVRASqo2Qcszu
+zuTWXHYve3vX2nAFS6Fia2tpeqQtTdJiqYoW34I1wdQG21I1vlaqNGpQUBAh6ctB
+QYrOhvitH50vw/PM7/nP/z/M6WemRWoqNp7b2fjtnP4dFWd/7M5Hmusb9nQC07O3
+gWQnaBOTm8jYIhek2hwbJAFEEFHBIKREIi4Nk1NscqFJQ0uotuQmtQyGmWVADROM
+pG4irOvUSlhIMxMJaXAMOYgB6bitws/6jhuEstjmGFNKmCYkZ7otkI0hMggxKaI2
+lCZhXFCoBtNeLpxQ5kyeE3HHUz1VpCbt/Q//lH3nJ+UMzAxoGkTXpMlNhqWtcSqQ
+DoktDIpYCOaE7/J2oeh27re9kXYCFRkUY0AdFBxLhG8bhpmCpoC4KmIg63uBZ3kZ
+1U8HQTYZjgXbspOcMFNTCinTce1QNAYKws85nguSSJFW4ISSKEGZRmACwxgQb2Yd
+X6SckNApMaBa4TWioCSxgQhFEiMTUxWZcIsyQqEGLYHUOBGaJW0KmdAITxBoSIIS
+BpOMSMh0gTAIM3W4ntLWlE/eqjRzTqvLg7wvQHH4VMv0SEVNJDqjMvxgkZrq2U++
+3dhXMx9t/b3nRvb29i/n7HinuC66pa/336FqfU062t6/anh9x83x9K+7SmM/9328
+9M7E+7d/6H3wy8ho8vqLw1cXH+862UgG/qubj26ePrrG/frduosbuhsP/bl88O3u
+6sNs3U/fXJ43v7h+8HW7vpQcvfWw9CDz3q7zu/dWfRHbfQ2sGjhwOLPn+9dOxZv3
+H+n/8GqWnz87dzQ6t/L+vhHy6ZWG2udfWFK77ODmfS8XPp81r1yYODdjaOCzo5c/
+WpBtyv9ROPHSKysX9hx7WPXXWx33xva2NB/IHFs0C0dXLCwOxsGmS/+UynfRBQrG
+k2WvvHr2c5/wv1np2Vd/a6nq7frug7Urms50LUlvHpF90x4D++NB6g==
+=EZEs
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/markwhiting
+
+==================================================================
