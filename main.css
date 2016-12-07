@@ -21,7 +21,7 @@ html {
     max-width: 100%;
 	margin: 0;
 	background-color: #747474;
-	background-image: url("CoffeeMed1.jpg");
+	background-image: url("background2S.jpg");
 	background-position: center top;
 	background-size: cover;
 	background-attachment: fixed;
@@ -163,7 +163,7 @@ section {
 	background-color: rgba(255, 255, 255, 0.8);
 	border-radius: .2em;
 	font-size: 1em;
-	box-shadow: 0px 1px 20px rgba(100, 100, 100, 0.5);
+	box-shadow: 0px 5px 5px rgba(100, 100, 100, 0.2);
 	margin: 0;
 	padding: 0;
 
@@ -176,7 +176,7 @@ section {
 
 .copyright {
 	font-weight: 300;
-	color: #eee;
+	color: #666;
 }
 
 .copyright a{
@@ -188,7 +188,7 @@ input[type=range] {
 	-webkit-backdrop-filter: saturate(1.8) blur(23px);
 	width: 12em;
 	height: .7em;
-	background-color: rgba(222, 222, 222, 0.2);
+	background-color: rgba(111, 111, 111, 0.2);
 	vertical-align: middle;
 	margin: 0 .5em;
 	border-radius: .2em;
@@ -203,7 +203,7 @@ input[type=range] {
 input[type=range]::-webkit-slider-thumb{
 	-webkit-appearance: none;
 	-webkit-backdrop-filter: saturate(1.8) blur(23px);
-	background-color: rgba(222, 222, 222, 0.8);
+	background-color: rgba(111, 111, 111, 0.5);
 	width: 1.3em;
 	height: 1.3em;
 	padding: 0;
