@@ -21,7 +21,7 @@ html {
     max-width: 100%;
 	margin: 0;
 	background-color: #747474;
-	background-image: url("background2S.jpg");
+	background-image: url("background2SD.jpg");
 	background-position: center top;
 	background-size: cover;
 	background-attachment: fixed;
@@ -176,7 +176,8 @@ section {
 
 .copyright {
 	font-weight: 300;
-	color: #666;
+/* 	color: #666; */
+	color: #eee;
 }
 
 .copyright a{
