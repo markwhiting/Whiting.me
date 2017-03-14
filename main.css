@@ -167,7 +167,7 @@ nav div {
 	font-weight: 500;
 }
 
-nav div:hover, nav .current{
+nav .current{
 	color: inherit;
 	-webkit-backdrop-filter: saturate(1.8) blur(23px);
 	background-color: rgba(255, 255, 255, 0.8);
