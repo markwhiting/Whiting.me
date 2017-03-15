@@ -21,7 +21,7 @@ html {
     max-width: 100%;
 	margin: 0;
 	background-color: #747474;
-	background-image: url("background1S.jpg");
+/* 	background-image: url("background1S.jpg"); */
 	background-position: center top;
 	background-size: cover;
 	background-attachment: fixed;
@@ -217,6 +217,8 @@ section {
 	flex-basis: 9em;
 	padding: .2em;
 	border-radius: .5em;
+	-webkit-transition: all 0.2s ease-out; /* Safari */
+	transition: all 0.2s ease-out;
 }
 
 .news:hover {
@@ -236,6 +238,8 @@ section {
 	align-content: flex-start;
 	margin: 0 -1em;
 	padding: .5em 1em;
+	-webkit-transition: all 0.2s ease-out; /* Safari */
+	transition: all 0.2s ease-out;
 }
 
 .experience:hover {
@@ -243,7 +247,22 @@ section {
 	background-color: rgba(175, 175, 175, 0.2);
 }
 
+.logo {
+	flex-basis: 43px;
+	align-content: stretch;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0 .5em 0 -.5em;
+}
+
+.cmu{ background-image: url("cmu.png"); }
+.kaist{ background-image: url("kaist.gif");}
+.rmit{ background-image: url("rmit.png");}
+.zju{ background-image: url("zju.png");}
+
 .main {
+	flex-grow: 1;
 }
 
 .detail {
