@@ -206,7 +206,7 @@ section {
 .featuredNews {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	text-align: center;
 	flex-wrap: wrap;
@@ -215,8 +215,8 @@ section {
 
 .news {
 	flex-basis: 9em;
-	padding: .5em;
-	border-radius: 1em;
+	padding: .2em;
+	border-radius: .5em;
 }
 
 .news:hover {
