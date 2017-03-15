@@ -228,35 +228,10 @@
 	</section>
 	
 	<footer class="copyright center">
-		<span id="updated"></span><a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue.</a>
-		<br><a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
+		<span id="updated"></span> 🐛 <a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue.</a>
+		<br>🔏 <a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
 	</footer>
 	</div>
-	<script>
-		function updateDetail() {
-			var rangePosition = document.getElementById("detail").value ;
-			var updateValue = "OK";
-			var title = "M.E. Whiting";
-			var destination = "http://whiting.me"
-			switch (rangePosition) {
-				case "1":
-					document.getElementById("longBio").style.display = "inline" ;
-					document.getElementById("CV").style.display = "none";
-					title = "M.E.Whiting";
-					destination = "http://whiting.me/";
-					break;
-				case "2": 
-					document.getElementById("longBio").style.display = "none" ;
-					document.getElementById("CV").style.display = "inline";
-					title = "M.E.Whiting CV";
-					destination = "http://whiting.me/#cv";
-					break;
-				default: moveTo(1) ;
-				}
-			window.document.title = title;
-			window.history.pushState({path: destination}, title, destination);
-		}
-	</script>
 	<script>
 		function moveTo(number) {
 			document.getElementById("detail").value = number;

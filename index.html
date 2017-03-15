@@ -46,35 +46,10 @@
 		<p class="notTweet">Though this work may seem to explore many unrelated topics, there is a central notion that is of utmost importance. The way we as a society and as individuals make creative decisions is one of our most human aspects. Through understanding grammar rule induction from design, learning to make individual agents in a crowd perform sophisticated judgments and creative tasks, and developing ways to better communicate about subtle design topics, Mark is developing a method for automating design.</p>
 	</section>
 	<footer class="copyright center">
-		<span id="updated"></span><a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue.</a>
-		<br><a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
+		<span id="updated"></span> 🐛 <a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue.</a>
+		<br>🔏 <a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
 	</footer>
 	</div>
-	<script>
-		function updateDetail() {
-			var rangePosition = document.getElementById("detail").value ;
-			var updateValue = "OK";
-			var title = "M.E. Whiting";
-			var destination = "http://whiting.me"
-			switch (rangePosition) {
-				case "1":
-					document.getElementById("longBio").style.display = "inline" ;
-					document.getElementById("CV").style.display = "none";
-					title = "M.E.Whiting";
-					destination = "http://whiting.me/";
-					break;
-				case "2": 
-					document.getElementById("longBio").style.display = "none" ;
-					document.getElementById("CV").style.display = "inline";
-					title = "M.E.Whiting CV";
-					destination = "http://whiting.me/#cv";
-					break;
-				default: moveTo(1) ;
-				}
-			window.document.title = title;
-			window.history.pushState({path: destination}, title, destination);
-		}
-	</script>
 	<script>
 		function moveTo(number) {
 			document.getElementById("detail").value = number;
