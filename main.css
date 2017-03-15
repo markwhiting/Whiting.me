@@ -226,6 +226,32 @@ section {
 	background-color: rgba(175, 175, 175, 0.2);
 }
 
+.cvHeader {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.name{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+/* 	align-content: flex-end; */
+}
+
+.name img {
+	width: 7em;
+	margin: 0 auto;
+}
+
+.name h1 {
+	margin: 0;
+	padding: 0;
+}
+
+.contact {
+}
+
 .highlightRows {
 	display: flex;
 	flex-direction: column;
