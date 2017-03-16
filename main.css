@@ -64,7 +64,7 @@
 
 html {
     color: #222;
-    font-size: .9em;
+    font-size: .8em;
     line-height: 1.4;
     max-width: 100%;
 	margin: 0;
@@ -155,7 +155,7 @@ body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	max-width: 45em;
+	max-width: 55em;
 	margin: auto;
 }
 
