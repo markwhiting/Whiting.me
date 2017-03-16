@@ -233,7 +233,7 @@ section {
 
 .cvHeader {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
 }
 
@@ -244,20 +244,22 @@ section {
 }
 
 .name img {
-	width: 7em;
+	width: 8em;
 	margin: 0 auto;
 }
 
 .name h1 {
 	margin: 0;
 	padding: 0;
-	font-size: large;
+/* 	font-size: large; */
+	text-align: center;
 }
 
 .contact {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .highlightRows {
@@ -297,12 +299,13 @@ section {
 .zju{ background-image: url("zju.png");}
 
 .wide{ 
-	flex-basis: 100px;
+	flex-basis: 70px;
 	flex-shrink: 0;
 }
 
 .right {
 	margin: 0 0 0 1em;
+	order: 1;
 }
 
 .constitution{ background-image: url("daemo.png");}
