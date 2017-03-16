@@ -151,8 +151,9 @@ a:hover{
 
 .justified {
 	text-align: justify;
-	flex-grow: 1;
 }
+
+.grow {flex-grow: 1;}
 
 #wrapper {
 	margin: 0 .7em;
@@ -241,7 +242,6 @@ section {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-/* 	align-content: flex-end; */
 }
 
 .name img {
