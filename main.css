@@ -149,6 +149,10 @@ a:hover{
 	hyphens: auto;
 }
 
+.justified {
+	text-align: justify;
+}
+
 #wrapper {
 	margin: 0 .7em;
 }
@@ -175,7 +179,7 @@ nav .current{
 }
 
 section {
-	padding: 1em;
+	padding: 1em 1em 0 1em;
 	-webkit-backdrop-filter: saturate(1.8) blur(23px);
 	background-color: rgba(255, 255, 255, 0.8);
 	border-radius: 0 0 .2em .2em;
@@ -279,6 +283,7 @@ section {
 
 .logo {
 	flex-basis: 43px;
+	flex-shrink: 0;
 	align-content: stretch;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -286,10 +291,25 @@ section {
 	margin: 0 .5em 0 -.5em;
 }
 
-.cmu{ background-image: url("cmu.png"); }
+.cmu{ background-image: url("cmu.png");}
 .kaist{ background-image: url("kaist.gif");}
 .rmit{ background-image: url("rmit.png");}
 .zju{ background-image: url("zju.png");}
+
+.wide{ 
+	flex-basis: 100px;
+	flex-shrink: 0;
+}
+
+.right{
+	margin: 0 -.5em 0 .5em;
+}
+
+.constitution{ background-image: url("daemo.png");}
+.moocs{ background-image: url("uom.png");}
+.guilds{ background-image: url("guilds.png");}
+.grammar{ background-image: url("grammar.png");}
+
 
 .main {
 	flex-grow: 1;
@@ -314,7 +334,6 @@ section {
 	-webkit-backdrop-filter: saturate(1.8) blur(100px);
 	background-color: rgba(175, 175, 175, 0.2);
 }
-
 
 .copyright {
 	font-weight: 300;
