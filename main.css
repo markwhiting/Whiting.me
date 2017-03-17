@@ -181,14 +181,16 @@ strong {
 }
 
 a {
-	text-decoration: none;
+/* 	text-decoration: none; */
 	font-weight: 700;
 	color: inherit;
 }
 
+/*
 a:hover{
 	text-decoration: underline;
 }
+*/
 
 .hiphen {
 	-webkit-hyphens: auto;
