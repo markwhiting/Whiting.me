@@ -6,40 +6,11 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
-
-/** Ultra Light */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 100;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
-}
-
-/** Thin */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 200;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
-}
-
 /** Regular */
 @font-face {
   font-family: "San Francisco";
   font-weight: 400;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-}
-
-/** Medium */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 500;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
-}
-
-/** Semi Bold */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 600;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
 }
 
 /** Bold */ 
@@ -49,9 +20,11 @@
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
 }
 
+/*
 * {
-    font-family: "San Francisco" ; 
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+*/
 
 
 * {
@@ -181,16 +154,10 @@ strong {
 }
 
 a {
-/* 	text-decoration: none; */
-	font-weight: 700;
 	color: inherit;
+	-webkit-transition: all 0.1s ease-out; /* Safari */
+	transition: all 0.1s ease-out;
 }
-
-/*
-a:hover{
-	text-decoration: underline;
-}
-*/
 
 .hiphen {
 	-webkit-hyphens: auto;
@@ -220,7 +187,7 @@ nav div {
 	padding: .2em .5em 0 .5em;
 	font-size: larger;
 	color: #eee;
-	font-weight: 500;
+	font-weight: 700;
 }
 
 nav .current{
@@ -239,6 +206,13 @@ section {
 	box-shadow: 0px 5px 5px rgba(100, 100, 100, 0.2);
 }
 
+section a:hover{
+	background-color: #333;
+	border-radius: .2em;
+	box-shadow: 0px 0px 0px 3px #333;
+	color: #eee;
+}
+
 .leftRound {
 	border-radius: .2em 0 .2em .2em;
 
@@ -250,7 +224,7 @@ section {
 }
 
 .heading {
-	font-weight: 600;
+	font-weight: 700;
 	color: inherit;
 }
 
@@ -265,11 +239,11 @@ section {
 	justify-content: space-around;
 	align-items: center;
 	text-align: center;
-/* 	flex-wrap: wrap; */
+	flex-wrap: wrap;
 }
 
 .news {
-/* 	flex-basis: 9em; */
+	flex-basis: 11em;
 	padding: .2em;
 	border-radius: .5em;
 	-webkit-transition: all 0.2s ease-out; /* Safari */
@@ -279,6 +253,10 @@ section {
 .news:hover {
 	-webkit-backdrop-filter: saturate(1.8) blur(100px);
 	background-color: rgba(175, 175, 175, 0.2);
+}
+
+.newsEmoji{
+	font-size: x-large;
 }
 
 .cvHeader {
@@ -389,7 +367,7 @@ section {
 }
 
 .copyright {
-	font-weight: 300;
+	font-weight: 400;
 /* 	color: #666; */
 	color: #eee;
 }
