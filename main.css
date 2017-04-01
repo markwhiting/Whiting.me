@@ -103,7 +103,7 @@ body {
 }
 
 p { 
-	padding: 1em;
+	padding: 1em 0;
 	margin: 0;
 }
 
@@ -227,7 +227,7 @@ nav .current a{
 .contact {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
