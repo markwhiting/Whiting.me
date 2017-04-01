@@ -18,7 +18,6 @@
 
 html {
     font-size: .8em;
-    line-height: 1.4;
     max-width: 100%;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
@@ -97,7 +96,6 @@ textarea {
 
 
 body {
-	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	max-width: 55em;
