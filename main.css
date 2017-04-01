@@ -8,8 +8,8 @@
  
 * { 
 	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	-webkit-transition: all .1s ease-in-out; /* Safari */
-	transition: all .1s ease-in-out;	
+	-webkit-transition: all 0.2s ease-in-out; /* Safari */
+	transition: all 0.2s ease-in-out;	
 }
 
 /* ==========================================================================
@@ -189,8 +189,10 @@ nav .current a{
 
 .news:hover, .experience:hover, .publication:hover{
 	border-radius: .5em;
-	-webkit-backdrop-filter: saturate(1.8) blur(100px);
-	background-color: rgba(175, 175, 175, 0.2);
+/* 	-webkit-backdrop-filter: saturate(1.8) blur(100px); */
+/* 	background-color: rgba(178, 215, 255, 0.2); */
+/* 	background-color: rgba(255, 187, 184, 0.2); */
+	background-color: rgba(232, 93, 0, 0.1);
 }
 
 .newsEmoji{
