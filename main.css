@@ -6,24 +6,21 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
  
-* { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+* { 
+	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	-webkit-transition: all .1s ease-in-out; /* Safari */
+	transition: all .1s ease-in-out;	
+}
 
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
 html {
-    color: #222;
     font-size: .8em;
     line-height: 1.4;
     max-width: 100%;
 	margin: 0;
-	background-color: #747474;
-/* 	background-image: url("background1S.jpg"); */
-	background-position: center top;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -100,8 +97,6 @@ textarea {
 
 
 body {
-	color: #333;
-	font-weight: 400;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -126,14 +121,17 @@ h2 {
 	margin: 0;
 }
 
-strong {
+strong,b {
 	font-weight: 700;
 }
 
 a {
-	color: inherit;
-	-webkit-transition: all 0.1s ease-out; /* Safari */
-	transition: all 0.1s ease-out;
+	color: rgb(0, 136, 204);
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
 }
 
 .hiphen {
@@ -157,52 +155,18 @@ nav{
 	display: flex;
 	justify-content: space-between;
 	margin: .5em 0 0 0;
-	
-}
-
-nav div {
-	padding: .2em .5em 0 .5em;
 	font-size: larger;
-	color: #eee;
+}
+
+nav div a{
+	font-size: large;
 	font-weight: 700;
+	color: rgb(232, 93, 0);
 }
 
-nav .current{
+nav .current a{
 	color: inherit;
-	-webkit-backdrop-filter: saturate(1.8) blur(23px);
-	background-color: rgba(255, 255, 255, 0.8);
-	border-radius: .2em .2em 0 0;
-}
-
-section {
-	padding: 1em 1em 0 1em;
-	-webkit-backdrop-filter: saturate(1.8) blur(23px);
-	background-color: rgba(255, 255, 255, 0.8);
-	border-radius: 0 0 .2em .2em;
-	font-size: 1em;
-	box-shadow: 0px 5px 5px rgba(100, 100, 100, 0.2);
-}
-
-section a:hover{
-	background-color: #333;
-	border-radius: .2em;
-	box-shadow: 0px 0px 0px 3px #333;
-	color: #eee;
-}
-
-.leftRound {
-	border-radius: .2em 0 .2em .2em;
-
-}
-
-.rightRound {
-	border-radius: 0 .2em .2em .2em;
-
-}
-
-.heading {
-	font-weight: 700;
-	color: inherit;
+	color: rgb(0, 136, 204);
 }
 
 .sectionHeading{
@@ -223,23 +187,26 @@ section a:hover{
 	flex-basis: 11em;
 	padding: .2em;
 	border-radius: .5em;
-	-webkit-transition: all 0.2s ease-out; /* Safari */
-	transition: all 0.2s ease-out;
 }
 
-.news:hover {
+.news:hover, .experience:hover, .publication:hover{
+	border-radius: .5em;
 	-webkit-backdrop-filter: saturate(1.8) blur(100px);
 	background-color: rgba(175, 175, 175, 0.2);
 }
 
 .newsEmoji{
-	font-size: x-large;
+	font-size: xx-large;
 }
 
 .cvHeader {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.cvHeader a {
+	color: inherit;
 }
 
 .name{
@@ -256,7 +223,6 @@ section a:hover{
 .name h1 {
 	margin: 0;
 	padding: 0;
-/* 	font-size: large; */
 	text-align: center;
 }
 
@@ -279,13 +245,6 @@ section a:hover{
 	align-content: flex-start;
 	margin: 0 -1em;
 	padding: .5em 1em;
-	-webkit-transition: all 0.2s ease-out; /* Safari */
-	transition: all 0.2s ease-out;
-}
-
-.experience:hover {
-	-webkit-backdrop-filter: saturate(1.8) blur(100px);
-	background-color: rgba(175, 175, 175, 0.2);
 }
 
 .logo {
@@ -303,6 +262,11 @@ section a:hover{
 .rmit{ background-image: url("rmit.png");}
 .zju{ background-image: url("zju.png");}
 
+.constitution{ background-image: url("daemo.png");}
+.moocs{ background-image: url("uom.png");}
+.guilds{ background-image: url("guilds.png");}
+.grammar{ background-image: url("grammar.png");}
+
 .wide{ 
 	flex-basis: 70px;
 	flex-shrink: 0;
@@ -312,12 +276,6 @@ section a:hover{
 	margin: 0 0 0 1em;
 	order: 1;
 }
-
-.constitution{ background-image: url("daemo.png");}
-.moocs{ background-image: url("uom.png");}
-.guilds{ background-image: url("guilds.png");}
-.grammar{ background-image: url("grammar.png");}
-
 
 .main {
 	flex-grow: 1;
@@ -338,103 +296,10 @@ section a:hover{
 	text-align: justify;
 }
 
-.publication:hover {
-	-webkit-backdrop-filter: saturate(1.8) blur(100px);
-	background-color: rgba(175, 175, 175, 0.2);
-}
-
-.copyright {
-	font-weight: 400;
-/* 	color: #666; */
-	color: #eee;
-}
-
-.copyright a{
-	font-weight: inherit;
-}
-
-
-ol {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-li {
-	padding: 10px;
-}
-
-table {
-	width: 100%;
-}
-
-tr {
-	vertical-align: top;
-}
-
-tr:hover {
-	-webkit-backdrop-filter: saturate(1.8) blur(100px);
-	background-color: rgba(175, 175, 175, 0.2);
-}
-
-td {
-	padding: 1em 1em;
-}
-
-.year {
-	width: 5em;
-}
-
-.team {
-	width: 8.5em;
-}
-
-.right{
-	text-align: right;
-}
-
-.center{
-	text-align: center;
-}
-
-.course, .course a {
-	font-style: italic;
-	font-weight: 400;
-}
-
-#portrait{
-	position:  relative;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	
-	background-image: url('Headshot.png');
-	background-position: center bottom;
-	background-size: contain;
-	background-repeat: no-repeat;
-	
-/* 	bottom: ; */
-}
-
-#portrait:before{
-	content: "";
-	display: block;
-	margin: 0;
-	padding: 0;
-	padding-top: 100%;
-}
-
-.overText {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom:1em;
-	
-	color: #eee;
-}
-
-footer, footer a {
+footer {
 	margin:1em 0;
+	color: inherit;
+	text-align: center;
 }
 
 /* ==========================================================================
