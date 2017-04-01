@@ -153,18 +153,12 @@ nav{
 	display: flex;
 	justify-content: space-between;
 	margin: .5em 0 0 0;
-	font-size: larger;
-}
-
-nav div a{
 	font-size: large;
-	font-weight: 700;
-	color: rgb(232, 93, 0);
+	font-weight: bold
 }
 
 nav .current a{
-	color: inherit;
-	color: rgb(0, 136, 204);
+	color: rgb(232, 93, 0);
 }
 
 .sectionHeading{
