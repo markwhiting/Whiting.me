@@ -258,8 +258,9 @@
 	</section>
 	
 	<footer class="copyright center">
-		<span id="updated"></span> 🐛 <a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue.</a>
-		<br>🔏 <a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span>
+		<div id="updated"></div>
+		<div>🐛 <a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue.</a></div>
+		<div>🔏 <a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span></div>
 	</footer>
 	</div>
 	<script>
@@ -325,7 +326,7 @@
 			}
 			var fullDate = "" + month + " " + date.getDate() + ", " + date.getFullYear();
 			var commit = latestEvent.payload.commits[0];
-			document.getElementById("updated").innerHTML =  '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">Last updated</a>: ' + fullDate + '<span class="no-print">, <a   target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>. <spam>";
+			document.getElementById("updated").innerHTML =  '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">🛠</a> ' + fullDate + '<span class="no-print">: <a   target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>. <spam>";
 		}
 		document.getElementById("year").innerHTML = new Date().getFullYear();
 	</script>

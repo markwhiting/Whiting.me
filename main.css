@@ -295,9 +295,15 @@ nav .current a{
 }
 
 footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
 	margin:1em 0;
 	color: inherit;
-	text-align: center;
+}
+
+footer div {
+	margin: 0em .5em;
 }
 
 /* ==========================================================================
