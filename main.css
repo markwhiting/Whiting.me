@@ -98,7 +98,7 @@ textarea {
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	max-width: 55em;
+	max-width: 50em;
 	margin: auto;
 }
 
@@ -197,7 +197,6 @@ nav .current a{
 .cvHeader {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 }
 
 .cvHeader a {
@@ -224,8 +223,12 @@ nav .current a{
 .contact {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	flex-wrap: wrap;
+}
+
+.contact div{
+	padding: 0 .7em;
 }
 
 .highlightRows {
