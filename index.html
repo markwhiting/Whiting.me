@@ -60,7 +60,7 @@
 <!-- 		</div> -->
 		<div class="highlightRows">
 		<div class="area1 experience tab">
-			<div class="logo wide constitution"></div>
+			<div class="logo wide grammar"></div>
 			<div class="grow">
 				<p>A consistent difficulty in automating design is having a reliable representation that can encompass the important nuances of the design problem.</p>
 				<p>In my PhD I have built an automatic, grammar like way of representing structured systems, such as designs. We applied this tool to design, architecture, abstract systems, and even biological domains. We also developed tools for detecting differences and anomalies between cases of this type of data, faster and more accurately than previous efforts.</p>
@@ -68,7 +68,6 @@
 			</div>
 		</div>
 		<div class="area2 experience tab">
-			<div class="logo wide moocs"></div>
 			<div class="grow">
 				<p>Despite constant improvements in intelligent algorithms, we are still a surprisingly long way from having ones that can replace every aspect of a human labor</p>
 				<p>Mentoring several groups of undergraduate students at CMU and in the Pitt i3 program, we have worked to build systems that are made stronger by encouraging humans and computers to work together. We have focused particularly on how human-computer hybrid systems can have more insight about creative problems and product than just the human or just the computer. We have also explored ways that novice humans can be supported by computer systems to provide rich design insight.</p>
@@ -84,7 +83,7 @@
 				</div>
 		</div>
 		<div class="area4 experience tab">
-			<div class="logo wide  grammar"></div>
+			<div class="logo wide moocs"></div>
 			<div class="grow">
 				<p>People are complex and only partially rational. As a consequence, incentives in socio-technical systems' can drastically influence how effectively people use them. With algorithmic game theory, a branch of economics, incentives can be carefully designed to achieve specific behavioral goals. Many socio-technical systems today stand to benefit from incorporating these lessons.</p>
 				 <p>Together with Dilrukshi Gamage, Thejan Rajapakshe, Haritha Thilakarathne, Indika Perera, and Shantha Fernando, we have explored how aligning the incentives for peer feedback in online learning helps improve the quality of the feedback. We will present this work at <strong><a href="https://arxiv.org/pdf/1703.06169.pdf" target="_blank">Learning at Scale</a></strong>, 2017.</p>
@@ -106,9 +105,9 @@
 			Array.prototype.forEach.call(buttons, function(button){ button.id = "" })
 			selectedTab.id = "currentTab"
 // 			alert(selectedTab.name)
-			Array.prototype.forEach.call(tabs, function(tab){ if (tab.classList[0] == selectedTab.classList[0] ) { tab.style.display = "block"; } else { tab.style.display = "none"; } })
+			Array.prototype.forEach.call(tabs, function(tab){ if (tab.classList[0] == selectedTab.classList[0] ) { tab.style.display = "flex"; } else { tab.style.display = "none"; } })
 		}
-		tab(buttons[3])
+		tab(buttons[0])
 	</script>
 	<script>
 		var xmlhttp = new XMLHttpRequest();

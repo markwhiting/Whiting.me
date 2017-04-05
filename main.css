@@ -266,7 +266,7 @@ nav .current a{
 .grammar{ background-image: url("grammar.png");}
 
 .wide{ 
-	flex-basis: 70px;
+	flex-basis: 140px;
 	flex-shrink: 0;
 }
 
