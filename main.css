@@ -171,7 +171,7 @@ nav .current a{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	align-items: center;
+	align-items: flex-end;
 	text-align: center;
 	flex-wrap: wrap;
 }
@@ -179,10 +179,10 @@ nav .current a{
 .news {
 	flex-basis: 11em;
 	padding: .3em;
-	border-radius: .5em;
+	border-radius: .5em .5em 0 0;
 }
 
-.news:hover, .experience:hover, .publication:hover{
+.news:hover, .experience:hover, .publication:hover, #currentTab, .tab{
 	border-radius: .5em;
 /* 	-webkit-backdrop-filter: saturate(1.8) blur(100px); */
 /* 	background-color: rgba(178, 215, 255, 0.2); */
