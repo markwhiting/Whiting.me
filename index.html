@@ -31,19 +31,19 @@
 		<p>Quality creative thinking is highly prized because it is remarkably hard to achieve. As a consequence, companies face financial uncertainty and time pressure when trying to innovate. My work focuses on how we might make creative decisions in the future, designing faster and at higher quality than we do today. This research leverages design, society and artificial intelligence, with the following specific interests.</p>
 		<strong>Research Interests:</strong>
 		<div class="featuredNews hoverTab">
-			<div class="area1 news tabSelector" onmouseover="tab(this)">
+			<div class="1 news tabSelector" onmouseover="chooseTab(this)">
 				<div class="newsEmoji">🤖💭🎨</div>
 				Automated design & representation
 			</div>
-			<div class="area2 news tabSelector" onmouseover="tab(this)">
+			<div class="2 news tabSelector" onmouseover="chooseTab(this)">
 				<div class="newsEmoji">🤔☯🤖</div>
 				Human-computer <br>hybrid systems
 			</div>
-			<div class="area3 news tabSelector" onmouseover="tab(this)">
+			<div class="3 news tabSelector" onmouseover="chooseTab(this)">
 				<div class="newsEmoji">👥👤👥</div>
 				Crowd work & <br>crowd governance
 			</div>
-			<div class="area4 news tabSelector" onmouseover="tab(this)">
+			<div class="4 news tabSelector" onmouseover="chooseTab(this)">
 				<div class="newsEmoji">⚖️➞🏆</div>
 				Socio-technical <br>incentive design
 			</div>
@@ -59,7 +59,7 @@
 <!-- 			<div class="news"><a href="http://link.springer.com/chapter/10.1007%2F978-3-319-44989-0_15" target="_blank">Automated Grammar Induction</a> was presented at <a href="http://dccconferences.org/dcc16/" target="_blank">DCC'16</a></div> -->
 <!-- 		</div> -->
 		<div class="highlightRows">
-		<div class="area1 experience tab">
+		<div class="1 experience tab">
 			<div class="logo wide grammar"></div>
 			<div class="grow">
 				<p>A consistent difficulty in automating design is having a reliable representation that can encompass the important nuances of the design problem.</p>
@@ -67,14 +67,14 @@
 				<p>This work is with <a href="http://www.cmu.edu/me/idig/index.html" target="_blank">Jon Cagan</a> and <a href="http://www.andrew.cmu.edu/user/prl/" target="_blank">Phil Leduc</a>, and has been published in <strong><a href="http://link.springer.com/chapter/10.1007/978-3-319-44989-0_15" target="_blank">Design Computing and Cognition</a></strong> (<a href="http://dccconferences.org/dcc16/" target="_blank">DCC, 2016</a>) and in a forthcoming issue of <strong>Artificial Intelligence for Engineering Design, Analysis and Manufacturing</strong> (AIEDAM). It is also currently under patent application.</p>
 			</div>
 		</div>
-		<div class="area2 experience tab">
+		<div class="2 experience tab">
 			<div class="grow">
 				<p>Despite constant improvements in intelligent algorithms, we are still a surprisingly long way from having ones that can replace every aspect of human labor.</p>
 				<p>Mentoring several groups of undergraduate students at CMU and in the Pitt i3 program, we have worked to build systems that are made stronger by encouraging humans and computers to work together. We have focused particularly on how human-computer hybrid systems can have more insight about creative problems and products than just the human or just the computer. We have also explored ways that novice humans can be supported by computer systems to provide rich design insight.</p>
 				<p>This work has been presented at the <strong>iConference</strong>, and is under review for further publications.</p>
 			</div>
 		</div>
-		<div class="area3 experience tab">
+		<div class="3 experience tab">
 			<div class="logo wide guilds"></div>
 			<div class="grow">
 				<p>Crowdsourcing tools today offer ad hoc and remote work arrangements at an unprecedented scale, yet many of the benefits of having a traditional job have not yet been realized for this community.</p>
@@ -82,7 +82,7 @@
 				<p>We have studied how crowdsourcing systems could better support the communities they serve. We introduced <strong><a href="http://hci.stanford.edu/publications/2017/crowdguilds/guilds.pdf" target="_blank">crowd guilds at CSCW 2017</a></strong>, a way to improve reputation and feedback within crowdsourcing, inspired by traditional worker guilds, and have developed the <strong>Daemo Constitution</strong>, a mechanism for self governance in crowdsourcing marketplaces which will be presented at <a href="http://collectiveintelligenceconference.org" target="_blank">Collective Intelligence, 2017</a></p>
 				</div>
 		</div>
-		<div class="area4 experience tab">
+		<div class="4 experience tab">
 			<div class="logo wide moocs"></div>
 			<div class="grow">
 				<p>People are complex and only partially rational. As a consequence, incentives in socio-technical systems' can drastically influence how effectively people use them. With algorithmic game theory, a branch of economics, incentives can be carefully designed to achieve specific behavioral goals. Many socio-technical systems today stand to benefit from incorporating these lessons.</p>
@@ -101,13 +101,17 @@
 	<script>
 		var buttons = document.getElementsByClassName("tabSelector")
 		var tabs = document.getElementsByClassName("tab")
-		function tab(selectedTab){
-			Array.prototype.forEach.call(buttons, function(button){ button.id = "" })
-			selectedTab.id = "currentTab"
-// 			alert(selectedTab.name)
-			Array.prototype.forEach.call(tabs, function(tab){ if (tab.classList[0] == selectedTab.classList[0] ) { tab.style.display = "flex"; } else { tab.style.display = "none"; } })
+		function chooseTab(newTabButton){
+			clearInterval(looping)
+			setTab(newTabButton)
 		}
-		tab(buttons[0])
+		function setTab(newTabButton){
+			Array.prototype.forEach.call(buttons, function(button){ button == newTabButton ? button.id = "currentTab" : button.id = "" })
+			Array.prototype.forEach.call(tabs, function(tab){ tab.classList[0] == newTabButton.classList[0] ? tab.style.display = "flex" : tab.style.display = "none" })
+		}
+		function nextTab(){ setTab( buttons[parseInt( document.getElementById("currentTab").classList[0]) % buttons.length]) }
+		setTab(buttons[0])
+		var looping = setInterval(nextTab, 3000)
 	</script>
 	<script>
 		var xmlhttp = new XMLHttpRequest();
