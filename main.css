@@ -98,7 +98,7 @@ textarea {
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	max-width: 50em;
+	max-width: 52em;
 	margin: auto;
 }
 
@@ -304,11 +304,13 @@ nav .current a{
 }
 
 footer {
+/* 	position: relative; */
+/* 	bottom: -2em; */
+	margin: 1em;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content:center;
-	margin:1em 0;
-	color: inherit;
+	background: white;
 }
 
 footer div {
