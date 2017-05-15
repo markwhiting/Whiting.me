@@ -266,10 +266,13 @@ nav .current a{
   margin: 0 .5em 0 0;
 }
 
+.stanford{ background-image: url("stanford.png");}
 .cmu{ background-image: url("cmu.png");}
+.pitt{ background-image: url("pitt.svg");}
 .kaist{ background-image: url("kaist.gif");}
 .rmit{ background-image: url("rmit.png");}
 .zju{ background-image: url("zju.png");}
+.adaptive{ background-image: url("adaptive.png");}
 
 .constitution{ background-image: url("daemo.png");}
 .moocs{ background-image: url("uom.png");}
