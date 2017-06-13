@@ -75,7 +75,7 @@
 				<div class="logo wide guilds"></div>
 				<div class="grow">
 					<p>Crowdsourcing tools today offer ad hoc and remote work arrangements at an unprecedented scale, yet many of the perks of traditional jobs have not yet been realized for this community; no benefits, limited community of support, systems hindering economic mobility.</p>
-					<p>I am part of the <a href="http://crowdresearch.stanford.edu" target="_blank">Stanford Crowd Research Collective</a>, a group of almost 1000 collaborators from around the world, led by Stanford professor <a href="http://hci.stanford.edu/msb/" target="_blank">Michael Bernstein</a>. We conduct research as a crowd, and are developing <a href="http://daemo.stanford.edu" target="_blank">Daemo</a> (<a href="http://hci.stanford.edu/publications/2017/crowdguilds/CSCWDemo.pdf" target="_blank">CSCW'17 demo</a>), a new crowdsourcing platform that aims to mitigate many of the shortcomings of crowdsourcing today.</p>
+					<p>I am part of the <a href="http://crowdresearch.stanford.edu" target="_blank">Stanford Crowd Research Collective</a>, a group of almost 1000 collaborators from around the world, led by Stanford professor <a href="http://hci.stanford.edu/msb/" target="_blank">Michael Bernstein</a>. We conduct research as a crowd, and are developing <a href="http://daemo.org" target="_blank">Daemo</a> (<a href="http://hci.stanford.edu/publications/2017/crowdguilds/CSCWDemo.pdf" target="_blank">CSCW'17 demo</a>), a new crowdsourcing platform that aims to mitigate many of the shortcomings of crowdsourcing today.</p>
 					<p>We also introduced crowd guilds (<a href="http://hci.stanford.edu/publications/2017/crowdguilds/guilds.pdf" target="_blank">CSCW'17</a>), a way to improve reputation and feedback within crowdsourcing, inspired by traditional worker guilds, and we have developed the <a href="https://crowdresearch.github.io/open-gov/constitution/2016/11/21/constitution.html" target="_blank">Daemo Constitution</a> (<a href="http://collectiveintelligenceconference.org" target="_blank">Collective Intelligence'17</a>), a mechanism for self governance in crowdsourcing marketplaces.</p>
 				</div>
 			</div>
@@ -88,7 +88,7 @@
 				</div>
 			</div>
 		</section>
-		<footer class="copyright center">
+		<footer id="footer" class="copyright center">
 			<div id="updated"></div>
 			<div>🐛 <a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue.</a></div>
 			<div>🔏 <a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span></div>
@@ -108,6 +108,8 @@
 	function nextTab(){ setTab( buttons[parseInt( document.getElementById("currentTab").classList[0]) % buttons.length]) }
 	setTab(buttons[0])
 	var looping = setInterval(nextTab, 4000)
+	
+// 	document.getElementById("footer").style.position = "absolute";
 	</script>
 	<script>
 	var xmlhttp = new XMLHttpRequest();

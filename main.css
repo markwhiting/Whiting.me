@@ -310,13 +310,13 @@ nav .current a{
 }
 
 footer {
-  /* 	position: relative; */
-  /* 	bottom: -2em; */
-  margin: 1em;
+  position: relative;
+  bottom: 0em;
+  margin: 1em 1em 0;
   display: flex;
   flex-wrap: wrap;
   justify-content:center;
-  background: white;
+background: white;
 }
 
 footer div {
