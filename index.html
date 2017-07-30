@@ -91,7 +91,7 @@
 		</section>
 		<footer id="footer">
 			<div id="updated"></div>
-			<div>🐛 <a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue.</a></div>
+			<div>🐛 <a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue</a>.</div>
 			<div>🔏 <a href="mailto:Mark@Whiting.me">Mark E. Whiting</a> © <span id="year"></span></div>
 		</footer>
 	</div>
@@ -157,7 +157,7 @@
 			case 10: month = "November"; break;
 			case 11: month = "December";
 		}
-		var fullDate = "" + month + " " + date.getDate() + ", " + date.getFullYear();
+		var fullDate = "Updated " + month + " " + date.getDate();
 		var commit = latestEvent.payload.commits[0];
 		document.getElementById("updated").innerHTML =  '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">🛠</a> ' + fullDate + '<span class="no-print">: <a   target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>. <spam>";
 	}
