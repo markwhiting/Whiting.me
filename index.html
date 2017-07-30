@@ -15,7 +15,7 @@
 	<!-- 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,700" rel="stylesheet"> -->
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
+<body onresize="fixFooter()">
 	<div id="wrapper">
 		<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -89,7 +89,7 @@
 				</div>
 			</div>
 		</section>
-		<footer id="footer" class="copyright center">
+		<footer id="footer">
 			<div id="updated"></div>
 			<div>🐛 <a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue.</a></div>
 			<div>🔏 <a href="mailto:mwhiting@andrew.cmu.edu">Mark E. Whiting</a> © <span id="year"></span></div>
@@ -110,7 +110,16 @@
 	setTab(buttons[0])
 	var looping = setInterval(nextTab, 4000)
 	
-// 	document.getElementById("footer").style.position = "absolute";
+	
+	var wrapper = document.getElementById("wrapper")
+	function fixFooter(){
+		if (wrapper.clientHeight < window.innerHeight-100) {
+			document.getElementById("footer").style.position = "absolute";
+		} else {
+			document.getElementById("footer").style.position = "relative";
+		}
+	}
+	fixFooter()
 	</script>
 	<script>
 	var xmlhttp = new XMLHttpRequest();
@@ -154,10 +163,12 @@
 	}
 	document.getElementById("year").innerHTML = new Date().getFullYear();
 	</script>
+<!--
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
+-->
 	<script>
 	(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
 		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
