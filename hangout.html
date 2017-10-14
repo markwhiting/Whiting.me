@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="refresh" content="0; url=https://hangouts.google.com/call/itMqAn-BlOApegsjP8ZaAAEE" />
     <style>
+	    
+	    * {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-transition: all 0.2s ease-in-out; /* Safari */
+  transition: all 0.2s ease-in-out;
+}
 
         * {
             line-height: 1.2;
@@ -13,13 +19,32 @@
         }
 
         html {
-            color: #888;
+	        -webkit-font-smoothing: antialiased;
+	        -moz-osx-font-smoothing: grayscale;
             display: table;
-            font-family: sans-serif;
             height: 100%;
             text-align: center;
             width: 100%;
         }
+        
+        a {
+  color: rgb(0, 136, 204);
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+        
+        ::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+        ::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
 
         body {
             display: table-cell;
@@ -28,9 +53,8 @@
         }
 
         h1 {
-            color: #555;
             font-size: 2em;
-            font-weight: 400;
+            font-weight: 700;
         }
 
         p {
@@ -54,9 +78,8 @@
     </style>
 </head>
 <body>
-    <h1>Hangout not loaded</h1>
-    <p>Sorry, but the hangout you were trying to view is not loading.</p>
-    <p>Please contact <a href="mailto:Mark@Whiting.me">Mark Whiting</a></p>
+    <h1>Loading...</h1>
+    <p>Click <a href="https://hangouts.google.com/call/itMqAn-BlOApegsjP8ZaAAEE">here</a> if it does not load.
 </body>
 
     <!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
