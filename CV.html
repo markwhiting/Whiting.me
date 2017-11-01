@@ -23,9 +23,9 @@
 		<nav>
 			<div class="" id="Title"><span class="newsEmoji">🏠</span> <a href="index.html">Home</a></div>
 			<div class="current" id="CV"><span class="newsEmoji">👨🏻‍🎓</span></div>
-			<div class="" id="Meet"><a href="meet.html">Meet</a> <span class="newsEmoji">📅</span></div>
+			<div class="" id="Meet"><a href="meet.html" target="_blank">Meet</a> <span class="newsEmoji">📅</span></div>
 		</nav>
-		
+
 		<section class="leftRound">
 			<header class="cvHeader">
 				<div class="name">
@@ -354,18 +354,18 @@
 						document.getElementById("updated").innerHTML =  '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">🛠</a> ' + fullDate + '<span class="no-print">: <a   target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>. <spam>";
 					}
 					document.getElementById("year").innerHTML = new Date().getFullYear();
-					
-					
+
+
 					var wrapper = document.getElementById("wrapper")
 					function fixFooter(){
 						if (wrapper.clientHeight < window.innerHeight-100) {
 							document.getElementById("footer").style.position = "absolute";
 						} else { document.getElementById("footer").style.position = "relative";
-							
+
 						}
 					}
 					fixFooter()
-					
+
 					</script>
 					<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 					<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>

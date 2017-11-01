@@ -23,7 +23,7 @@
 		<nav>
 			<div class="current" id="Title"><span class="newsEmoji">👨🏻‍💻</span> <a href="index.html">Mark Whiting</a></div>
 			<div id="CV"><a href="CV.html">CV</a> <span class="newsEmoji">📄</span></div>
-			<div class="" id="Meet"><a href="meet.html">Meet</a> <span class="newsEmoji">📅</span></div>
+			<div class="" id="Meet"><a href="meet.html" target="_blank">Meet</a> <span class="newsEmoji">📅</span></div>
 
 		</nav>
 		<section class="rightRound justified hiphen">
@@ -109,8 +109,8 @@
 	function nextTab(){ setTab( buttons[parseInt( document.getElementById("currentTab").classList[0]) % buttons.length]) }
 	setTab(buttons[0])
 	var looping = setInterval(nextTab, 4000)
-	
-	
+
+
 	var wrapper = document.getElementById("wrapper")
 	function fixFooter(){
 		if (wrapper.clientHeight < window.innerHeight-100) {
