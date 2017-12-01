@@ -8,8 +8,8 @@
 
 * {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  -webkit-transition: all 0.2s ease-in-out; /* Safari */
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all .4s ease-out; /* Safari */
+  transition: all .4s ease-out;
 }
 
 /* ==========================================================================
@@ -227,7 +227,7 @@ nav .current a{
 }
 
 .name h1 {
-  margin: 0;
+  margin: 0 0 0.2em 0;
   padding: 0;
   text-align: center;
 }
