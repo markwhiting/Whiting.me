@@ -10,6 +10,10 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-transition: all .4s ease-out; /* Safari */
   transition: all .4s ease-out;
+  
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ==========================================================================
@@ -19,8 +23,7 @@ Base styles: opinionated defaults
 html {
   font-size: .8em;
   max-width: 100%;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
+  margin: 0;;
 }
 
 
