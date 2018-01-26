@@ -189,11 +189,12 @@ nav .current a{
 }
 
 .news:hover, .experience:hover, .publication:hover{
-  border-radius: .5em;
   /* 	-webkit-backdrop-filter: saturate(1.8) blur(100px); */
   /* 	background-color: rgba(178, 215, 255, 0.2); */
   /* 	background-color: rgba(255, 187, 184, 0.2); */
   background-color: rgba(232, 93, 0, 0.1);
+/*   a really nice hover shadow from Apple.com */
+/*   box-shadow: rgba(0, 0, 0, 0.298039) 0px 39px 70px -14px;  */
 }
 
 .tabSelector {
@@ -258,6 +259,7 @@ nav .current a{
   align-content: flex-start;
   margin: 0 -1em;
   padding: .5em 1em;
+  border-radius: .5em;
 }
 
 .logo {
@@ -311,6 +313,7 @@ nav .current a{
   margin: 0 -1em;
   padding: .5em 1em;
   text-align: justify;
+  border-radius: .5em;
 }
 
 footer {
