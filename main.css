@@ -8,8 +8,8 @@
 
 * {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  -webkit-transition: all .4s ease-out; /* Safari */
-  transition: all .4s ease-out;
+  -webkit-transition: background .4s ease-out; /* Safari */
+  transition: background .4s ease-out;
   
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,9 +21,10 @@ Base styles: opinionated defaults
 ========================================================================== */
 
 html {
-  font-size: .8em;
+  font-size: 14px;
   max-width: 100%;
-  margin: 0;;
+  margin: 0;
+  font-weight: 400;
 }
 
 
@@ -103,7 +104,7 @@ Author's custom styles
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 52em;
+  max-width: 700px;
   margin: auto;
 }
 
@@ -112,20 +113,24 @@ p {
   margin: 0;
 }
 
+h1, h2 { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
 h1 {
-  font-size: 1.5em;
-  padding: 1em;
+  font-weight: 300;
+  font-size: 25px;
+  padding: 0;
   margin: 0;
 }
 
 h2 {
-  font-size: 1.4em;
-  padding: 1em;
-  margin: 0;
+  font-weight: 500;
+  font-size: 17px;
+  margin: 2em 0 0 0;
+  padding: 5px 0;
 }
 
 strong,b {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 a {
@@ -163,13 +168,13 @@ nav{
   font-weight: bold
 }
 
-nav .current a{
+.current a{
   color: rgb(232, 93, 0);
 }
 
 .sectionHeading{
-  margin: 1em 0 0 0;
-  padding: 0;
+/*   margin: 1em 0 0 0; */
+/*   padding: 0; */
 }
 
 .featuredNews {
@@ -182,10 +187,8 @@ nav .current a{
 }
 
 .news {
-  flex-basis: 11em;
-  padding: .3em;
-  font-weight: 700;
-  border-radius: .5em .5em 0 0;
+  flex-basis: 150px;
+  border-radius: 5px 5px 0 0;
 }
 
 .news:hover, .experience:hover, .publication:hover{
@@ -202,12 +205,13 @@ nav .current a{
 }
 
 #currentTab {
-  border-radius: .5em .5em 0 0;
+/*   border-radius: 7px 7px 0 0; */
   border-bottom: 2px solid rgba(232, 93, 0, 1);
 }
 
 .newsEmoji{
   font-size: xx-large;
+  display: none;
 }
 
 .cvHeader {
@@ -216,7 +220,7 @@ nav .current a{
 }
 
 .cvHeader a {
-  color: inherit;
+/*   color: inherit; */
 }
 
 .name{
@@ -231,8 +235,6 @@ nav .current a{
 }
 
 .name h1 {
-  margin: 0 0 0.2em 0;
-  padding: 0;
   text-align: center;
 }
 
@@ -259,7 +261,7 @@ nav .current a{
   align-content: flex-start;
   margin: 0 -1em;
   padding: .5em 1em;
-  border-radius: .5em;
+  border-radius: 7px;
 }
 
 .logo {
@@ -313,7 +315,7 @@ nav .current a{
   margin: 0 -1em;
   padding: .5em 1em;
   text-align: justify;
-  border-radius: .5em;
+  border-radius: 7px;
 }
 
 footer {
