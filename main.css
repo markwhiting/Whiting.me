@@ -183,6 +183,8 @@ nav a {
   color: white;
   text-decoration: none;
   background-color: hsl(200, 100%, 40%);
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 12px;
 }
 
 .button:hover {
