@@ -167,6 +167,7 @@ nav{
   flex-wrap: wrap;
   justify-content: flex-end;
   font-size: 23px;
+  padding-top: 12px
 }
 
 nav a {
