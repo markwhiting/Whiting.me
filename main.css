@@ -104,7 +104,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 700px;
   margin: auto;
-  padding: 1em;
+  padding: 5px;
 }
 
 p {
@@ -170,7 +170,7 @@ nav{
 }
 
 nav a {
-  margin: 0 5px;
+  margin: 0 0 0 5px;
 }
 
 .button {
