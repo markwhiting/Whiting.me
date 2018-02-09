@@ -10,7 +10,7 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-transition: background .4s ease-out; /* Safari */
   transition: background .4s ease-out;
-  
+
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,13 +21,11 @@ Base styles: opinionated defaults
 ========================================================================== */
 
 html {
-  font-size: 14px;
+  font-size: 15px;
   max-width: 100%;
   margin: 0;
   font-weight: 400;
 }
-
-
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -106,6 +104,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 700px;
   margin: auto;
+  padding: 1em;
 }
 
 p {
@@ -117,7 +116,7 @@ h1, h2 { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helve
 
 h1 {
   font-weight: 300;
-  font-size: 25px;
+  font-size: 35px;
   padding: 0;
   margin: 0;
 }
@@ -125,8 +124,8 @@ h1 {
 h2 {
   font-weight: 500;
   font-size: 17px;
-  margin: 2em 0 0 0;
-  padding: 5px 0;
+  margin: 1em 0 0 0;
+  padding: 5px 0 0 0;
 }
 
 strong,b {
@@ -159,13 +158,36 @@ a:hover{
   margin: 0 .7em;
 }
 
+header {
+  float: left;
+}
 
 nav{
   display: flex;
-  justify-content: space-between;
-  margin: .5em 0 0 0;
-  font-size: large;
-  font-weight: bold
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  font-size: 23px;
+}
+
+nav a {
+  margin: 0 5px;
+}
+
+.button {
+  font-size: medium;
+  border: none;
+  font-weight: 600;
+  margin: 3px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  background-color: hsl(200, 100%, 40%);
+}
+
+.button:hover {
+  text-decoration: none;
+  background-color: hsl(200, 100%, 32%);
 }
 
 .current a{
@@ -196,6 +218,7 @@ nav{
   /* 	background-color: rgba(178, 215, 255, 0.2); */
   /* 	background-color: rgba(255, 187, 184, 0.2); */
   background-color: rgba(232, 93, 0, 0.1);
+
 /*   a really nice hover shadow from Apple.com */
 /*   box-shadow: rgba(0, 0, 0, 0.298039) 0px 39px 70px -14px;  */
 }
@@ -210,7 +233,7 @@ nav{
 }
 
 .newsEmoji{
-  font-size: xx-large;
+  font-size: x-large;
   display: none;
 }
 
@@ -246,7 +269,7 @@ nav{
 }
 
 .contact div{
-  padding: 0 .7em;
+  padding: 5px 10px;
 }
 
 .highlightRows {
@@ -320,7 +343,7 @@ nav{
 
 footer {
   position: relative;
-  bottom: 0em;
+  bottom: 5px;
   left: 0;
   right: 0;
   margin: 1em auto 0 auto;

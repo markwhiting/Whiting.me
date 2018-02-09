@@ -12,66 +12,42 @@
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="main.css">
+<!-- 	<link rel="stylesheet" href="sakura.css"> -->
 	<!-- 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,700" rel="stylesheet"> -->
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
+
 <body onresize="fixFooter()">
-	<div id="wrapper">
-		<!--[if lt IE 8]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-		<nav>
-			<h1 class="current" id="Title"><span class="newsEmoji">👨🏻‍💻</span> <a href="index.html">Mark Whiting</a></h1>
-			<h1 id="CV"><a href="CV.html">CV</a> <span class="newsEmoji">📄</span></h1>
-			<h1 class="" id="Meet"><a href="meet.html" target="_blank">Meet</a> <span class="newsEmoji">📅</span></h1>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-		</nav>
-		<section class="rightRound justified hiphen">
-			<p>I'm a postdoctoral scholar at <a href="https://www.stanford.edu" target="_blank">Stanford</a> under <a href="http://hci.stanford.edu/msb/" target="_blank">Michael Bernstein</a>.</p>
-			<p>The difficulty of making good creative decisions constrains human productivity. My work focuses on how we might make creative decisions in the future, with help from computational systems and models of human behavior, improving speed and reliability.</p>
-			<p>My recent work studies four areas:</p>
-			<div class="featuredNews hoverTab">
-				<h2 class="1 news tabSelector" onmouseover="chooseTab(this)">
-					<div class="newsEmoji">🤖💭🎨</div>
-					Automated design
-				</h2>
-				<h2 class="2 news tabSelector" onmouseover="chooseTab(this)">
-					<div class="newsEmoji">🤔☯🤖</div>
-					Hybrid systems
-				</h2>
-				<h2 class="3 news tabSelector" onmouseover="chooseTab(this)">
-					<div class="newsEmoji">👥👤👥</div>
-					Crowd resourcing
-				</h2>
-				<h2 class="4 news tabSelector" onmouseover="chooseTab(this)">
-					<div class="newsEmoji">⚖️➞🏆</div>
-					Incentive design
-				</h2>
-			</div>
-			<!-- 		<h2 class="sectionHeading">📣 Latest updates</h2> -->
-			<!-- 		<div class="featuredNews"> -->
-			<!--
-			<div class="news"><strong>Daemo Constitution</strong> was accepted to <a href="http://collectiveintelligenceconference.org" target="_blank">CI'17</a></div>
-			<div class="news"><strong><a href="https://arxiv.org/pdf/1703.06169.pdf" target="_blank">Identified Peer Review for MOOCs</a></strong> was accepted to <a href="http://learningatscale.acm.org/las2017/" target="_blank">L@S'17</a></div>
-			<div class="news"><strong><a href="http://dl.acm.org/citation.cfm?doid=2998181.2998234" target="_blank">Crowd Guilds</a></strong> & <strong><a href="http://dl.acm.org/citation.cfm?doid=3022198.3023270" target="_blank">Daemo</a></strong> were shown at <a href="https://cscw.acm.org/2017/" target="_blank">CSCW'17</a></div>
-		-->
+<header>
+	<h1 class="current"><span class="newsEmoji">👨🏻‍💻</span> <a href="index.html">Mark E. Whiting</a></h1>
+</header>
 
-		<!-- 			<div class="news"><a href="http://link.springer.com/chapter/10.1007%2F978-3-319-44989-0_15" target="_blank">Automated Grammar Induction</a> was presented at <a href="http://dccconferences.org/dcc16/" target="_blank">DCC'16</a></div> -->
-		<!-- 		</div> -->
-		<div class="highlightRows">
-			<div class="1 experience tab">
+<nav>
+	<a href="CV.html">CV</a>
+	<a class="button" href="meet.html" target="_blank">Meet me</a >
+</nav>
+
+<main>
+	<section class="rightRound justified hiphen">
+		<h2>I'm a postdoctoral scholar at <a href="https://www.stanford.edu" target="_blank">Stanford</a> under <a href="http://hci.stanford.edu/msb/" target="_blank">Michael Bernstein</a>.</h2>
+		<p>The difficulty of making good creative decisions constrains human productivity. My work focuses on how we might make creative decisions in the future, with help from computational systems and models of human behavior, improving speed and reliability.</p>
+		<h2>My recent work studies four areas:</h2>
+		<article>
+			<h2>Automated design</h2>
+			<div class="experience">
 				<div class="logo wide grammar"></div>
 				<div class="grow">
 					<p>To automate design, a computational representation of all the nuances of design is necessary. This has been challenging because even humans are usually unsure of the best ways to abstract design into a formal representation.</p>
 					<p>For my PhD, I have introduced an automatic, grammar-based system for structuring information (<a href="http://link.springer.com/chapter/10.1007/978-3-319-44989-0_15" target="_blank">DCC'16</a>). We applied this tool to data from design, architecture, and abstract systems (<a href="https://www.cambridge.org/core/journals/ai-edam" target="_blank">AI EDAM</a> forthcoming). We used this representation technique for detecting subtle differences between data sets, as accurately as the existing state of the art, but requiring almost 10 times less data.</p>
 				</div>
 			</div>
-			<div class="2 experience tab">
-				<div class="grow">
-					<p>Humans are pretty good at chess. Computers are better. Humans and computers together have been the best. We are still not very good at getting the best out of this kind of working relationship</p>
-					<p>Mentoring several groups of undergraduate students at CMU and in the Pitt i3 program, we have worked to build systems that are made stronger by encouraging humans and computers to work together. For example, We have explored how socio-technical systems can provide novel insight into new product development opportunities, by performing computational analysis on Amazon product reviews (iConference'16). In ongoing work, we are studying how novice humans can be supported by computer systems to provide rich design insight.</p>
-				</div>
-			</div>
+		</article>
+		<article>
+			<h2>Crowd resourcing</h2>
 			<div class="3 experience tab">
 				<div class="logo wide guilds"></div>
 				<div class="grow">
@@ -80,6 +56,9 @@
 					<p>We also introduced crowd guilds (<a href="http://hci.stanford.edu/publications/2017/crowdguilds/guilds.pdf" target="_blank">CSCW'17</a>), a way to improve reputation and feedback within crowdsourcing, inspired by traditional worker guilds, and we have developed the <a href="https://crowdresearch.github.io/open-gov/constitution/2016/11/21/constitution.html" target="_blank">Daemo Constitution</a> (<a href="http://collectiveintelligenceconference.org" target="_blank">CI'17</a>), a mechanism for self governance in crowdsourcing marketplaces.</p>
 				</div>
 			</div>
+		</article>
+		<article>
+			<h2>Incentive design</h2>
 			<div class="4 experience tab">
 				<div class="logo wide moocs"></div>
 				<div class="grow">
@@ -87,95 +66,107 @@
 					<p>Together with Dilrukshi Gamage, Thejan Rajapakshe, Haritha Thilakarathne, Indika Perera, and Shantha Fernando, we have explored how aligning the incentives for peer feedback in online learning helps improve the perceived quality and length of the feedback (<a href="https://arxiv.org/pdf/1703.06169.pdf" target="_blank">L@S'17</a>). We have used similar approaches for crowd guilds (<a href="http://hci.stanford.edu/publications/2017/crowdguilds/guilds.pdf" target="_blank">CSCW'17</a>) and boomerang (<a href="http://hci.stanford.edu/publications/2016/boomerang/boomerang-uist.pdf" target="_blank">UIST'16</a>) with the <a href="http://crowdresearch.stanford.edu" target="_blank">Stanford Crowd Research Collective</a>.
 					</div>
 				</div>
+		</article>
+		<article>
+			<h2>Hybrid systems</h2>
+			<div class="2 experience tab">
+				<div class="grow">
+					<p>Humans are pretty good at chess. Computers are better. Humans and computers together have been the best. We are still not very good at getting the best out of this kind of working relationship</p>
+					<p>Mentoring several groups of undergraduate students at CMU and in the Pitt i3 program, we have worked to build systems that are made stronger by encouraging humans and computers to work together. For example, We have explored how socio-technical systems can provide novel insight into new product development opportunities, by performing computational analysis on Amazon product reviews (iConference'16). In ongoing work, we are studying how novice humans can be supported by computer systems to provide rich design insight.</p>
+				</div>
 			</div>
-		</section>
-		<footer id="footer">
-			<div id="updated"></div>
-			<div>🐛 <a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue</a>.</div>
-			<div>🔏 <a href="mailto:Mark@Whiting.me">Mark Whiting</a> © <span id="year"></span></div>
-		</footer>
-	</div>
-	<script>
-	var buttons = document.getElementsByClassName("tabSelector")
-	var tabs = document.getElementsByClassName("tab")
-	function chooseTab(newTabButton){
-		clearInterval(looping)
-		setTab(newTabButton)
-	}
-	function setTab(newTabButton){
-		Array.prototype.forEach.call(buttons, function(button){ button == newTabButton ? button.id = "currentTab" : button.id = "" })
-		Array.prototype.forEach.call(tabs, function(tab){ tab.classList[0] == newTabButton.classList[0] ? tab.style.display = "flex" : tab.style.display = "none" })
-	}
-	function nextTab(){ setTab( buttons[parseInt( document.getElementById("currentTab").classList[0]) % buttons.length]) }
-	setTab(buttons[0])
-	var looping = setInterval(nextTab, 4000)
+		</article>
+</main>
 
+<footer>
+	<div id="updated"></div>
+	<div>🐛 <a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue</a>.</div>
+	<div>🔏 <a href="mailto:Mark@Whiting.me">Mark Whiting</a> © <span id="year"></span></div>
+</footer>
 
-	var wrapper = document.getElementById("wrapper")
-	function fixFooter(){
-		if (wrapper.clientHeight < window.innerHeight-100) {
-			document.getElementById("footer").style.position = "absolute";
-		} else {
-			document.getElementById("footer").style.position = "relative";
+<script>
+var buttons = document.getElementsByClassName("tabSelector")
+var tabs = document.getElementsByClassName("tab")
+function chooseTab(newTabButton){
+	clearInterval(looping)
+	setTab(newTabButton)
+}
+function setTab(newTabButton){
+	Array.prototype.forEach.call(buttons, function(button){ button == newTabButton ? button.id = "currentTab" : button.id = "" })
+	Array.prototype.forEach.call(tabs, function(tab){ tab.classList[0] == newTabButton.classList[0] ? tab.style.display = "flex" : tab.style.display = "none" })
+}
+function nextTab(){ setTab( buttons[parseInt( document.getElementById("currentTab").classList[0]) % buttons.length]) }
+setTab(buttons[0])
+var looping = setInterval(nextTab, 4000)
+
+var body = document.getElementsByTagName("body")[0]
+var footer = document.getElementsByTagName("footer")[0]
+
+function fixFooter(){
+	if (body.clientHeight < window.innerHeight-100) {
+		footer.style.position = "absolute";
+	} else {
+		footer.style.position = "relative";
+	}
+}
+fixFooter()
+</script>
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "https://api.github.com/repos/markwhiting/Whiting.me/events";
+xmlhttp.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var events = JSON.parse(this.responseText);
+		lastUpdated(events);
+	}
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function lastUpdated(events) {
+	for (i=0; i < events.length; i++) {
+		var latestEvent = events[i];
+		if (latestEvent.type == "PushEvent") {
+			break ;
 		}
 	}
-	fixFooter()
-	</script>
-	<script>
-	var xmlhttp = new XMLHttpRequest();
-	var url = "https://api.github.com/repos/markwhiting/Whiting.me/events";
-	xmlhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			var events = JSON.parse(this.responseText);
-			lastUpdated(events);
-		}
-	};
-	xmlhttp.open("GET", url, true);
-	xmlhttp.send();
 
-	function lastUpdated(events) {
-		for (i=0; i < events.length; i++) {
-			var latestEvent = events[i];
-			if (latestEvent.type == "PushEvent") {
-				break ;
-			}
-		}
-
-		var date = new Date(latestEvent.created_at);
-		var month;
-		switch (date.getMonth()) {
-			case 0: month = "January"; break;
-			case 1: month = "February"; break;
-			case 2: month = "March"; break;
-			case 3: month = "April"; break;
-			case 4: month = "May"; break;
-			case 5: month = "June"; break;
-			case 6: month = "July"; break;
-			case 7: month = "August"; break;
-			case 8: month = "September"; break;
-			case 9: month = "October"; break;
-			case 10: month = "November"; break;
-			case 11: month = "December";
-		}
-		var fullDate = "Updated " + month + " " + date.getDate();
-		var commit = latestEvent.payload.commits[0];
-		document.getElementById("updated").innerHTML =  '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">🛠</a> ' + fullDate + '<span class="no-print">: <a   target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>. <spam>";
+	var date = new Date(latestEvent.created_at);
+	var month;
+	switch (date.getMonth()) {
+		case 0: month = "January"; break;
+		case 1: month = "February"; break;
+		case 2: month = "March"; break;
+		case 3: month = "April"; break;
+		case 4: month = "May"; break;
+		case 5: month = "June"; break;
+		case 6: month = "July"; break;
+		case 7: month = "August"; break;
+		case 8: month = "September"; break;
+		case 9: month = "October"; break;
+		case 10: month = "November"; break;
+		case 11: month = "December";
 	}
-	document.getElementById("year").innerHTML = new Date().getFullYear();
-	</script>
+	var fullDate = "Updated " + month + " " + date.getDate();
+	var commit = latestEvent.payload.commits[0];
+	document.getElementById("updated").innerHTML =  '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">🛠</a> ' + fullDate + '<span class="no-print">: <a   target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>. <spam>";
+}
+document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
 <!--
-	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 -->
-	<script>
-	(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-		e.src='https://www.google-analytics.com/analytics.js';
-		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-		ga('create','UA-298094-21','auto');ga('send','pageview');
-		</script>
-	</body>
-	</html>
+<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+	function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+	e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+	e.src='https://www.google-analytics.com/analytics.js';
+	r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+	ga('create','UA-298094-21','auto');ga('send','pageview');
+	</script>
+
+</body>
+</html>
