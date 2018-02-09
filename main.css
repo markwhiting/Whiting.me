@@ -178,12 +178,12 @@ nav a {
   border: none;
   font-weight: 600;
   margin: 3px;
-  padding: 2px 5px;
+  padding: 4px 5px 0px 5px;
   border-radius: 5px;
   color: white;
   text-decoration: none;
   background-color: hsl(200, 100%, 40%);
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: "menlo", Monaco, monospace;
   font-size: 12px;
 }
 
