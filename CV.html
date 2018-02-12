@@ -270,7 +270,7 @@
 
 <footer>
 	<div id="updated"></div>
-	<div>🐛 <a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Report an issue</a>.</div>
+	<div>🐛 <a class="no-print" href="https://github.com/markwhiting/Whiting.me/issues/new" target="_blank">Bugs</a>?</div>
 	<div>🔏 <a href="mailto:Mark@Whiting.me">Mark Whiting</a> © <span id="year"></span></div>
 </footer>
 
@@ -324,22 +324,22 @@ function lastUpdated(events) {
 	var date = new Date(latestEvent.created_at);
 	var month;
 	switch (date.getMonth()) {
-		case 0: month = "January"; break;
-		case 1: month = "February"; break;
-		case 2: month = "March"; break;
-		case 3: month = "April"; break;
+		case 0: month = "Jan"; break;
+		case 1: month = "Feb"; break;
+		case 2: month = "Mar"; break;
+		case 3: month = "Apr"; break;
 		case 4: month = "May"; break;
-		case 5: month = "June"; break;
-		case 6: month = "July"; break;
-		case 7: month = "August"; break;
-		case 8: month = "September"; break;
-		case 9: month = "October"; break;
-		case 10: month = "November"; break;
-		case 11: month = "December";
+		case 5: month = "Jun"; break;
+		case 6: month = "Jul"; break;
+		case 7: month = "Aug"; break;
+		case 8: month = "Sep"; break;
+		case 9: month = "Oct"; break;
+		case 10: month = "Nov"; break;
+		case 11: month = "Dec";
 	}
-	var fullDate = "Updated " + month + " " + date.getDate();
+	var upDate = "" + month + " " + date.getDate();
 	var commit = latestEvent.payload.commits[0];
-	document.getElementById("updated").innerHTML =  '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">🛠</a> ' + fullDate + '<span class="no-print">: <a   target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>. <spam>";
+	document.getElementById("updated").innerHTML =  '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" target="_blank">🛠</a> ' + upDate + '<span class="no-print">: <a   target="_blank" href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + commit.message.toLowerCase() + "</a>. <spam>";
 }
 document.getElementById("year").innerHTML = new Date().getFullYear();
 </script>
