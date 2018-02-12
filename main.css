@@ -197,11 +197,6 @@ nav a {
   color: rgb(232, 93, 0);
 }
 
-.sectionHeading{
-/*   margin: 1em 0 0 0; */
-/*   padding: 0; */
-}
-
 .featuredNews {
   display: flex;
   flex-direction: row;
@@ -243,10 +238,6 @@ nav a {
 .cvHeader {
   display: flex;
   flex-direction: column;
-}
-
-.cvHeader a {
-/*   color: inherit; */
 }
 
 .name{
