@@ -246,10 +246,14 @@ nav a {
   justify-content: flex-start;
 }
 
-.name img {
-  width: 8em;
-  margin: 0 auto;
+img {
+  width: 100px;
+  margin: 5px 5px 5px 0;
+  float: left;
+  background-color: #f5f5f5;
+  border-radius: 4px;
 }
+
 
 .name h1 {
   text-align: center;
@@ -305,9 +309,9 @@ nav a {
 .grammar{ background-image: url("grammar.png");}
 
 .wide{
-  flex-basis: 6em;
+  flex-basis: 100px;
   flex-shrink: 0;
-  margin-right: 1em;
+  margin-right: 10px;
 }
 
 .right {
