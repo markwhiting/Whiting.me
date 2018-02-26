@@ -25,6 +25,8 @@ html {
   max-width: 100%;
   margin: 0;
   font-weight: 400;
+  background-color: #fff;
+  color: #111;
 }
 
 ::-moz-selection {
@@ -110,6 +112,7 @@ body {
 p {
   padding: .5em 0;
   margin: 0;
+  line-height: 1.4;
 }
 
 h1, h2 { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
@@ -133,12 +136,13 @@ strong,b {
 }
 
 a {
-  color: rgb(0, 136, 204);
+  color: hsl(200, 100%, 40%);
   text-decoration: none;
 }
 
 a:hover{
   text-decoration: underline;
+  color: hsl(200, 100%, 32%);
 }
 
 .hiphen {
@@ -179,7 +183,7 @@ nav a {
   border: none;
   font-weight: 600;
   margin: 3px;
-  padding: 1px 5px 0px 5px;
+  padding: 1px 4px 0px 4px;
   border-radius: 5px;
   color: white;
   text-decoration: none;
@@ -190,6 +194,7 @@ nav a {
 .button:hover {
   text-decoration: none;
   background-color: hsl(200, 100%, 32%);
+  color: white;
 }
 
 .current a{
@@ -246,7 +251,7 @@ nav a {
 }
 
 img {
-  width: 110px;
+  width: 125px;
   margin: 5px 5px 5px 0;
   float: left;
   background-color: #f2f2f2;
@@ -311,7 +316,7 @@ img {
 .wide{
   flex-basis: 100px;
   flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .right {
