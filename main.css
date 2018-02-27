@@ -14,6 +14,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
 }
 
 /* ==========================================================================
@@ -26,7 +28,7 @@ html {
   margin: 0;
   font-weight: 400;
   background-color: #fff;
-  color: #111;
+  color: #2C2A2B;
 }
 
 ::-moz-selection {
@@ -119,20 +121,20 @@ h1, h2 { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helve
 
 h1 {
   font-weight: 300;
-  /* font-size: 35px; */
+  font-size: 2.2rem;
   padding: 0;
   margin: 0;
 }
 
 h2 {
-  font-weight: 500;
-  /* font-size: 17px; */
-  margin: 1em 0 0 0;
-  padding: 5px 0 0 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 1.5rem 0 .1rem 0;
+  /* padding: 5px 0 0 0; */
 }
 
 strong,b {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 a {
@@ -142,6 +144,10 @@ a {
 
 a:hover{
   text-decoration: underline;
+  color: hsl(200, 100%, 32%);
+}
+
+a:visited{
   color: hsl(200, 100%, 32%);
 }
 
@@ -179,19 +185,19 @@ nav a {
 }
 
 .button {
-  font-size: small;
+  font-size: .85rem;
   border: none;
   font-weight: 600;
-  margin: 3px;
-  padding: 1px 4px 0px 4px;
-  border-radius: 5px;
+  margin: .1rem;
+  padding: .05rem .22rem;
+  border-radius: .32rem;
   color: white;
   text-decoration: none;
   background-color: hsl(200, 100%, 40%);
   font-family: "menlo", Monaco, monospace;
 }
 
-.button:hover {
+.button:hover, .button:visited{
   text-decoration: none;
   background-color: hsl(200, 100%, 32%);
   color: white;
