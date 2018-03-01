@@ -177,7 +177,7 @@ nav{
   flex-wrap: wrap;
   justify-content: flex-end;
   /* font-size: 23px; */
-  padding-top: 12px
+  padding-top: 12px;
 }
 
 nav a {
@@ -299,19 +299,18 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  margin: 0 -1em;
-  padding: .5em 1em;
+  margin: 0 -1rem;
+  padding: .5rem 1rem;
   border-radius: 7px;
 }
 
-.headingBox {
+.contentBox {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  margin: 0 -1em;
-  padding: .5em 1em;
-  border-radius: 7px;
+  margin: 0 -1rem;
+  padding: 0 1rem;
 }
 
 .logo {
