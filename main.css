@@ -6,11 +6,20 @@
 * Kroc Camen, and the H5BP dev community and team.
 */
 
+:root{
+  --background: #fff;
+  --foreground: #2C2A2B;
+  --a: hsl(200, 100%, 40%);
+  --hover: rgb(232, 93, 0);
+  --hover-bg: rgba(232, 93, 0, 0.1);
+  --visited: hsl(200, 100%, 38%);
+  --animationDetails: background .2s ease-out;
+}
+
 * {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  -webkit-transition: background .4s ease-out; /* Safari */
-  transition: background .4s ease-out;
-
+  -webkit-transition: var(--animationDetails); /* Safari */
+  transition: var(--animationDetails);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,17 +36,17 @@ html {
   max-width: 100%;
   margin: 0;
   font-weight: 400;
-  background-color: #fff;
-  color: #2C2A2B;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: var(--hover-bg);
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: var(--hover-bg);
   text-shadow: none;
 }
 
@@ -104,8 +113,6 @@ Author's custom styles
 
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   max-width: 44rem;
   margin: auto;
   padding: 5px;
@@ -138,17 +145,17 @@ strong,b {
 }
 
 a {
-  color: hsl(200, 100%, 40%);
+  color: var(--a);
   text-decoration: none;
 }
 
 a:hover, a:visited:hover{
   text-decoration: underline;
-  color: hsl(200, 100%, 32%);
+  color: var(--hover);
 }
 
 a:visited{
-  color: hsl(200, 100%, 38%);
+  color: var(--visited);
 }
 
 .hiphen {
@@ -176,7 +183,6 @@ nav{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  /* font-size: 23px; */
   padding-top: 12px;
 }
 
@@ -191,26 +197,26 @@ nav a {
   margin: .05rem;
   padding: .05rem .22rem;
   border-radius: .32rem;
-  color: white;
+  color: var(--background);
   text-decoration: none;
-  background-color: hsl(200, 100%, 40%);
+  background-color: var(--a);
   font-family: "menlo", Monaco, monospace;
 }
 
 .button:hover, .button:visited:hover{
   text-decoration: none;
-  background-color: hsl(200, 100%, 32%);
-  color: white;
+  background-color: var(--hover);
+  color: var(--background);
 }
 
 .button:visited{
   text-decoration: none;
-  background-color: hsl(200, 100%, 38%);
-  color: white;
+  background-color: var(--visited);
+  color: var(--background);
 }
 
 .current a, .current a:hover{
-  color: rgb(232, 93, 0);
+  color: var(--hover);
 }
 
 .featuredNews {
@@ -231,7 +237,7 @@ nav a {
   /* 	-webkit-backdrop-filter: saturate(1.8) blur(100px); */
   /* 	background-color: rgba(178, 215, 255, 0.2); */
   /* 	background-color: rgba(255, 187, 184, 0.2); */
-  background-color: rgba(232, 93, 0, 0.1);
+  background-color: var(--hover-bg);
 
 /*   a really nice hover shadow from Apple.com */
 /*   box-shadow: rgba(0, 0, 0, 0.298039) 0px 39px 70px -14px;  */
