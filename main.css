@@ -188,7 +188,7 @@ nav{
 }
 
 nav a {
-  margin: 0 10px 0 10px;
+  margin: 0 1rem;
 }
 
 .button {
@@ -196,7 +196,7 @@ nav a {
   height: 1rem;
   border: none;
   font-weight: 600;
-  margin: .15rem .05rem .05rem .05rem;
+  margin: .2rem .05rem .05rem .05rem;
   padding: .05rem .22rem;
   border-radius: .32rem;
   color: var(--background);
@@ -215,6 +215,10 @@ nav a {
   text-decoration: none;
   background-color: var(--visited);
   color: var(--background);
+}
+
+.spaced {
+  margin: .2rem .05rem .05rem 1rem;
 }
 
 .current a, .current a:hover{
