@@ -292,20 +292,6 @@
 </footer>
 
 <script>
-var buttons = document.getElementsByClassName("tabSelector")
-var tabs = document.getElementsByClassName("tab")
-function chooseTab(newTabButton){
-	clearInterval(looping)
-	setTab(newTabButton)
-}
-function setTab(newTabButton){
-	Array.prototype.forEach.call(buttons, function(button){ button == newTabButton ? button.id = "currentTab" : button.id = "" })
-	Array.prototype.forEach.call(tabs, function(tab){ tab.classList[0] == newTabButton.classList[0] ? tab.style.display = "flex" : tab.style.display = "none" })
-}
-function nextTab(){ setTab( buttons[parseInt( document.getElementById("currentTab").classList[0]) % buttons.length]) }
-setTab(buttons[0])
-var looping = setInterval(nextTab, 4000)
-
 var body = document.getElementsByTagName("body")[0]
 var footer = document.getElementsByTagName("footer")[0]
 
@@ -317,8 +303,7 @@ function fixFooter(){
 	}
 }
 fixFooter()
-</script>
-<script>
+
 var xmlhttp = new XMLHttpRequest();
 var url = "https://api.github.com/repos/markwhiting/Whiting.me/events";
 xmlhttp.onreadystatechange = function() {
