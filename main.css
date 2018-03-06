@@ -183,18 +183,20 @@ nav{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  padding-top: 12px;
+  margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
 nav a {
-  margin: 0 0 0 5px;
+  margin: 0 10px 0 10px;
 }
 
 .button {
   font-size: .8rem;
+  height: 1rem;
   border: none;
   font-weight: 600;
-  margin: .05rem;
+  margin: .15rem .05rem .05rem .05rem;
   padding: .05rem .22rem;
   border-radius: .32rem;
   color: var(--background);
