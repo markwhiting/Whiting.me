@@ -12,6 +12,7 @@
   --a: hsl(200, 100%, 40%);
   --hover: rgb(232, 93, 0);
   --hover-bg: rgba(232, 93, 0, 0.1);
+  --select-bg: rgba(232, 93, 0, 0.2);
   --visited: hsl(200, 100%, 38%);
   --animationDetails: background .2s ease-out;
 }
@@ -41,12 +42,12 @@ html {
 }
 
 ::-moz-selection {
-  background: var(--hover-bg);
+  background: var(--select-bg);
   text-shadow: none;
 }
 
 ::selection {
-  background: var(--hover-bg);
+  background: var(--select-bg);
   text-shadow: none;
 }
 
