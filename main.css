@@ -199,9 +199,10 @@ nav a {
   height: 1rem;
   border: none;
   font-weight: 600;
+  padding: 0.1rem 0.2rem 0.08rem 0.2rem;
+  border-radius: .2rem;
   margin: .19rem .05rem .06rem .05rem;
-  padding: .05rem .22rem;
-  border-radius: .32rem;
+  /* border-radius: .32rem; */
   color: var(--background);
   text-decoration: none;
   background-color: var(--a);
