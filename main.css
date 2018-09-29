@@ -116,7 +116,7 @@ Author's custom styles
 
 
 body {
-  max-width: 44rem;
+  max-width: 55rem;
   margin: auto;
   padding: 5px;
 }
@@ -132,7 +132,7 @@ h1, h2 { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helve
 h1 {
   font-weight: 300;
   font-size: 2.2rem;
-  padding: 0;
+  padding: 1rem 0 0 0;
   margin: 0;
 }
 
@@ -262,7 +262,7 @@ nav a {
 }
 
 .newsEmoji{
-  font-size: x-large;
+  font-size: large;
   display: none;
 }
 
