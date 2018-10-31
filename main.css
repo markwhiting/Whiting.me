@@ -1,20 +1,24 @@
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
-
-/*
-* What follows is the result of much research on cross-browser styling.
-* Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
-* Kroc Camen, and the H5BP dev community and team.
-*/
-
 :root{
-  --background: #fff;
-  --foreground: #2C2A2B;
-  --a: hsl(200, 100%, 40%);
-  --hover: rgb(232, 93, 0);
-  --hover-bg: rgba(232, 93, 0, 0.1);
-  --select-bg: rgba(232, 93, 0, 0.2);
-  --visited: hsl(200, 100%, 38%);
+  --background: hsla(0, 0%, 100%, 1);
+  --foreground: hsla(330, 2.3%, 16.9%, 1);
+  --a: hsla(200, 100%, 40%, 1);
+  --hover: hsla(24.1, 100%, 45.5%, 1);
+  --hover-bg: hsla(24.1, 100%, 45.5%, 0.1);
+  --select-bg: hsla(24.1, 100%, 45.5%, 0.2);
+  --visited: hsla(200, 100%, 38%, 1);
   --animationDetails: background .2s ease-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --background: hsla(330, 2.3%, 16.9%, 1);
+    --foreground: hsla(0, 0%, 100%, 1);
+    --a: hsla(24.1, 100%, 45.5%, 1);
+    --hover: hsla(200, 100%, 40%, 1);
+    --hover-bg: hsla(200, 100%, 40%, 0.1);
+    --select-bg: hsla(200, 100%, 40%, 0.2);
+    --visited: hsla(24.1, 100%, 43.5%, 1);
+  }
 }
 
 * {
@@ -250,16 +254,7 @@ nav a {
   background-color: var(--hover-bg);
 
 /*   a really nice hover shadow from Apple.com */
-/*   box-shadow: rgba(0, 0, 0, 0.298039) 0px 39px 70px -14px;  */
-}
-
-.tabSelector {
-  border-bottom: 2px solid rgba(232, 93, 0, 0);
-}
-
-#currentTab {
-/*   border-radius: 7px 7px 0 0; */
-  border-bottom: 2px solid rgba(232, 93, 0, 1);
+  /* box-shadow: rgba(0, 0, 0, 0.298039) 0px 39px 70px -14px;  */
 }
 
 .newsEmoji{
@@ -284,7 +279,6 @@ img {
   margin: 0;
   padding: 0;
   margin: 5px 5px 5px 0;
-  /* background-color: #f2f2f2; */
   border-radius: .3rem;
   box-shadow: rgba(0, 0, 0, 0.298039) 0px 25px 70px -14px;
 }
