@@ -1,23 +1,36 @@
 :root{
-  --background: hsla(0, 0%, 100%, 1);
-  --foreground: hsla(330, 2.3%, 16.9%, 1);
-  --a: hsla(200, 100%, 40%, 1);
-  --hover: hsla(24.1, 100%, 45.5%, 1);
-  --hover-bg: hsla(24.1, 100%, 45.5%, 0.1);
-  --select-bg: hsla(24.1, 100%, 45.5%, 0.2);
-  --visited: hsla(200, 100%, 38%, 1);
+  --light: hsla(0, 0%, 100%, 1);
+  --dark: hsla(330, 2.3%, 16.9%, 1);
+
+  --blue: hsla(200, 100%, 40%, 1);
+  --blue-dark: hsla(200, 100%, 38%, 1);
+  --blue-transparent: hsla(200, 100%, 40%, 0.2);
+  --blue-very-transparent: hsla(200, 100%, 40%, 0.1);
+
+  --orange: hsla(24.1, 100%, 45.5%, 1);
+  --orange-dark: hsla(24.1, 100%, 43.5%, 1);
+  --orange-transparent: hsla(200, 100%, 40%, 0.2);
+  --orange-very-transparent: hsla(200, 100%, 40%, 0.1);
+
+  --background: var(--light);
+  --foreground: var(--dark);
+  --a: var(--blue);
+  --hover: var(--orange);
+  --hover-bg: var(----orange-very-transparent);
+  --select-bg: var(----orange-transparent);
+  --visited: var(----blue-dark);
   --animationDetails: background .2s ease-out;
 }
 
 @media (prefers-color-scheme: dark) {
   :root{
-    --background: hsla(330, 2.3%, 16.9%, 1);
-    --foreground: hsla(0, 0%, 100%, 1);
-    --a: hsla(24.1, 100%, 45.5%, 1);
-    --hover: hsla(200, 100%, 40%, 1);
-    --hover-bg: hsla(200, 100%, 40%, 0.1);
-    --select-bg: hsla(200, 100%, 40%, 0.2);
-    --visited: hsla(24.1, 100%, 43.5%, 1);
+    --background: var(--dark);
+    --foreground: var(--light);
+    --a: var(--orange);
+    --hover: var(--blue);
+    --hover-bg: var(--blue-very-transparent);
+    --select-bg: var(--blue-transparent);
+    --visited: var(--orange-dark);
   }
 }
 
@@ -39,7 +52,6 @@ Base styles: opinionated defaults
 ========================================================================== */
 
 html {
-  /* font-size: 15px; */
   max-width: 100%;
   margin: 0;
   font-weight: 400;
@@ -120,7 +132,7 @@ Author's custom styles
 
 
 body {
-  max-width: 55rem;
+  max-width: 45rem;
   margin: auto;
   padding: 5px;
 }
@@ -165,6 +177,7 @@ a:visited{
   color: var(--visited);
 }
 
+/*
 .hiphen {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -175,6 +188,7 @@ a:visited{
 .justified {
   text-align: justify;
 }
+*/
 
 .grow {flex-grow: 1;}
 
@@ -373,7 +387,7 @@ img {
 .publication {
   margin: 0 -1em;
   padding: .5em 1em;
-  text-align: justify;
+  /* text-align: justify; */
   border-radius: 7px;
 }
 
