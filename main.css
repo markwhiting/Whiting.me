@@ -16,9 +16,9 @@
   --foreground: var(--dark);
   --a: var(--blue);
   --hover: var(--orange);
-  --hover-bg: var(----orange-very-transparent);
-  --select-bg: var(----orange-transparent);
-  --visited: var(----blue-dark);
+  --hover-bg: var(--orange-very-transparent);
+  --select-bg: var(--orange-transparent);
+  --visited: var(--blue-dark);
   --animationDetails: background .2s ease-out;
 }
 
