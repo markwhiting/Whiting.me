@@ -132,7 +132,7 @@ Author's custom styles
 
 
 body {
-  max-width: 45rem;
+  max-width: 50rem;
   margin: auto;
   padding: 5px;
 }
@@ -212,33 +212,6 @@ nav a {
   margin: 0 1rem;
 }
 
-.button {
-  font-size: .8rem;
-  height: 1rem;
-  border: none;
-  font-weight: 600;
-  padding: 0.1rem 0.2rem 0.08rem 0.2rem;
-  border-radius: .2rem;
-  margin: .19rem .05rem .06rem .05rem;
-  /* border-radius: .32rem; */
-  color: var(--background);
-  text-decoration: none;
-  background-color: var(--a);
-  font-family: "menlo", Monaco, monospace;
-}
-
-.button:hover, .button:visited:hover{
-  text-decoration: none;
-  background-color: var(--hover);
-  color: var(--background);
-}
-
-.button:visited{
-  text-decoration: none;
-  background-color: var(--visited);
-  color: var(--background);
-}
-
 .spaced {
   margin: .2rem .05rem .05rem 1rem;
 }
@@ -247,21 +220,7 @@ nav a {
   color: var(--hover);
 }
 
-.featuredNews {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-end;
-  text-align: center;
-  flex-wrap: wrap;
-}
-
-.news {
-  flex-basis: 150px;
-  border-radius: 5px 5px 0 0;
-}
-
-.news:hover, .experience:hover, .publication:hover{
+.experience:hover, .publication:hover{
   /* 	-webkit-backdrop-filter: saturate(1.8) blur(100px); */
   /* 	background-color: rgba(178, 215, 255, 0.2); */
   /* 	background-color: rgba(255, 187, 184, 0.2); */
@@ -271,20 +230,45 @@ nav a {
   /* box-shadow: rgba(0, 0, 0, 0.298039) 0px 39px 70px -14px;  */
 }
 
-.newsEmoji{
-  font-size: large;
-  display: none;
+.cvTable {
+  width: 100%;
+  font-size: 11pt;
 }
 
-.cvHeader {
-  display: flex;
-  flex-direction: column;
+/* .cvTable #updated {
+  padding-left: 1rem;
+} */
+
+.cvTable a{
+  text-decoration: none;
+  color: var(--foreground);
 }
 
-.name{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.cvTable a:hover{
+  text-decoration: underline;
+  color: var(--hover)
+}
+
+.cvTable table {
+  border-collapse: collapse;
+}
+
+.cvTable td {
+  vertical-align: top;
+  page-break-inside: avoid;
+  padding: 0.3rem 0;
+}
+
+.cvTable tr {
+  page-break-inside: avoid;
+}
+
+.cvTable .detail{
+  font-weight: 100;
+  white-space: nowrap;
+  text-align: right;
+  padding-right: 0.5rem;
+  margin-left: 1rem;
 }
 
 img {
@@ -295,11 +279,6 @@ img {
   margin: 5px 5px 5px 0;
   border-radius: .3rem;
   box-shadow: rgba(0, 0, 0, 0.298039) 0px 25px 70px -14px;
-}
-
-
-.name h1 {
-  text-align: center;
 }
 
 .contact {
@@ -371,24 +350,30 @@ img {
   order: 1;
 }
 
-.main {
-  flex-grow: 1;
+.button {
+  font-size: .8rem;
+  height: 1rem;
+  border: none;
+  font-weight: 600;
+  padding: 0.1rem 0.2rem 0.08rem 0.2rem;
+  border-radius: .2rem;
+  margin: .19rem .05rem .06rem .05rem;
+  color: var(--background);
+  text-decoration: none;
+  background-color: var(--a);
+  font-family: "menlo", Monaco, monospace;
 }
 
-.detail {
-  flex-basis: 10em;
-  text-align: end
+.button:hover, .button:visited:hover{
+  text-decoration: none;
+  background-color: var(--hover);
+  color: var(--background);
 }
 
-.prodjectTitle{
-  font-style: italic;
-}
-
-.publication {
-  margin: 0 -1em;
-  padding: .5em 1em;
-  /* text-align: justify; */
-  border-radius: 7px;
+.button:visited{
+  text-decoration: none;
+  background-color: var(--visited);
+  color: var(--background);
 }
 
 footer {
@@ -506,6 +491,14 @@ Print styles.
 Inlined to avoid the additional HTTP request:
 http://www.phpied.com/delay-loading-your-print-css/
 ========================================================================== */
+
+@page {
+   counter-increment: page;
+   counter-reset: page 1;
+   @top-right {
+      content: "Cognitive Science<br>Page " counter(page) " of " counter(pages);
+   }
+}
 
 @media print {
   *,
