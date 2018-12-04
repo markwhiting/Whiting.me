@@ -230,6 +230,10 @@ nav a {
   /* box-shadow: rgba(0, 0, 0, 0.298039) 0px 39px 70px -14px;  */
 }
 
+.cvHeadNote{
+  margin-left: 1rem;
+}
+
 .cvTable {
   width: 100%;
   font-size: 11pt;
@@ -268,7 +272,6 @@ nav a {
   white-space: nowrap;
   text-align: right;
   padding-right: 0.5rem;
-  margin-left: 1rem;
 }
 
 img {
