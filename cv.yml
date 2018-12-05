@@ -1,0 +1,9 @@
+- name: Mark Whiting
+  bio: "Mark is a postdoc at Stanford and, has led design workshops around the world for 10 years."
+  image: "/assets/mark.png"
+  url: "http://whiting.me"
+
+- name: Ardon Shorr
+  bio: "Ardon Shorr is the co-founder of [Public Communication for Researchers](https://www.cmu.edu/student-org/pcr/), where he's helped over 500 faculty, graduate students, and startups explain their work and why it matters. His workshops have appeared at universities and conferences across the US, including Harvard, Carnegie Mellon, AAAS, and SXSWedu. He is a biology Ph.D. candidate at CMU, and a fellow with the National Science Foundation. His work involves building tools to test how living things sense gravity, with the hope of improving long-term space travel."
+  image: "/assets/ardon.png"
+  url: "http://ardonshorr.com"
