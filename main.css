@@ -234,6 +234,10 @@ nav a {
   margin-left: 1rem;
 }
 
+.cvHeadNote a {
+  text-decoration: none;
+}
+
 .cvTable {
   width: 100%;
   font-size: 11pt;
@@ -495,11 +499,16 @@ Inlined to avoid the additional HTTP request:
 http://www.phpied.com/delay-loading-your-print-css/
 ========================================================================== */
 
+
+@page{
+  margin: 1.6cm;
+}
+
 @page {
    counter-increment: page;
    counter-reset: page 1;
-   @top-right {
-      content: "Cognitive Science<br>Page " counter(page) " of " counter(pages);
+   @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
    }
 }
 
