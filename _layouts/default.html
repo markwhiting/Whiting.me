@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  <script>
+  var xmlhttp = new XMLHttpRequest();
+  var url = "https://api.github.com/repos/markwhiting/Whiting.me/events";
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var events = JSON.parse(this.responseText);
+      lastUpdated(events);
+    }
+  };
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
+
+  function lastUpdated(events) {
+    for (i = 0; i < events.length; i++) {
+      var latestEvent = events[i];
+      if (latestEvent.type == "PushEvent") {
+        break;
+      }
+    }
+
+    var date = new Date(latestEvent.created_at);
+    var month;
+    switch (date.getMonth()) {
+      case 0: month = "Jan"; break;
+      case 1: month = "Feb"; break;
+      case 2: month = "Mar"; break;
+      case 3: month = "Apr"; break;
+      case 4: month = "May"; break;
+      case 5: month = "Jun"; break;
+      case 6: month = "Jul"; break;
+      case 7: month = "Aug"; break;
+      case 8: month = "Sep"; break;
+      case 9: month = "Oct"; break;
+      case 10: month = "Nov"; break;
+      case 11: month = "Dec";
+    }
+    var upDate = "" + month + " " + date.getDate() + ", " + date.getFullYear();
+    var commit = latestEvent.payload.commits[0];
+    Array.from(document.getElementsByClassName('upDate')).forEach(element => {
+      element.innerHTML = '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" ></a><a href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + upDate + "</a>"
+    })
+  }
+  </script>
+
+  </body>
+
+</html>
