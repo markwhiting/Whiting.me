@@ -2,8 +2,8 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
+  // border-top: 5px solid $grey-color-dark;
+  // border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
@@ -11,8 +11,8 @@
 }
 
 .site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
+  @include relative-font-size(2.5);
+  font-weight: $light-font-weight * 3;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
   margin-bottom: 0;
@@ -106,8 +106,8 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit 0;
+  // border-top: 1px solid $grey-color-light;
+  padding: $visual-space 0;
 }
 
 .footer-heading {
@@ -176,7 +176,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: 0;
   flex: 1;
 }
 
@@ -252,4 +252,57 @@
       @include relative-font-size(1.125);
     }
   }
+}
+
+.section{
+  margin: $visual-space 0 0 0;
+}
+
+.row{
+  padding-bottom: $visual-space;
+}
+
+.left {
+  white-space: nowrap;
+  text-align: right;
+  vertical-align: top;
+  padding-right: $visual-space;
+}
+
+.small {
+  font-size: $small-font-size;
+  line-height: $base-line-height * $base-font-size * 1.1;
+}
+
+.light {
+  font-weight: $light-font-weight;
+  color: $grey-color-dark;
+}
+
+.smallCaps {
+  font-variant: all-small-caps;
+  font-variant-numeric: tabular-nums !important;
+}
+
+.note, .note p{
+  font-size: $small-font-size;
+  font-style: italic;
+  font-variant-numeric: oldstyle-nums;
+  margin-bottom: 0;
+}
+
+.clean a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.clean a:hover{
+  text-decoration: underline;
+}
+
+.headerComment{
+  float: right;
+  padding-left: $spacing-unit;
+  line-height: $base-line-height * $base-font-size * 2.25;
+  vertical-align: bottom;
 }

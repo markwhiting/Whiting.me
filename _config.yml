@@ -16,7 +16,7 @@
 title: Mark E. Whiting
 email: mark@whiting.me
 description: >- # this means to ignore newlines until "baseurl:"
-  Mark E. Whiting studies uses HCI and AI to understand how people interact.
+  Mark uses HCI and AI to understand how people coordinate.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://whiting.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: markwhiting

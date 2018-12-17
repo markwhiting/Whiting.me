@@ -37,10 +37,21 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: 0 //$spacing-unit / 2;
 }
 
+h1, h2, h3, h4, h5, h6,
+blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-top: $visual-space;
+  margin-bottom: 0 //$spacing-unit / 2;
+}
 
+p, blockquote, pre,
+ul, ol, dl {
+  font-variant-numeric: oldstyle-nums;
+}
 
 /**
  * `main` element
@@ -72,8 +83,6 @@ figcaption {
   font-size: $small-font-size;
 }
 
-
-
 /**
  * Lists
  */
@@ -94,7 +103,8 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  font-weight: $light-font-weight * 6;
+  padding: $spacing-unit 0 0 0;
 }
 
 
@@ -191,8 +201,6 @@ pre {
   }
 }
 
-
-
 /**
  * Clearfix
  */
@@ -223,32 +231,54 @@ pre {
   }
 }
 
+.onlyPrint {
+  display: none !important;
+}
 
+@media print
+{
+  .noPrint, .noPrint *
+  {
+    display: none !important;
+  }
 
+  .onlyPrint {
+    display: inline !important;
+  }
+}
+
+strong {
+  font-weight: $light-font-weight * 6 !important;
+}
+
+table, td, tr {
+  padding: 0;
+  margin: 0;
+}
 /**
  * Tables
  */
-table {
-  margin-bottom: $spacing-unit;
-  width: 100%;
-  text-align: $table-text-align;
-  color: lighten($text-color, 18%);
-  border-collapse: collapse;
-  border: 1px solid $grey-color-light;
-  tr {
-    &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
-    }
-  }
-  th, td {
-    padding: ($spacing-unit / 3) ($spacing-unit / 2);
-  }
-  th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
-  }
-  td {
-    border: 1px solid $grey-color-light;
-  }
-}
+// table {
+//   margin-bottom: $spacing-unit;
+//   width: 100%;
+//   text-align: $table-text-align;
+//   color: lighten($text-color, 18%);
+//   border-collapse: collapse;
+//   border: 1px solid $grey-color-light;
+//   tr {
+//     &:nth-child(even) {
+//       background-color: lighten($grey-color-light, 6%);
+//     }
+//   }
+//   th, td {
+//     padding: ($spacing-unit / 3) ($spacing-unit / 2);
+//   }
+//   th {
+//     background-color: lighten($grey-color-light, 3%);
+//     border: 1px solid darken($grey-color-light, 4%);
+//     border-bottom-color: darken($grey-color-light, 12%);
+//   }
+//   td {
+//     border: 1px solid $grey-color-light;
+//   }
+// }
