@@ -284,6 +284,9 @@
   font-variant-numeric: tabular-nums !important;
 }
 
+.button::before { content: "["; }
+.button::after { content: "]"; }
+
 .note, .note p{
   font-size: $small-font-size;
   font-style: italic;
