@@ -15,14 +15,26 @@ $spacing-unit: 30px !default;
 $visual-space: 0.3rem !default;
 $spacing-unit: $visual-space;
 
-$text-color: hsla(330, 2.3%, 16.9%, 1) !default;
-$background-color: hsla(0, 0%, 100%, 1) !default;
-$brand-color: hsla(200, 100%, 40%, 1) !default;
-$alt-brand-color: hsla(24.1, 100%, 45.5%, 1) !default;
+$dark: hsla(330, 2.3%, 16.9%, 1) !default;
+$light: hsla(0, 0%, 100%, 1) !default;
+$blue: hsla(200, 100%, 40%, 1) !default;
+$orange: hsla(24.1, 100%, 45.5%, 1) !default;
 
-$grey-color: lighten($text-color, 40%) !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark: darken($grey-color, 25%) !default;
+$text-color: $dark;
+$background-color: $light;
+$brand-color: $blue;
+$alt-brand-color: $orange;
+
+@media (prefers-color-scheme: dark) {
+  $text-color: $light;
+  $background-color: $dark;
+  $brand-color: $orange;
+  $alt-brand-color: $blue;
+}
+
+$grey-color: lighten($text-color, 40%);
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
 
 $table-text-align: left !default;
 
