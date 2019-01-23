@@ -1,4 +1,4 @@
-:root{
+:root {
   --light: hsla(0, 0%, 100%, 1);
   --dark: hsla(330, 2.3%, 16.9%, 1);
 
@@ -19,11 +19,11 @@
   --hover-bg: var(--orange-very-transparent);
   --select-bg: var(--orange-transparent);
   --visited: var(--blue-dark);
-  --animationDetails: background .2s ease-out;
+  --animationDetails: background 0.2s ease-out;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root{
+  :root {
     --background: var(--dark);
     --foreground: var(--light);
     --a: var(--orange);
@@ -36,8 +36,8 @@
 
 * {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", Helvetica, sans-serif;
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", Helvetica, sans-serif;
   -webkit-transition: var(--animationDetails); /* Safari */
   transition: var(--animationDetails);
   text-rendering: optimizeLegibility;
@@ -130,7 +130,6 @@ Browser Upgrade Prompt
 Author's custom styles
 ========================================================================== */
 
-
 body {
   max-width: 50rem;
   margin: auto;
@@ -138,12 +137,16 @@ body {
 }
 
 p {
-  padding: .5em 0;
+  padding: 0.5em 0;
   margin: 0;
   line-height: 1.4;
 }
 
-h1, h2 { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+h1,
+h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+}
 
 h1 {
   font-weight: 300;
@@ -155,11 +158,12 @@ h1 {
 h2 {
   font-weight: 700;
   font-size: 1.2rem;
-  margin: 1.5rem 0 .1rem 0;
+  margin: 1.5rem 0 0.1rem 0;
   /* padding: 5px 0 0 0; */
 }
 
-strong,b {
+strong,
+b {
   font-weight: 700;
 }
 
@@ -168,12 +172,13 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:visited:hover{
+a:hover,
+a:visited:hover {
   text-decoration: underline;
   color: var(--hover);
 }
 
-a:visited{
+a:visited {
   color: var(--visited);
 }
 
@@ -190,17 +195,19 @@ a:visited{
 }
 */
 
-.grow {flex-grow: 1;}
+.grow {
+  flex-grow: 1;
+}
 
 #wrapper {
-  margin: 0 .7em;
+  margin: 0 0.7em;
 }
 
 header {
   float: left;
 }
 
-nav{
+nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -213,24 +220,26 @@ nav a {
 }
 
 .spaced {
-  margin: .2rem .05rem .05rem 1rem;
+  margin: 0.2rem 0.05rem 0.05rem 1rem;
 }
 
-.current a, .current a:hover{
+.current a,
+.current a:hover {
   color: var(--hover);
 }
 
-.experience:hover, .publication:hover{
+.experience:hover,
+.publication:hover {
   /* 	-webkit-backdrop-filter: saturate(1.8) blur(100px); */
   /* 	background-color: rgba(178, 215, 255, 0.2); */
   /* 	background-color: rgba(255, 187, 184, 0.2); */
   background-color: var(--hover-bg);
 
-/*   a really nice hover shadow from Apple.com */
+  /*   a really nice hover shadow from Apple.com */
   /* box-shadow: rgba(0, 0, 0, 0.298039) 0px 39px 70px -14px;  */
 }
 
-.cvHeadNote{
+.cvHeadNote {
   margin-left: 1rem;
 }
 
@@ -247,14 +256,14 @@ nav a {
   padding-left: 1rem;
 } */
 
-.cvTable a{
+.cvTable a {
   text-decoration: none;
   color: var(--foreground);
 }
 
-.cvTable a:hover{
+.cvTable a:hover {
   text-decoration: underline;
-  color: var(--hover)
+  color: var(--hover);
 }
 
 .cvTable table {
@@ -271,7 +280,7 @@ nav a {
   page-break-inside: avoid;
 }
 
-.cvTable .detail{
+.cvTable .detail {
   font-weight: 100;
   white-space: nowrap;
   text-align: right;
@@ -284,7 +293,7 @@ img {
   margin: 0;
   padding: 0;
   margin: 5px 5px 5px 0;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   box-shadow: rgba(0, 0, 0, 0.298039) 0px 25px 70px -14px;
 }
 
@@ -295,7 +304,7 @@ img {
   flex-wrap: wrap;
 }
 
-.contact div{
+.contact div {
   padding: 5px 10px;
 }
 
@@ -310,7 +319,7 @@ img {
   justify-content: space-between;
   align-content: center;
   margin: 0 -1rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 7px;
 }
 
@@ -330,23 +339,47 @@ img {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  margin: 0 .5em 0 0;
+  margin: 0 0.5em 0 0;
 }
 
-.stanford{ background-image: url("stanford.png");}
-.cmu{ background-image: url("cmu.png");}
-.pitt{ background-image: url("pitt.svg");}
-.kaist{ background-image: url("kaist.gif");}
-.rmit{ background-image: url("rmit.png");}
-.zju{ background-image: url("zju.png");}
-.adaptive{ background-image: url("adaptive.png");}
-.ideo{ background-image: url("ideo.jpg");}
-.constitution{ background-image: url("daemo.png");}
-.moocs{ background-image: url("uom.png");}
-.guilds{ background-image: url("guilds.png");}
-.grammar{ background-image: url("grammar.png");}
+.stanford {
+  background-image: url("stanford.png");
+}
+.cmu {
+  background-image: url("cmu.png");
+}
+.pitt {
+  background-image: url("pitt.svg");
+}
+.kaist {
+  background-image: url("kaist.gif");
+}
+.rmit {
+  background-image: url("rmit.png");
+}
+.zju {
+  background-image: url("zju.png");
+}
+.adaptive {
+  background-image: url("adaptive.png");
+}
+.ideo {
+  background-image: url("ideo.jpg");
+}
+.constitution {
+  background-image: url("daemo.png");
+}
+.moocs {
+  background-image: url("uom.png");
+}
+.guilds {
+  background-image: url("guilds.png");
+}
+.grammar {
+  background-image: url("grammar.png");
+}
 
-.wide{
+.wide {
   flex-basis: 100px;
   flex-shrink: 0;
   margin-right: 20px;
@@ -358,26 +391,27 @@ img {
 }
 
 .button {
-  font-size: .8rem;
+  font-size: 0.8rem;
   height: 1rem;
   border: none;
   font-weight: 600;
   padding: 0.1rem 0.2rem 0.08rem 0.2rem;
-  border-radius: .2rem;
-  margin: .19rem .05rem .06rem .05rem;
+  border-radius: 0.2rem;
+  margin: 0.19rem 0.05rem 0.06rem 0.05rem;
   color: var(--background);
   text-decoration: none;
   background-color: var(--a);
   font-family: "menlo", Monaco, monospace;
 }
 
-.button:hover, .button:visited:hover{
+.button:hover,
+.button:visited:hover {
   text-decoration: none;
   background-color: var(--hover);
   color: var(--background);
 }
 
-.button:visited{
+.button:visited {
   text-decoration: none;
   background-color: var(--visited);
   color: var(--background);
@@ -392,7 +426,7 @@ footer {
   width: inherit;
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: center;
   align-content: flex-end;
   font-size: small;
 }
@@ -487,9 +521,9 @@ Modify as content requires.
 }
 
 @media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -499,17 +533,16 @@ Inlined to avoid the additional HTTP request:
 http://www.phpied.com/delay-loading-your-print-css/
 ========================================================================== */
 
-
-@page{
+@page {
   margin: 1.6cm;
 }
 
 @page {
-   counter-increment: page;
-   counter-reset: page 1;
-   @bottom-right {
-      content: "Page " counter(page) " of " counter(pages);
-   }
+  counter-increment: page;
+  counter-reset: page 1;
+  @bottom-right {
+    content: "Page " counter(page) " of " counter(pages);
+  }
 }
 
 @media print {
@@ -535,62 +568,60 @@ http://www.phpied.com/delay-loading-your-print-css/
 }
 */
 
-abbr[title]:after {
-  content: " (" attr(title) ")";
-}
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
 
-/*
+  /*
 * Don't show links that are fragment identifiers,
 * or use the `javascript:` pseudo protocol
 */
 
-a[href^="#"]:after,
-a[href^="javascript:"]:after {
-  content: "";
-}
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
 
-pre,
-blockquote {
-  border: 1px solid #999;
-  page-break-inside: avoid;
-}
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
 
-/*
+  /*
 * Printing Tables:
 * http://css-discuss.incutio.com/wiki/Printing_Tables
 */
 
-thead {
-  display: table-header-group;
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
 
-tr,
-img {
-  page-break-inside: avoid;
-}
-
-img {
-  max-width: 100% !important;
-}
-
-p,
-h2,
-h3 {
-  orphans: 3;
-  widows: 3;
-}
-
-h2,
-h3 {
-  page-break-after: avoid;
-}
-
-}
-
-@media print
-{
-  .no-print, .no-print *
-  {
+@media print {
+  .no-print,
+  .no-print * {
     display: none !important;
   }
 }
