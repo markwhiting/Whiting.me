@@ -5,7 +5,7 @@
 layout: home
 ---
 
-## I study coordination at scale.
+**I study coordination at scale.**
 
 I believe that learning to be better together is the single most important thing we can do to facilitate our longterm success; as individuals, and as a species.
 
