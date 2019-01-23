@@ -5,14 +5,14 @@
 layout: home
 ---
 
-## I study coordination at scale.
+<!-- ## I study coordination at scale.
 
 I believe that learning to be better together is the single most important thing we can do to facilitate our longterm success; as individuals, and as a species.
 
 **I'm a postdoc in the [Stanford HCI group](https://hci.stanford.edu)** with [Michael Bernstein](http://hci.stanford.edu/msb/), and I'm on the academic job market.
 
 I'm usually `markwhiting` online.
-
+ -->
 <!-- The difficulty of making good creative decisions constrains human productivity. My work focuses on how we might make decisions in the future, with help from computational systems and models of human behavior, improving speed and reliability. **My recent work studies four areas:**
 
  ## Automated design
