@@ -8,10 +8,10 @@ layout: default
   itemtype="http://schema.org/BlogPosting"
 >
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">
+    <h2 class="post-title p-name" itemprop="name headline">
       {{ page.title | escape }}
-    </h1>
-    <p class="post-meta">
+    </h2>
+    <!-- <p class="post-meta">
       <time
         class="dt-published"
         datetime="{{ page.date | date_to_xmlschema }}"
@@ -27,7 +27,7 @@ layout: default
         }}</span></span
       >
       {%- endif -%}
-    </p>
+    </p> -->
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">{{ content }}</div>

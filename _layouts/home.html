@@ -19,27 +19,25 @@ layout: default
   }}
 
   {%- if site.posts.size > 0 -%}
-  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-
+  <h2>Recent topics:</h2>
   <ul class="post-list">
+    {{
+      site.static_files.name
+    }}
     {%- for post in site.posts -%}
     <li>
-      <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} -->
-      <!-- <span class="post-meta">{{ post.date | date: date_format }}</span> -->
-      <h3>
-        <a
-          class="post-link"
-          href="{{ post.url | relative_url }}"
-          target="_self"
-        >
-          {{ post.title | escape }}
-        </a>
-      </h3>
-      {{ post.excerpt }}
+      <a class="post-link" href="{{ post.url | relative_url }}" target="_self">
+        {%- if post.image -%} {% assign images = site.static_files | where:
+        "name", post.image %} {% for image in images %}
+        <img
+          class="post-image"
+          src="{{ image.path }}"
+          alt="{{ post.title | escape }}"
+        />
+        {% endfor %} {%- endif -%}<strong>{{ post.title | escape }}</strong>
+      </a>
     </li>
     {%- endfor -%}
   </ul>
-
-  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
   {%- endif -%}
 </div>

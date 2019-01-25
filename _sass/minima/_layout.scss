@@ -174,20 +174,15 @@
   flex: 1;
 }
 
-.page-heading {
-  @include relative-font-size(2);
-}
-
-.post-list-heading {
-  @include relative-font-size(1.75);
-}
-
 .post-list {
   margin-left: 0;
   list-style: none;
 
   > li {
+    display: inline-block;
     margin-bottom: $spacing-unit;
+    width: 25%;
+    text-align: center;
   }
 }
 
@@ -198,21 +193,22 @@
 
 .post-link {
   display: block;
-  @include relative-font-size(1.5);
+}
+
+.post-image {
+  margin: auto;
+  display: block;
+  height: 6rem;
 }
 
 /**
  * Posts
  */
 .post-header {
-  margin-bottom: $spacing-unit;
+  // margin-bottom: $spacing-unit;
 }
 
 .post-title {
-  @include relative-font-size(2.625);
-  letter-spacing: -1px;
-  line-height: 1;
-
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
   }
