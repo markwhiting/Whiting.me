@@ -19,12 +19,11 @@ layout: default
   }}
 
   {%- if site.posts.size > 0 -%}
-  <h2>Recent topics:</h2>
+
+  <h2>Recent<h2>
   <ul class="post-list">
-    {{
-      site.static_files.name
-    }}
-    {%- for post in site.posts -%}
+    {%- assign posts = site.posts | sample: 4 -%}
+    {%- for post in posts -%}
     <li>
       <a class="post-link" href="{{ post.url | relative_url }}" target="_self">
         {%- if post.image -%} {% assign images = site.static_files | where:
@@ -34,7 +33,7 @@ layout: default
           src="{{ image.path }}"
           alt="{{ post.title | escape }}"
         />
-        {% endfor %} {%- endif -%}<strong>{{ post.title | escape }}</strong>
+        {% endfor %} {%- endif -%}{{post.title | escape }}
       </a>
     </li>
     {%- endfor -%}

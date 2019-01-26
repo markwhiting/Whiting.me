@@ -1,0 +1,28 @@
+---
+layout: default
+title: 🗃
+permalink: /all/
+---
+
+<table class="clean">
+  {% for post in site.posts %}
+  <tr>
+    <td class="left light small">
+      <time
+        datetime="{{ post.date | date_to_xmlschema }}"
+        itemprop="datePublished"
+      >
+        {%- assign date_format = site.minima.date_format | default: "%b, %Y" -%}
+        {{ post.date | date: date_format }}
+      </time>
+    </td>
+    <td class="row">
+      <a href="{{ post.url }}"
+        ><strong>{{ post.title }}</strong></a
+      >
+      <!-- in {{ post.categories | array_to_sentence_string }}. -->
+      <!-- <span class="light note">{{ post.excerpt | markdownify }}</span> -->
+    </td>
+  </tr>
+  {% endfor %}
+</table>
