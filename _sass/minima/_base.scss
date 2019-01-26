@@ -208,6 +208,13 @@ code {
   padding: 1.5px 4px;
 }
 
+a code {
+  text-decoration: none;
+  &:hover {
+    background-color: darken($brand-color, 15%);
+  }
+}
+
 pre {
   padding: 8px 12px;
   overflow-x: auto;
