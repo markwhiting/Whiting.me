@@ -1,0 +1,73 @@
+# To update mentees, please make a pull request or contact Mark with the changes you'd like to see. Mark will review.
+
+- name: Wing Tung Wong
+  URL: http://www.wingtungwong.com
+  description: undergraduate research
+  institution: CMU
+  dateStart: 2013-01-01
+  dateEnd: 2016-01-01
+
+- name: Maika Isogawa
+  URL: http://www.maikaisogawa.com
+  description: undergraduate research
+  institution: Stanford
+  dateStart: 2018-04-01
+  dateEnd: 2018-09-01
+
+- name: Pheobe Kimm
+  URL: https://www.linkedin.com/in/phoebekimm/
+  description: undergraduate research
+  institution: Stanford
+  dateStart: 2018-07-01
+  dateEnd: 2018-12-20
+
+- name: Nik Marda
+  URL: https://www.linkedin.com/in/nmarda/
+  description: undergraduate research
+  institution: Stanford
+  dateStart: 2018-04-01
+  dateEnd: 2018-09-01
+
+- name: Allie Blaising
+  URL: https://www.linkedin.com/in/allie-blaising-b6a91b115/
+  description: visiting researcher from Cal Poly-San Luis Obispo
+  institution: Stanford
+  dateStart: 2018-07-01
+
+- name: Kevin Lin
+  description: undergraduate research
+  institution: Stanford
+  dateStart: 2018-09-01
+  dateEnd: 2018-12-20
+
+- name: Alex Huy Nguyen
+  description: visiting researcher from Minerva
+  institution: Stanford
+  dateStart: 2018-07-01
+  dateEnd: 2018-09-01
+
+- name: Phoebe Yao
+  description: undergraduate research
+  institution: Stanford
+  dateStart: 2018-12-01
+
+- name: Chloe Barreau
+  URL: https://chloebarreau.github.io
+  description: undergraduate research
+  institution: Stanford
+  dateStart: 2018-12-01
+
+- name: Laura Fiuza
+  desciption: visiting researcher
+  institution: Stanford
+  dateStart: 2019-01-01
+
+- name: Emily Hu
+  description: undergraduate research
+  institution: Stanford
+  dateStart: 2019-01-15
+
+- name: Grant Hugh
+  description: undergraduate research
+  institution: Stanford
+  dateStart: 2019-01-01

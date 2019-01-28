@@ -5,6 +5,7 @@ permalink: /cv/
 ---
 
 <table class="clean">
+  <!-- Main CV -->
   {%- assign experienceTypes = "Training, Experience, Teaching, Awards,
   Leadership, Service" | split: ", "-%} {%- for experienceType in
   experienceTypes -%} {%- assign experienceSet = site.data.CV |
@@ -45,7 +46,51 @@ permalink: /cv/
       >{%endif%}
     </td>
   </tr>
-  {%- endfor -%} {%- endif -%} {%- endfor -%}
+  <!-- Mentees -->
+  {%- endfor -%} {%- endif -%} {%- endfor -%} {%- assign menteeSet =
+  site.data.mentees | sort: "dateStart"| reverse -%} {%- if menteeSet.size > 0
+  -%}
+  <tr>
+    <td>
+      <!-- <td colspan="2"> -->
+      <h2 class="section">Mentees</h2>
+    </td>
+    <td class="light bottom small">
+      <a
+        href="https://github.com/markwhiting/Whiting.me/blob/gh-pages/_data/bentees.yml"
+        >Submit an update.</a
+      >
+    </td>
+  </tr>
+  {%- for mentee in menteeSet -%} {%- assign yearFull = site.minima.date_format
+  | default: "%Y" -%} {%- assign yearShort = site.minima.date_format | default:
+  "%y" -%}
+  <tr>
+    {%- capture startDate -%}{{
+      mentee.dateStart | date: yearFull
+    }}{%- endcapture -%} {%- capture endDate -%}{{
+      mentee.dateEnd | date: yearFull
+    }}{%- endcapture -%}
+    <td class="left light small">
+      {{ mentee.dateStart | date: yearFull }} {%- if startDate != endDate -%}
+      {%- if mentee.dateEnd -%} –{{ mentee.dateEnd | date: yearShort }} {%- else
+      -%} {{ "→" }} {%- endif -%} {%- endif -%}
+    </td>
+    <td class="row">
+      {% if mentee.URL %}<a href="{{ mentee.URL }}"
+        >{%endif%} <strong>{{ mentee.name }}</strong
+        >{% if mentee.URL %}</a
+      >{% endif %}{% if mentee.description %}, {{ mentee.description }}{% endif
+      %}{% if mentee.institution %}, {% if mentee.institution.size > 4 %}
+      {{ mentee.institution }}{% else %}<span class="smallCaps">{{
+        mentee.institution
+      }}</span
+      >{% endif %}{% endif %}{% if mentee.description or mentee.institution
+      %}.{% endif %}
+    </td>
+  </tr>
+  {%- endfor -%}{%- endif -%}
+  <!-- Publications -->
   <tr>
     <td colspan="2"><h2 class="section">Publications</h2></td>
   </tr>

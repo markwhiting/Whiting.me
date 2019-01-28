@@ -48,6 +48,9 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  margin-top: $visual-space;
+  margin-right: $visual-space;
+  margin-left: $visual-space;
 }
 p {
   padding-bottom: 4 * $spacing-unit;
@@ -280,7 +283,9 @@ pre {
 
 @media print {
   .wrapper {
-    max-width: 900px;
+    font-size: smaller;
+    // max-width: 900px;
+    width: 100%;
   }
   .noPrint,
   .noPrint * {
