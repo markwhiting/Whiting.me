@@ -4,6 +4,11 @@ title: CV
 permalink: /cv/
 ---
 
+<!-- Set up date formats -->
+{%- assign yearFull = site.minima.date_format | default: "%Y" -%} {%- assign
+yearShort = site.minima.date_format | default: "%y" -%}
+
+<!-- Single table for entire CV -->
 <table class="clean">
   <!-- Main CV -->
   {%- assign experienceTypes = "Training, Experience, Teaching, Awards,
@@ -16,9 +21,7 @@ permalink: /cv/
       <h2 class="section">{{ experienceType }}</h2>
     </td>
   </tr>
-  {%- for experience in experienceSet -%} {%- assign yearFull =
-  site.minima.date_format | default: "%Y" -%} {%- assign yearShort =
-  site.minima.date_format | default: "%y" -%}
+  {%- for experience in experienceSet -%}
   <tr>
     {%- capture startDate -%}{{
       experience.dateStart | date: yearFull
@@ -48,45 +51,56 @@ permalink: /cv/
   </tr>
   <!-- Mentees -->
   {%- endfor -%} {%- endif -%} {%- endfor -%} {%- assign menteeSet =
-  site.data.mentees | sort: "dateStart"| reverse -%} {%- if menteeSet.size > 0
-  -%}
+  site.data.mentees | sort: "dateEnd"| reverse -%} {%- if menteeSet.size > 0 -%}
   <tr>
     <td>
       <!-- <td colspan="2"> -->
       <h2 class="section">Mentees</h2>
     </td>
-    <td class="light bottom small">
+    <td class="light bottom small noPrint">
       <a
         href="https://github.com/markwhiting/Whiting.me/blob/gh-pages/_data/mentees.yml"
         >Submit an update.</a
       >
     </td>
   </tr>
-  {%- for mentee in menteeSet -%} {%- assign yearFull = site.minima.date_format
-  | default: "%Y" -%} {%- assign yearShort = site.minima.date_format | default:
-  "%y" -%}
+  {%- assign menteeSet = site.data.mentees | sort: "dateStart" | reverse -%} {%-
+  assign institutions = menteeSet | group_by:"institution" -%} {%- for
+  institution in institutions -%}
   <tr>
-    {%- capture startDate -%}{{
-      mentee.dateStart | date: yearFull
-    }}{%- endcapture -%} {%- capture endDate -%}{{
-      mentee.dateEnd | date: yearFull
+    {%- capture startDate -%} {%- assign startOrderedMentees = institution.items
+    | sort: "startDate" -%}
+    {{
+      startOrderedMentees.first.dateStart | date: yearFull
+    }}
+    {%- endcapture -%} {%- capture endDate -%}{%- assign endOrderedMentees =
+    institution.items | sort: "endDate" -%}
+    {{
+      startOrderedMentees.last.dateEnd | date: yearFull
     }}{%- endcapture -%}
     <td class="left light small">
-      {{ mentee.dateStart | date: yearFull }} {%- if startDate != endDate -%}
-      {%- if mentee.dateEnd -%} –{{ mentee.dateEnd | date: yearShort }} {%- else
-      -%} {{ "→" }} {%- endif -%} {%- endif -%}
+      {{ startDate }}{% if startDate != endDate %}{% if endDate != "" %}–{{ endDate | slice: -2, 2
+
+
+
+      }}{% else %}{{ "→" }}{% endif %}{% endif %}
     </td>
     <td class="row">
-      {% if mentee.URL %}<a href="{{ mentee.URL }}"
-        >{%endif%} <strong>{{ mentee.name }}</strong
-        >{% if mentee.URL %}</a
-      >{% endif %}{% if mentee.description %}, {{ mentee.description }}{% endif
-      %}{% if mentee.institution %}, {% if mentee.institution.size > 4 %}
-      {{ mentee.institution }}{% else %}<span class="smallCaps">{{
-        mentee.institution
-      }}</span
-      >{% endif %}{% endif %}{% if mentee.description or mentee.institution
-      %}.{% endif %}
+      <strong
+        >{% if institution.name.size > 4 %}{{ institution.name }}{% else %}<span
+          class="smallCaps"
+          >{{ institution.name }}</span
+        >{% endif %}</strong
+      >
+      <p class="light note">
+        {%- for mentee in institution.items -%}{% if forloop.first == false and
+        forloop.last == false %},{% elsif forloop.first == false and
+        forloop.last %}, and{% endif %} {% if mentee.URL %}<a
+          href="{{ mentee.URL }}"
+          >{%endif%}{{ mentee.name }}{% if mentee.URL %}</a
+        >{% endif %}{% if mentee.notes %} ({{ mentee.notes }}){% endif %}{%
+        endfor %}
+      </p>
     </td>
   </tr>
   {%- endfor -%}{%- endif -%}
