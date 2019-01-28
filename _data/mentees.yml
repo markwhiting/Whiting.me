@@ -81,16 +81,6 @@
   dateStart: 2018-01-01
   dateEnd: 2018-04-20
 
-- name: Abhay Kumar Agarwal
-  institution: Stanford
-  dateStart: 2017-10-10
-  dateEnd: 2018-04-20
-
-- name: Hao Wu
-  institution: Stanford
-  dateStart: 2018-01-01
-  dateEnd: 2018-04-20
-
 - name: Kristen Law
   institution: Stanford
   dateStart: 2017-09-10
@@ -103,45 +93,54 @@
 
 - name: Monique Jeffrey
   institution: i3
+  notes: UMBC
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
 
 - name: Abrere Sophie Kozolan
   institution: i3
+  notes: UMBC
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
 
 - name: Samuel Osei-Afriyie
   institution: i3
+  notes: <span class="smallCaps">SUNY</span> Oneonta
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
 
 - name: Imauri Hazel
   institution: i3
+  notes: UMBC
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
 
 - name: Jeremiah Azurin
   institution: i3
+  notes: Harvard
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
 
 - name: Alex Selimov
   institution: i3
+  notes: UCF
   dateStart: 2014-06-20
   dateEnd: 2016-03-20
 
 - name: Simon Smith
   institution: i3
+  notes: University of Wisconsin-Madison
   dateStart: 2014-06-20
   dateEnd: 2016-03-20
 
 - name: Laurel Rawley
   institution: i3
+  notes: University of Houston
   dateStart: 2014-06-20
   dateEnd: 2016-03-20
 
 - name: Jose Valderrama
   institution: i3
+  notes: UCF
   dateStart: 2014-06-20
   dateEnd: 2016-03-20

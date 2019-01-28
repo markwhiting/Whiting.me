@@ -49,9 +49,11 @@ yearShort = site.minima.date_format | default: "%y" -%}
       >{%endif%}
     </td>
   </tr>
+
+  {%- endfor -%} {%- endif -%} {%- endfor -%}
   <!-- Mentees -->
-  {%- endfor -%} {%- endif -%} {%- endfor -%} {%- assign menteeSet =
-  site.data.mentees | sort: "dateEnd"| reverse -%} {%- if menteeSet.size > 0 -%}
+  {%- assign menteeSet = site.data.mentees | sort: "dateStart" | reverse -%} {%-
+  if menteeSet.size > 0 -%}
   <tr>
     <td>
       <!-- <td colspan="2"> -->
@@ -68,21 +70,18 @@ yearShort = site.minima.date_format | default: "%y" -%}
   assign institutions = menteeSet | group_by:"institution" -%} {%- for
   institution in institutions -%}
   <tr>
-    {%- capture startDate -%} {%- assign startOrderedMentees = institution.items
-    | sort: "startDate" -%}
+    {%- assign startOrderedMentees = institution.items | sort: "startDate"
+    -%}{%- capture startDate -%}
     {{
       startOrderedMentees.first.dateStart | date: yearFull
     }}
-    {%- endcapture -%} {%- capture endDate -%}{%- assign endOrderedMentees =
-    institution.items | sort: "endDate" -%}
+    {%- endcapture -%}{%- assign endOrderedMentees = institution.items | sort:
+    "endDate" -%}{%- capture endDate -%}
     {{
       startOrderedMentees.last.dateEnd | date: yearFull
     }}{%- endcapture -%}
     <td class="left light small">
       {{ startDate }}{% if startDate != endDate %}{% if endDate != "" %}–{{ endDate | slice: -2, 2
-
-
-
       }}{% else %}{{ "→" }}{% endif %}{% endif %}
     </td>
     <td class="row">
@@ -98,8 +97,10 @@ yearShort = site.minima.date_format | default: "%y" -%}
         forloop.last %}, and{% endif %} {% if mentee.URL %}<a
           href="{{ mentee.URL }}"
           >{%endif%}{{ mentee.name }}{% if mentee.URL %}</a
-        >{% endif %}{% if mentee.notes %} ({{ mentee.notes }}){% endif %}{%
-        endfor %}
+        >{% endif %}{% if mentee.notes %} ({% if mentee.notes.size > 4 %}{{
+          mentee.notes
+        }}{% else %}<span class="smallCaps">{{ mentee.notes }}</span
+        >{% endif %}){% endif %}{% endfor %}
       </p>
     </td>
   </tr>
