@@ -70,19 +70,24 @@ yearShort = site.minima.date_format | default: "%y" -%}
   assign institutions = menteeSet | group_by:"institution" -%} {%- for
   institution in institutions -%}
   <tr>
-    {%- assign startOrderedMentees = institution.items | sort: "startDate"
-    -%}{%- capture startDate -%}
+    {%- assign startOrderedMentees = institution.items | sort: "startDate" |
+    reverse -%}{%- capture startDate -%}
     {{
-      startOrderedMentees.first.dateStart | date: yearFull
+      startOrderedMentees.last.dateStart | date: yearFull
     }}
     {%- endcapture -%}{%- assign endOrderedMentees = institution.items | sort:
-    "endDate" -%}{%- capture endDate -%}
+    "endDate" | reversed -%}{%- capture endDate -%}
     {{
-      startOrderedMentees.last.dateEnd | date: yearFull
+      startOrderedMentees.first.dateEnd | date: yearFull
     }}{%- endcapture -%}
     <td class="left light small">
       {{ startDate }}{% if startDate != endDate %}{% if endDate != "" %}–{{ endDate | slice: -2, 2
-      }}{% else %}{{ "→" }}{% endif %}{% endif %}
+
+
+
+
+
+      }}{% else %}→{% endif %}{% endif %}
     </td>
     <td class="row">
       <strong
