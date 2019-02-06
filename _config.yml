@@ -20,7 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://whiting.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: markwhiting
-github_username:  markwhiting
+github_username: markwhiting
 google_analytics: UA-298094-21
 
 # Build settings
@@ -28,7 +28,6 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

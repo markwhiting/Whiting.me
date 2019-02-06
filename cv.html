@@ -23,23 +23,19 @@ yearShort = site.minima.date_format | default: "%y" -%}
   </tr>
   {%- for experience in experienceSet -%}
   <tr>
-    {%- capture startDate -%}{{
-      experience.dateStart | date: yearFull
-    }}{%- endcapture -%} {%- capture endDate -%}{{
-      experience.dateEnd | date: yearFull
+    {%- capture startDate -%}{{ experience.dateStart | date: yearFull }}{%-
+    endcapture -%} {%- capture endDate -%}{{ experience.dateEnd | date: yearFull
     }}{%- endcapture -%}
     <td class="left light small">
       {{ experience.dateStart | date: yearFull }} {%- if startDate != endDate
-      -%} {%- if experience.dateEnd -%} –{{
-        experience.dateEnd | date: yearShort
-      }}
-      {%- else -%} {{ "→" }} {%- endif -%} {%- endif -%}
+      -%} {%- if experience.dateEnd -%} –{{ experience.dateEnd | date: yearShort
+      }} {%- else -%} {{ "→" }} {%- endif -%} {%- endif -%}
     </td>
     <td class="row">
       {% if experience.institutionURL %}<a
         href="{{ experience.institutionURL }}"
-        >{%endif%} <strong>{{ experience.institutionFull }}</strong
-        >{% if experience.institutionURL %}</a
+        >{%endif%} <strong>{{ experience.institutionFull }}</strong>{% if
+        experience.institutionURL %}</a
       >{%endif%}{% if experience.institutionShort %}
       <span class="smallCaps">({{ experience.institutionShort }})</span>{% endif
       %}{% if experience.position %}, {{ experience.position }}{% if
@@ -71,20 +67,13 @@ yearShort = site.minima.date_format | default: "%y" -%}
   institution in institutions -%}
   <tr>
     {%- assign startOrderedMentees = institution.items | sort: "startDate" |
-    reverse -%}{%- capture startDate -%}
-    {{
-      startOrderedMentees.last.dateStart | date: yearFull
-    }}
-    {%- endcapture -%}{%- assign endOrderedMentees = institution.items | sort:
-    "endDate" | reversed -%}{%- capture endDate -%}
-    {{
-      startOrderedMentees.first.dateEnd | date: yearFull
-    }}{%- endcapture -%}
+    reverse -%}{%- capture startDate -%} {{ startOrderedMentees.last.dateStart |
+    date: yearFull }} {%- endcapture -%}{%- assign endOrderedMentees =
+    institution.items | sort: "endDate" | reversed -%}{%- capture endDate -%} {{
+    startOrderedMentees.first.dateEnd | date: yearFull }}{%- endcapture -%}
     <td class="left light small">
-      {{ startDate }}{% if startDate != endDate %}{% if endDate != "" %}–{{ endDate | slice: -2, 2
-
-
-      }}{% else %}→{% endif %}{% endif %}
+      {{ startDate }}{% if startDate != endDate %}{% if endDate != "" %}–{{
+      endDate | slice: -2, 2 }}{% else %}→{% endif %}{% endif %}
     </td>
     <td class="row">
       <strong
@@ -100,8 +89,8 @@ yearShort = site.minima.date_format | default: "%y" -%}
           href="{{ mentee.URL }}"
           >{%endif%}{{ mentee.name }}{% if mentee.URL %}</a
         >{% endif %}{% if mentee.notes %} ({% if mentee.notes.size > 4 %}{{
-          mentee.notes
-        }}{% else %}<span class="smallCaps">{{ mentee.notes }}</span
+        mentee.notes }}{% else %}<span class="smallCaps"
+          >{{ mentee.notes }}</span
         >{% endif %}){% endif %}{% endfor %}
       </p>
     </td>

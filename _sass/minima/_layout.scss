@@ -172,6 +172,11 @@
 .page-content {
   padding: 0;
   flex: 1;
+  p > img {
+  border-radius: 1.5 * $spacing-unit;
+  max-width: 20rem;
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 25px 70px -14px;
+}
 }
 
 .post-list {
@@ -314,3 +319,5 @@
 h2 {
   @include relative-font-size(1.2);
 }
+
+
