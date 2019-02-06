@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /job-talk/
+exclude: true
 ---
 
 ## Scaled humanity: computational scaffolds for pro-social interaction
