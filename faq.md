@@ -11,7 +11,7 @@ permalink: /faq/
 2. Can I have a pdf of your CV.
    > Yes, my [CV](https://whiting.me/cv) is printer friendly and can be used to save a PDF.
 3. Whats going on with your site?
-   > Its heavily inspired by sites from great faculty around the internet, especially [Scott Klemmer](https://d.ucsd.edu/srk/) and [Michael Bernstein](https://hci.stanford.edu/msb/).
+   > It's heavily inspired by sites from great faculty around the internet, especially [Scott Klemmer](https://d.ucsd.edu/srk/) and [Michael Bernstein](https://hci.stanford.edu/msb/).
 4. Do you provide consulting services?
    > Yes, I consult through [Cultured Fit](https://cultured.fit).
 5. What if I have another question?
