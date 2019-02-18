@@ -159,23 +159,29 @@ h6 {
  * Links
  */
 a {
-  color: $brand-color;
+  // color: $brand-color;
+  color: $text-color;
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    // color: darken($brand-color, 15%);
+  color: $text-color;
   }
 
   &:hover {
-    color: darken($brand-color, 15%);
-    text-decoration: underline;
+    // color: darken($brand-color, 15%);
+  color: $text-color;
+    // text-decoration: underline;
+    text-decoration: none;
+    background-color: transparentize($alt-brand-color, 0.7);
+    border-radius: $spacing-unit / 2;
   }
 
   .social-media-list &:hover {
     text-decoration: none;
 
     .username {
-      text-decoration: underline;
+      // text-decoration: underline;
     }
   }
 }
@@ -203,7 +209,7 @@ pre,
 code {
   color: $background-color;
   @include relative-font-size(0.9375);
-  border-radius: 0.3rem;
+  border-radius: $spacing-unit /2;
   background-color: transparentize($brand-color, 0.3);
 }
 
