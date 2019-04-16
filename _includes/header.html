@@ -5,7 +5,7 @@
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <a class="site-title noPrint" rel="author" href="{{ "/" | relative_url }}" target="_self">{{ site.title | escape }}</a><span class="site-title onlyPrint" rel="author">{{ site.title | escape }}</span>
 
-    <p class="headerComment clean onlyPrint"><a rel="author" href="{{ "/" | relative_url }}" target="_self">whiting.me</a><span class="light">, {{ site.time | date: "%b %d, %Y" }}</span></p>
+    <p class="headerComment clean onlyPrint"><a rel="author" href="{{ "/" | relative_url }}" target="_self">mark@whiting.me</a><span class="light">, {{ site.time | date: "%b %d, %Y" }}</span></p>
 
     {%- if page_paths -%}
       <nav class="site-nav">
