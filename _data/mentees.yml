@@ -7,6 +7,10 @@
 #   dateStart: yyyy-mm-dd (if you don't know the day, just put 01)
 #   dateEnd: yyyy-mm-dd (if you don't know the day, just put 01)
 
+- name: Lydia Stone 
+  institution: Stanford
+  dateStart: 2019-04-01
+
 - name: Maika Isogawa
   URL: http://www.maikaisogawa.com
   institution: Stanford
@@ -36,6 +40,7 @@
   notes: Cal Poly-San Luis Obispo
   institution: Stanford
   dateStart: 2018-07-01
+  dateEnd: 2019-04-01
 
 - name: Kevin Lin
   institution: Stanford
@@ -56,6 +61,7 @@
   URL: https://chloebarreau.github.io
   institution: Stanford
   dateStart: 2018-12-01
+  dateEnd: 2019-04-01
 
 - name: Laura Fiuza
   URL: https://www.linkedin.com/in/laura-fiuza-ba1077b4/
