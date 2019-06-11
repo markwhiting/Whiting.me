@@ -1,4 +1,4 @@
-# To update mentees, please make a pull request or contact Mark with the changes you'd like to see. Mark will review.
+# To update mentees, please make a pull request or contact Mark with the changes you'd like to see.
 
 # Adhere to the format:
 # - name: Full name
@@ -6,6 +6,20 @@
 #   institution: where we colaborated
 #   dateStart: yyyy-mm-dd (if you don't know the day, just put 01)
 #   dateEnd: yyyy-mm-dd (if you don't know the day, just put 01)
+
+- name: J.D. Zamfirescu
+  institution: Stanford
+  dateStart: 2019-06-01
+  notes: Berkeley
+
+- name: Tonya Nguyen
+  institution: Stanford
+  dateStart: 2019-06-01
+  notes: Berkeley
+
+- name: Tonya Nguyen
+  institution: Stanford
+  dateStart: 2019-06-01
 
 - name: So Yeon Park
   institution: Stanford
