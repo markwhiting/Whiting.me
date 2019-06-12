@@ -53,7 +53,7 @@ body {
   margin-left: $visual-space;
 }
 p {
-  padding-bottom: 4 * $spacing-unit;
+  padding-bottom: 1 * $spacing-unit;
 }
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -187,7 +187,7 @@ a {
  */
 blockquote {
   color: var(--grey-color);
-  border-left: 4px solid var(--grey-color-light);
+  border-left: 1px solid var(--grey-color-light);
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
   letter-spacing: -1px;
