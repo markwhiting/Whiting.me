@@ -15,26 +15,53 @@ $spacing-unit: 30px !default;
 $visual-space: 0.3rem !default;
 $spacing-unit: $visual-space;
 
-$dark: hsla(330, 2.3%, 16.9%, 1) !default;
-$light: hsla(0, 0%, 100%, 1) !default;
-$blue: hsla(200, 100%, 40%, 1) !default;
-$orange: hsla(24.1, 100%, 45.5%, 1) !default;
+:root {
+  --light: hsla(0, 0%, 100%, 1);
+  --dark: hsla(330, 2.3%, 16.9%, 1);
+  // --grey: hsla(330, 2.3%, 16.9%, 1);
 
-$text-color: $dark;
-$background-color: $light;
-$brand-color: $blue;
-$alt-brand-color: $orange;
+  --dark-grey: hsla(330, 2.3%, 35%, 1);
+  --dark-grey-dark: hsla(330, 2.3%, 25%, 1);
+  --dark-grey-light: hsla(330, 2.3%, 45%, 1);
 
-@media (prefers-color-scheme: dark) {
-  $text-color: $light;
-  $background-color: $dark;
-  $brand-color: $orange;
-  $alt-brand-color: $blue;
+  --light-grey: hsla(0, 0%, 60%, 1);
+  --light-grey-dark: hsla(0, 0%, 50%, 1);
+  --light-grey-light: hsla(0, 0%, 70%, 1);
+
+  --blue: hsla(200, 100%, 40%, 1);
+  --transparent-blue: hsla(200, 100%, 40%, 0.7);
+  --very-transparent-blue: hsla(200, 100%, 40%, 0.3);
+  --dark-blue: hsla(200, 100%, 34%, 1);
+
+  --orange: hsla(24.1, 100%, 45.5%, 1);
+  --transparent-orange: hsla(24.1, 100%, 45.5%, 0.7);
+  --very-transparent-orange: hsla(24.1, 100%, 45.5%, 0.3);
+  --dark-orange: hsla(24.1, 100%, 38.675%, 1);
+
+  --text-color: var(--dark);
+  --grey-color: var(--dark-grey);
+  --grey-color-light: var(--dark-grey-light);
+  --grey-color-dark: var(--dark-grey-dark);
+  --background-color: var(--light);
+  --brand-color: var(--blue);
+  --alt-brand-color: var(--orange);
+  --transparent-brand-color: var(--transparent-blue);
+  --transparent-alt-brand-color: var(--very-transparent-orange);
+  --dark-brand-color: var(--dark-blue);
+
+  @media (prefers-color-scheme: dark) {
+    --text-color: var(--light);
+    --grey-color: var(--light-grey);
+    --grey-color-light: var(--light-grey-dark);
+    --grey-color-dark: var(--light-grey-light);
+    --background-color: var(--dark);
+    --brand-color: var(--orange);
+    --alt-brand-color: var(--blue);
+    --transparent-brand-color: var(--transparent-orange);
+    --transparent-alt-brand-color: var(--very-transparent-blue);
+    --dark-brand-color: var(--dark-orange);
+  }
 }
-
-$grey-color: lighten($text-color, 40%);
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark: darken($grey-color, 25%);
 
 $table-text-align: left !default;
 

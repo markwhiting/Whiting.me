@@ -22,12 +22,12 @@ figure {
 }
 
 ::-moz-selection {
-  background: transparentize($alt-brand-color, 0.7);
+  background: var(--transparent-alt-brand-color);
   text-shadow: none;
 }
 
 ::selection {
-  background: transparentize($alt-brand-color, 0.7);
+  background: var(--transparent-alt-brand-color);
   text-shadow: none;
 }
 
@@ -37,8 +37,8 @@ figure {
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height}
     $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -159,21 +159,17 @@ h6 {
  * Links
  */
 a {
-  // color: $brand-color;
-  color: $text-color;
+  color: var(--text-color);
   text-decoration: none;
 
   &:visited {
-    // color: darken($brand-color, 15%);
-  color: $text-color;
+    color: var(--text-color);
   }
 
   &:hover {
-    // color: darken($brand-color, 15%);
-  color: $text-color;
-    // text-decoration: underline;
+    color: var(--text-color);
     text-decoration: none;
-    background-color: transparentize($alt-brand-color, 0.7);
+    background-color: var(--transparent-alt-brand-color);
     border-radius: $spacing-unit / 2;
   }
 
@@ -190,13 +186,15 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  color: var(--grey-color);
+  border-left: 4px solid var(--grey-color-light);
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
   letter-spacing: -1px;
   font-style: italic;
-
+  > p {
+    padding: 0.3rem;
+  }
   > :last-child {
     margin-bottom: 0;
   }
@@ -207,10 +205,10 @@ blockquote {
  */
 pre,
 code {
-  color: $background-color;
+  color: var(--background-color);
   @include relative-font-size(0.9375);
-  border-radius: $spacing-unit /2;
-  background-color: transparentize($brand-color, 0.3);
+  border-radius: $spacing-unit / 2;
+  background-color: var(--transparent-brand-color);
 }
 
 code {
@@ -220,7 +218,7 @@ code {
 a code {
   text-decoration: none;
   &:hover {
-    background-color: darken($brand-color, 15%);
+    background-color: var(--brand-color);
   }
 }
 
@@ -265,14 +263,15 @@ pre {
 }
 
 /**
- * Icons
+ * Icons/
  */
 
 .svg-icon {
   width: 16px;
   height: 16px;
   display: inline-block;
-  fill: #{$grey-color};
+  // fill: #{$grey-color};
+  fill: var(--grey-color);
   padding-right: 5px;
   vertical-align: text-top;
 }
@@ -320,9 +319,9 @@ tr {
 //   margin-bottom: $spacing-unit;
 //   width: 100%;
 //   text-align: $table-text-align;
-//   color: lighten($text-color, 18%);
+//   color: lighten(var(--text-color), 18%);
 //   border-collapse: collapse;
-//   border: 1px solid $grey-color-light;
+//   border: 1px solid var(--grey-color-light);
 //   tr {
 //     &:nth-child(even) {
 //       background-color: lighten($grey-color-light, 6%);
@@ -337,6 +336,6 @@ tr {
 //     border-bottom-color: darken($grey-color-light, 12%);
 //   }
 //   td {
-//     border: 1px solid $grey-color-light;
+//     border: 1px solid var(--grey-color-light);
 //   }
 // }
