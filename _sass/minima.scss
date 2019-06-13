@@ -23,10 +23,12 @@ $spacing-unit: $visual-space;
   --dark-grey: hsla(330, 2.3%, 35%, 1);
   --dark-grey-dark: hsla(330, 2.3%, 25%, 1);
   --dark-grey-light: hsla(330, 2.3%, 45%, 1);
+  --shadow-dark: rgba(0, 0, 0, 0.298039);
 
   --light-grey: hsla(0, 0%, 70%, 1);
   --light-grey-dark: hsla(0, 0%, 60%, 1);
   --light-grey-light: hsla(0, 0%, 80%, 1);
+  --shadow-light: rgba(255, 255, 255, 0.198039);
 
   --blue: hsla(200, 100%, 40%, 1);
   --transparent-blue: hsla(200, 100%, 40%, 0.7);
@@ -47,8 +49,9 @@ $spacing-unit: $visual-space;
   --alt-brand-color: var(--orange);
   --transparent-brand-color: var(--transparent-blue);
   --very-transparent-brand-color: var(--very-transparent-blue);
-  yy--transparent-alt-brand-color: var(--very-transparent-orange);
+  --transparent-alt-brand-color: var(--very-transparent-orange);
   --dark-brand-color: var(--dark-blue);
+  --shadow-color: var(--shadow-dark);
 
   @media (prefers-color-scheme: dark) {
     --text-color: var(--light);
@@ -59,10 +62,10 @@ $spacing-unit: $visual-space;
     --brand-color: var(--orange);
     --alt-brand-color: var(--blue);
     --transparent-brand-color: var(--transparent-orange);
-    transparent-alt-brand-color--transparent-alt-brand-color: var(
-      --very-transparent-blue
-    );
+    --very-transparent-brand-color: var(--very-transparent-orange);
+    --transparent-alt-brand-color: var(--very-transparent-blue);
     --dark-brand-color: var(--dark-orange);
+    --shadow-color: var(--shadow-light);
   }
 }
 

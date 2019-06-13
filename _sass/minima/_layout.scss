@@ -175,7 +175,7 @@
   p > img {
     border-radius: 1.5 * $spacing-unit;
     max-width: 20rem;
-    box-shadow: rgba(0, 0, 0, 0.298039) 0px 25px 70px -14px;
+    box-shadow: var(--shadow-color) 0px 25px 70px -14px;
   }
 }
 
@@ -200,15 +200,16 @@
   display: block;
   color: var(--text-color);
   font-size: $small-font-size;
+  // background: var(--very-transparent-brand-color);
+  border-radius: 1.5 * $spacing-unit;
+  padding: 0.2rem;
+  margin: 0.2rem;
 }
 
 .post-image {
-  padding: 1rem;
   margin: auto;
   display: block;
   height: 6rem;
-  background: var(--transparent-brand-color);
-  border-radius: 1.5 * $spacing-unit;
 }
 
 /**
