@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /bio
-title: Bio
+title: Bio 🐨
 exclude: false
 ---
 
