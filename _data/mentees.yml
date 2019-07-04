@@ -7,6 +7,23 @@
 #   dateStart: yyyy-mm-dd (if you don't know the day, just put 01)
 #   dateEnd: yyyy-mm-dd (if you don't know the day, just put 01)
 
+- name: Junior Diarrassouba
+  institution: Stanford
+  dateStart: 2019-06-27
+  notes: Texas Tech
+
+- name: Ryan Andrew Foulke
+  institution: Stanford
+  dateStart: 2019-06-24
+
+- name: Michelle Xing
+  institution: Stanford
+  dateStart: 2019-06-24
+
+- name: Irena Gao
+  institution: Stanford
+  dateStart: 2019-06-17
+
 - name: J.D. Zamfirescu
   institution: Stanford
   dateStart: 2019-06-01
