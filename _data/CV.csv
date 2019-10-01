@@ -11,7 +11,8 @@ IDEO CoLab,Experience,TRUE,,https://www.ideocolab.com,fellow,,2018-01-01,2018-02
 Stanford crowd research collective,Experience,TRUE,,http://crowdresearch.stanford.edu/w/index.php?title=Main_Page,team member,,2016-02-01,,
 Pitt iSchool inclusion institute,Experience,TRUE,I3,http://www.i3-inclusion.org,research mentor,,2015-05-01,2018-05-01,
 KAIST Cultural Technology,Experience,TRUE,CT,https://ct.kaist.ac.kr,visiting scholar,,2012-09-01,2012-12-01,Under [Meeyoung Cha](https://ds.kaist.ac.kr/professor.html)
-Adaptive Equipment,Experience,TRUE,,http://www.adaptivequipment.com,design lead,,2004-11-01,2012-08-15,Intermittent positions over several years
+Adaptive Equipment,Experience,FALSE,,http://www.adaptivequipment.com,various positions,,2004-11-01,2006-02-01, 
+Adaptive Equipment,Experience,TRUE,,http://www.adaptivequipment.com,design lead,,2008-01-01,2012-08-15, 
 Stanford Office of Postdoctoral Affairs,Teaching,TRUE,,https://postdocs.stanford.edu/events/series/postdoc-teaching-certificate,postdoc teaching certificate,,2018-01-01,,
 CMU Eberly Center for Teaching Excellence,Teaching,TRUE,,http://www.eberly.cmu.edu/services/graduate-students,future faculty program,,2013-05-01,2017-07-01,
 CMU Mechanical Engineering,Teaching,TRUE,,,teaching assistant,Senior design,2013-09-01,2014-05-01,Nominated for teaching assistance award
@@ -28,3 +29,4 @@ TEDxKAIST,Leadership,TRUE,,http://tedxkaist.com,founder & director,,2009-10-01,2
 Program committee,Service,TRUE,PC,,,,2017-05-01,,"[Group’20](https://group.acm.org/conferences/group20/), [CSCW’19](https://cscw.acm.org/2019/), [Designing Technologies to Support Human Problem Solving](https://www.cs.washington.edu/dtshps2018/index.html) at [VL/HCC'18](https://vlhcc18.github.io), [CSCW'18](https://cscw.acm.org/2018/submit/papers.html#Program%20Committee%20Members), [Linked Democracy](https://linkeddemocracy.com) at [IJCAI'17](http://ijcai-17.org)"
 Reviewer,Service,TRUE,R2,,,,2009-01-01,,"[CHI](https://dl.acm.org/event.cfm?id=RE151), [CSCW](https://cscw.acm.org), [CC](https://cc.acm.org), [MobileHCI](https://mobilehci.acm.org), [IDETC](https://event.asme.org/idetc-cie), [IASDR](https://www.iasdr.net/conferences/), [DIS](https://dl.acm.org/event.cfm?id=RE212), [UIST](https://uist.acm.org), [TSC](https://tsc.acm.org)"
 Scaled humanity: computational scaffolds for pro-social interaction,Talks,TRUE,,,,,2019-01-20,2019-03-27,"Adobe, Stanford, University California Santa Cruz, Berkley, Microsoft (collabratory keynote), George Mason University, [Human Computer Interaction Consortium: Futures of Work (HCIC)](https://hcic.org)"
+Design team fracture,Talks,TRUE,,,,,2019-09-10,,"Hasso Plattner design thinking research program workshop"
