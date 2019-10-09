@@ -7,7 +7,7 @@ permalink: /faq
 ## Frequently asked questions
 
 1. Can we talk?
-   > Yes, ~~come to my office hours, Wednesday 2--3 PM in [Gates 396](https://campus-map.stanford.edu/?id=07-450&lat=37.43015919146253&lng=-122.16995022537262&zoom=17)~~ but I havent set office hours at U Penn, so [email me](mailto:mark@whiting.me) instead.
+   > Yes, you can [book a meeting](whiting.me/meet). 
 2. How can I get a letter of recommendation from you?
    > First, do research with me.  
    > Then, at least 2 weeks before the application deadline, email me your application materials (including essays), your CV and a short, informal paragraph about our work together and anything you'd like the letter to highlight.  
