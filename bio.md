@@ -5,7 +5,7 @@ title: Bio 🐨
 exclude: false
 ---
 
-**[Mark E. Whiting](/)** is a postdoc under [Duncan J. Watts](https://en.wikipedia.org/wiki/Duncan_J._Watts) at [U Penn](https://www.upenn.edu) with a joint appointment in [Computer & Information Science](https://www.cis.upenn.edu/index.php) at the [School of Engineering and Applied Science](https://www.seas.upenn.edu) and in [Operations, Information and Decisions](https://oid.wharton.upenn.edu) at the [Wharton School of Business](https://www.wharton.upenn.edu). 
+**[Mark E. Whiting](/)** is a postdoc under [Duncan J. Watts](https://en.wikipedia.org/wiki/Duncan_J._Watts) at [U Penn](https://www.upenn.edu) in both [Computer & Information Science](https://www.cis.upenn.edu/index.php) at the [School of Engineering and Applied Science](https://www.seas.upenn.edu) and [Operations, Information and Decisions](https://oid.wharton.upenn.edu) at the [Wharton School of Business](https://www.wharton.upenn.edu). 
 Mark builds systems to study and scaffold improved collaboration.
 He was previously a postdoc under [Michael S. Bernstein](https://hci.stanford.edu/msb/) in the [HCI group](https://hci.stanford.edu) in [Computer Science](https://cs.stanford.edu) at [Stanford](http://stanford.edu).
 He holds bachelor's and master’s degrees in Industrial Design from [RMIT](https://www.rmit.edu.au) and [KAIST](https://www.kaist.ac.kr/) respectively, and a PhD in Mechanical Engineering from [CMU](https://www.cmu.edu).
