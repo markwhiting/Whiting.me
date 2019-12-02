@@ -10,7 +10,7 @@ permalink: /faq
    > Yes, you can [book a meeting](whiting.me/meet). 
 2. How can I get a letter of recommendation from you?
    > First, do research with me.  
-   > Then, at least 2 weeks before the application deadline, [email me](mailto:mark@whiting.me?subject=Recommendation request) your application essays, your CV and a short, informal paragraph about our work together, including anything you'd like the letter to highlight. Its fine to ask me what kind of letter I will write for you.
+   > Then, at least 2 weeks before the application deadline, [email me](mailto:mark@whiting.me?subject=Recommendation request) your application essays, your CV and an informal paragraph about our work together, including anything you'd like the letter to highlight. Its fine to ask me what kind of letter I will write for you.  
    > Last, I'll let you know when I submit the letter, but if you don't hear from me by the day before the deadline, feel free to email me as many times as you want.
 3. Can I have a PDF of your CV?
    > Yes, my [CV](https://whiting.me/cv) is printer friendly and can be used to save a PDF.
