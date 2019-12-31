@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Fair work"
+categories: Fair work mturk Stanford study system HCOMP
+image: fairwork.png
+---
+
+While at [Stanford](https://hci.stanford.edu), [Grant Hugh](https://linkedin.com/in/grant-hugh), [Michael Bernstein](https://hci.stanford.edu/msb/) and I, released a mechanism to make it possible for Amazon Mechanical Turk requesters to pay workers a more fair wage by adding only one line of code to their tasks <a class="button smallCaps" href="https://hci.stanford.edu/publications/2019/fairwork/fairwork-hcomp2019.pdf">HCOMP'19</a>. Our paper was awarded an Honorable Mention!
+
+You can use the service by visiting [fairwork.stanford.edu](https://fairwork.stanford.edu), where you will get a line of code to include in your tasks on MTurk.
+
+ Below I've included the paper abstract:
+
+> **Fair Work: Crowd Work Minimum Wage with One Line of Code**  
+> Accurate task pricing in microtask marketplaces requires substantial effort via trial and error, contributing to a pattern of worker underpayment. In response, we introduce Fair Work, enabling requesters to automatically pay their workers minimum wage by adding a one-line script tag to their task HTML on Amazon Mechanical Turk. **Fair Work automatically surveys workers to find out how long the task takes, then aggregates those self-reports and auto-bonuses workers up to a minimum wage if needed.** Evaluations demonstrate that the system estimates payments more accurately than requesters and that worker time surveys are close to behaviorally observed time measurements. With this work, we aim to lower the threshold for pro-social work practices in microtask marketplaces.
