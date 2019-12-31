@@ -18,10 +18,9 @@ I'm usually [`markwhiting`](https://keybase.io/markwhiting) online."
 
   {%- if site.posts.size > 0 -%}
 
-  <h2>Recent<h2>
+  <h2>Recent work<h2>
   <ul class="post-list">
-    {%- assign posts = site.posts | sample: 4 -%}
-    {%- for post in posts -%}
+    {%- for post in site.posts limit:4 -%}
     <li>
       <a class="post-link" href="{{ post.url | relative_url }}" target="_self">
         {%- if post.image -%} {% assign images = site.static_files | where:
@@ -37,4 +36,6 @@ I'm usually [`markwhiting`](https://keybase.io/markwhiting) online."
     {%- endfor -%}
   </ul>
   {%- endif -%}
+
+  <h2>Bio<h2>
 </div>

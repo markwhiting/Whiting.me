@@ -23,23 +23,19 @@ yearShort = site.minima.date_format | default: "%y" -%}
   </tr>
   {%- for experience in experienceSet -%}
   <tr>
-    {%- capture startDate -%}{{
-      experience.dateStart | date: yearFull
-    }}{%- endcapture -%} {%- capture endDate -%}{{
-      experience.dateEnd | date: yearFull
+    {%- capture startDate -%}{{ experience.dateStart | date: yearFull }}{%-
+    endcapture -%} {%- capture endDate -%}{{ experience.dateEnd | date: yearFull
     }}{%- endcapture -%}
     <td class="left light small">
       {{ experience.dateStart | date: yearFull }} {%- if startDate != endDate
-      -%} {%- if experience.dateEnd -%} –{{
-        experience.dateEnd | date: yearShort
-      }}
-      {%- else -%} {{ "→" }} {%- endif -%} {%- endif -%}
+      -%} {%- if experience.dateEnd -%} –{{ experience.dateEnd | date: yearShort
+      }} {%- else -%} {{ "→" }} {%- endif -%} {%- endif -%}
     </td>
     <td class="row">
       {% if experience.institutionURL %}<a
         href="{{ experience.institutionURL }}"
-        >{%endif%} <strong>{{ experience.institutionFull }}</strong
-        >{% if experience.institutionURL %}</a
+        >{%endif%} <strong>{{ experience.institutionFull }}</strong>{% if
+        experience.institutionURL %}</a
       >{%endif%}{% if experience.institutionShort %}
       <span class="smallCaps">({{ experience.institutionShort }})</span>{% endif
       %}{% if experience.position %}, {{ experience.position }}{% if
@@ -71,21 +67,13 @@ yearShort = site.minima.date_format | default: "%y" -%}
   institution in institutions -%}
   <tr>
     {%- assign startOrderedMentees = institution.items | sort: "startDate" |
-    reverse -%}{%- capture startDate -%}
-    {{
-      startOrderedMentees.last.dateStart | date: yearFull
-    }}
-    {%- endcapture -%}{%- assign endOrderedMentees = institution.items | sort:
-    "endDate" | reversed -%}{%- capture endDate -%}
-    {{
-      startOrderedMentees.first.dateEnd | date: yearFull
-    }}{%- endcapture -%}
+    reverse -%}{%- capture startDate -%} {{ startOrderedMentees.last.dateStart |
+    date: yearFull }} {%- endcapture -%}{%- assign endOrderedMentees =
+    institution.items | sort: "endDate" | reversed -%}{%- capture endDate -%} {{
+    startOrderedMentees.first.dateEnd | date: yearFull }}{%- endcapture -%}
     <td class="left light small">
       {{ startDate }}{% if startDate != endDate %}{% if endDate != "" %}–{{
-      endDate | slice: -2, 2
-
-
-      }}{% else %}→{% endif %}{% endif %}
+      endDate | slice: -2, 2 }}{% else %}→{% endif %}{% endif %}
     </td>
     <td class="row">
       <strong
@@ -101,8 +89,8 @@ yearShort = site.minima.date_format | default: "%y" -%}
           href="{{ mentee.URL }}"
           >{%endif%}{{ mentee.name }}{% if mentee.URL %}</a
         >{% endif %}{% if mentee.notes %} ({% if mentee.notes.size > 4 %}{{
-          mentee.notes
-        }}{% else %}<span class="smallCaps">{{ mentee.notes }}</span
+        mentee.notes }}{% else %}<span class="smallCaps"
+          >{{ mentee.notes }}</span
         >{% endif %}){% endif %}{% endfor %}
       </p>
     </td>
@@ -116,17 +104,26 @@ yearShort = site.minima.date_format | default: "%y" -%}
     <td class="left light smallCaps">
       <a class="" href="https://cscw.acm.org/2019/">CSCW'19</a>
     </td>
-    <td>      
-      <strong><a href="https://hci.stanford.edu/publications/2019/fracture/fracture-cscw2019.pdf">Did It Have To End This Way? Understanding the Consistency of Team Fracture</a></strong>
+    <td>
+      <strong
+        ><a
+          href="https://hci.stanford.edu/publications/2019/fracture/fracture-cscw2019.pdf"
+          >Did It Have To End This Way? Understanding the Consistency of Team
+          Fracture</a
+        ></strong
+      >
       <p class="light note">
-        <strong>Mark E. Whiting</strong>, Allie Blaising, Chloe Barreau, Laura Fiuza, Nik Marda, Melissa Valentine and Michael S. Bernstein. 2019.
-        <strong><a
+        <strong>Mark E. Whiting</strong>, Allie Blaising, Chloe Barreau, Laura
+        Fiuza, Nik Marda, Melissa Valentine and Michael S. Bernstein. 2019.
+        <strong
+          ><a
             href="https://hci.stanford.edu/publications/2019/fracture/fracture-cscw2019.pdf"
-                   >Did It Have To End This Way? Understanding the Consistency of Team Fracture</a></strong
+            >Did It Have To End This Way? Understanding the Consistency of Team
+            Fracture</a
+          ></strong
         >. Proc. ACM Hum.-Comput. Interact. 3, CSCW, Article 209. DOI:
-        <a href="https://doi.org/10.1145/3359311"
-          >10.1145/3359311</a
-        ></p>
+        <a href="https://doi.org/10.1145/3359311">10.1145/3359311</a>
+      </p>
     </td>
   </tr>
   <tr>
@@ -136,12 +133,21 @@ yearShort = site.minima.date_format | default: "%y" -%}
       >
     </td>
     <td>
-      <strong><a href="https://hci.stanford.edu/publications/2019/fairwork/fairwork-hcomp2019.pdf">Fair Work: Crowd Work Minimum Wage with One Line of Code</a></strong>
+      <strong
+        ><a
+          href="https://hci.stanford.edu/publications/2019/fairwork/fairwork-hcomp2019.pdf"
+          >Fair Work: Crowd Work Minimum Wage with One Line of Code</a
+        ></strong
+      >
+      <code>Honorable Mention</code>
       <p class="light note">
         <strong>Mark E. Whiting</strong>, Grant Hugh and Michael S. Bernstein.
-        <strong><a
+        <strong
+          ><a
             href="https://hci.stanford.edu/publications/2019/fairwork/fairwork-hcomp2019.pdf"
-                   >Fair Work: Crowd Work Minimum Wage with One Line of Code</a></strong>. Seventh AAAI Conference on Human Computation and Crowdsourcing. 2019.
+            >Fair Work: Crowd Work Minimum Wage with One Line of Code</a
+          ></strong
+        >. Seventh AAAI Conference on Human Computation and Crowdsourcing. 2019.
       </p>
     </td>
   </tr>
@@ -152,10 +158,20 @@ yearShort = site.minima.date_format | default: "%y" -%}
       >
     </td>
     <td>
-      <strong><a href="https://www.cmu.edu/me/idig/publications/Whiting%20et%20al%20_efficient_probabilistic_grammar_induction_for_design%20AIEDAM%202018.pdf">Efficient Probabilistic Grammar Induction for Design</a></strong>
+      <strong
+        ><a
+          href="https://www.cmu.edu/me/idig/publications/Whiting%20et%20al%20_efficient_probabilistic_grammar_induction_for_design%20AIEDAM%202018.pdf"
+          >Efficient Probabilistic Grammar Induction for Design</a
+        ></strong
+      >
       <p class="light note">
         <strong>Whiting, M.E.</strong>, J. Cagan and P. R. LeDuc,
-        <strong><a href="https://www.cmu.edu/me/idig/publications/Whiting%20et%20al%20_efficient_probabilistic_grammar_induction_for_design%20AIEDAM%202018.pdf">Efficient Probabilistic Grammar Induction for Design</a></strong>.
+        <strong
+          ><a
+            href="https://www.cmu.edu/me/idig/publications/Whiting%20et%20al%20_efficient_probabilistic_grammar_induction_for_design%20AIEDAM%202018.pdf"
+            >Efficient Probabilistic Grammar Induction for Design</a
+          ></strong
+        >.
         <a class="" href="https://www.cambridge.org/core/journals/ai-edam"
           >AI EDAM</a
         >, Vol 32, No. 2, pp. 177-188, 2018. DOI:
@@ -185,8 +201,8 @@ yearShort = site.minima.date_format | default: "%y" -%}
         Sekandar Matin, Senadhipathige Niranga, Shirish Goyal, Dinesh Majeti,
         Preethi Srinivas, Adam Ginzberg, Kamila Mananova, Karolina Ziulkoski,
         Jeff Regino, Tejas Sarma, Akshansh Sinha, Abhratanu Paul, Christopher
-        Diemert, Mahesh Murag, William Dai, Manoj Pandey, Rajan Vaish and Michael S.
-        Bernstein.
+        Diemert, Mahesh Murag, William Dai, Manoj Pandey, Rajan Vaish and
+        Michael S. Bernstein.
         <strong
           ><a href="https://arxiv.org/pdf/1707.05645.pdf"
             >Prototype Tasks: Improving Crowdsourcing Results through Rapid,
