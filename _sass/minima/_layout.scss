@@ -15,16 +15,15 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   margin-top: $spacing-unit;
-
-  &,
-  &:visited {
-    color: var(--grey-color-dark);
-  }
 }
 
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
+
+  a {
+    text-decoration: none;
+  }
 
   .nav-trigger {
     display: none;
@@ -35,7 +34,6 @@
   }
 
   .page-link {
-    color: var(--text-color);
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
@@ -198,7 +196,6 @@
 
 .post-link {
   display: block;
-  color: var(--text-color);
   font-size: $small-font-size;
   // background: var(--very-transparent-brand-color);
   border-radius: 1.5 * $spacing-unit;
@@ -280,7 +277,7 @@
 
 .light {
   font-weight: $light-font-weight;
-  color: var(--grey-color-dark);
+  color: var(--text-color);
 }
 
 .smallCaps {
@@ -303,15 +300,11 @@
   margin-bottom: 0;
 }
 
-.clean a,
-.clean a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-.clean a:hover {
-  // text-decoration: underline;
-}
+// .clean a,
+// .clean a:visited {
+//   text-decoration: none;
+//   color: inherit;
+// }
 
 .headerComment {
   float: right;

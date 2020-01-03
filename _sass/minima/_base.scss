@@ -114,6 +114,7 @@ main {
 img {
   max-width: 100%;
   vertical-align: middle;
+  margin-top: 4 * $spacing-unit;
 }
 
 /**
@@ -160,25 +161,20 @@ h6 {
  */
 a {
   color: var(--text-color);
-  text-decoration: none;
 
   &:visited {
     color: var(--text-color);
   }
 
   &:hover {
-    color: var(--text-color);
+    color: var(--background-color);
     text-decoration: none;
-    background-color: var(--transparent-alt-brand-color);
+    background-color: var(--transparent-brand-color);
     border-radius: $spacing-unit / 2;
   }
-
-  .social-media-list &:hover {
-    text-decoration: none;
-
-    .username {
-      // text-decoration: underline;
-    }
+  > code {
+    text-decoration: none !important;
+    font-size: xx-large;
   }
 }
 
@@ -213,12 +209,19 @@ code {
 
 code {
   padding: 1.5px 4px;
+  color: var(--background-color);
+  text-decoration: none;
 }
 
-a code {
+code a {
   text-decoration: none;
+  color: var(--background-color);
   &:hover {
+    color: var(--background-color);
     background-color: var(--brand-color);
+  }
+  &:visited {
+    color: var(--background-color);
   }
 }
 
@@ -303,7 +306,7 @@ pre {
 }
 
 strong {
-  font-weight: $light-font-weight * 6 !important;
+  font-weight: $light-font-weight * 3 !important;
 }
 
 table,
