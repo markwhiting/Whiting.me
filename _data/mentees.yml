@@ -7,32 +7,48 @@
 #   dateStart: yyyy-mm-dd (if you don't know the day, just put 01)
 #   dateEnd: yyyy-mm-dd (if you don't know the day, just put 01)
 
-- name: Junior Diarrassouba
+- name: Paulina Paiz
+  institution: U Penn
+  dateStart: 2019-12-01
+  URL: https://www.linkedin.com/in/paulina-m-paiz-0a13a9142/
+
+- name: N'Godjigui Junior Diarrassouba
   institution: Stanford
   dateStart: 2019-06-27
+  dateEnd: 2020-01-15
   notes: Texas Tech
+  URL: https://www.linkedin.com/in/ngodjigui/
 
 - name: Ryan Andrew Foulke
   institution: Stanford
   dateStart: 2019-06-24
+  dateEnd: 2019-10-15
 
 - name: Michelle Xing
   institution: Stanford
   dateStart: 2019-06-24
+  dateEnd: 2020-01-15
+  URL: https://www.linkedin.com/in/michellexing/
 
 - name: Irena Gao
   institution: Stanford
   dateStart: 2019-06-17
+  dateEnd: 2020-01-15
+  URL: https://www.linkedin.com/in/irena-gao-7b732b124/
 
 - name: J.D. Zamfirescu
   institution: Stanford
   dateStart: 2019-06-01
+  dateEnd: 2020-01-15
   notes: Berkeley
+  URL: https://zamfi.net
 
 - name: Tonya Nguyen
   institution: Stanford
   dateStart: 2019-06-01
+  dateEnd: 2020-01-15
   notes: Berkeley
+  URL: https://www.tonyanguyen.com
 
 - name: So Yeon Park
   institution: Stanford
@@ -41,11 +57,14 @@
 - name: Yu Jin Lee
   institution: Stanford
   dateStart: 2019-04-10
+  dateEnd: 2020-01-15
+  URL: https://www.linkedin.com/in/yu-jin-l-54571182/
 
-- name: Lydia Stone 
+- name: Lydia Stone
   institution: Stanford
   dateStart: 2019-04-01
-  dateEnd: 2019-06-03
+  dateEnd: 2019-12-10
+  URL: https://www.linkedin.com/in/lydiastone16/
 
 - name: Maika Isogawa
   URL: http://www.maikaisogawa.com
@@ -152,11 +171,12 @@
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
 
-- name: Imauri Hazel
+- name: Imauri Motorin
   institution: i3
   notes: UMBC
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
+  URL: http://www.motorin.me
 
 - name: Jeremiah Azurin
   institution: i3
