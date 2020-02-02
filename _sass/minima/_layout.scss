@@ -175,6 +175,14 @@
     max-width: 20rem;
     box-shadow: var(--shadow-color) 0px 25px 70px -14px;
   }
+  h3 {
+    @include relative-font-size(1);
+    padding-top: 2 * $spacing-unit;
+    padding-bottom: 0;
+  }
+  li {
+    margin-left: 1rem;
+  }
 }
 
 .post-list {
@@ -182,6 +190,7 @@
   list-style: none;
 
   > li {
+    margin: 0;
     display: inline-block;
     margin-bottom: $spacing-unit;
     width: 25%;

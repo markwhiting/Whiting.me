@@ -11,10 +11,10 @@ yearShort = site.minima.date_format | default: "%y" -%}
 <!-- Single table for entire CV -->
 <table class="clean">
   <!-- Main CV -->
-  {%- assign experienceTypes = "Experience, Education, Teaching, Awards,
-  Leadership, Service, Invited talks" | split: ", "-%} {%- for experienceType in
-  experienceTypes -%} {%- assign experienceSet = site.data.CV |
-  where:"include","TRUE" | where:"type", experienceType | sort: "dateStart"|
+  {%- assign experienceTypes = "Academic positions, Other roles, Teaching,
+  Awards, Leadership, Service, Invited talks" | split: ", "-%} {%- for
+  experienceType in experienceTypes -%} {%- assign experienceSet = site.data.CV
+  | where:"include","TRUE" | where:"type", experienceType | sort: "dateStart"|
   reverse -%} {%- if experienceSet.size > 0 -%}
   <tr>
     <td colspan="2">

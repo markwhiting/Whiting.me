@@ -1,18 +1,18 @@
 institutionFull,type,include,institutionShort,institutionURL,position,focus,dateStart,dateEnd,notes
-Eastside High School,Education,FALSE,EHS,https://www.sbac.edu/eastside,International Baccalaureate,,1999-08-01,2003-05-01,
-University of Florida,Education,FALSE,UF,https://uf.edu,non-degree study,,2001-05-01,2003-12-01,Focus on mathematics
-Royal Melbourne Institute of Technology,Education,TRUE,RMIT,https://rmit.edu.au,BDes,industrial design,2004-03-01,2007-12-01,With first class honors
-Zhejiang University,Education,TRUE,ZJU,,exchange student,industrial design,2006-01-01,2006-12-01,
-Korea Advanced Institute of Science and Technology,Education,TRUE,KAIST,https://kaist.ac.kr,MS,industrial design,2009-02-01,2010-12-24,Under [Youn-kyung Lim](http://cixd.kaist.ac.kr) & [Tek-jin Nam](http://cidr.kaist.ac.kr)
-Carnegie Mellon University,Education,TRUE,CMU,https://CMU.edu,PhD,mechanical engineering,2013-01-01,2017-07-28,"Under [Jon Cagan](http://www.cmu.edu/me/idig/index.html) & [Phil R. Leduc](http://www.andrew.cmu.edu/user/prl), with [Manuela M. Veloso](https://www.cs.cmu.edu/%7Emmv) & [Yongjie Jessica Zhang](https://www.meche.engineering.cmu.edu/faculty/zhang.html) on the committee"
-Stanford,Experience,TRUE,,https://stanford.edu,postdoc,computer science,2017-08-22,2019-09-30,Under [Michael S. Bernstein](http://hci.stanford.edu/msb/) in the [HCI group](http://hci.stanford.edu)
-University of Pennsylvania,Experience,TRUE,U Penn,https://upenn.edu,postdoc,computer science & business,2019-10-01,,"Under [Duncan J. Watts](https://en.wikipedia.org/wiki/Duncan_J._Watts) in [CIS](https://www.cis.upenn.edu/index.php) at [SEAS](https://www.seas.upenn.edu) & [OID](https://oid.wharton.upenn.edu) at [Wharton](https://www.wharton.upenn.edu)"
-IDEO CoLab,Experience,TRUE,,https://www.ideocolab.com,fellow,,2018-01-01,2018-02-01,
-Stanford crowd research collective,Experience,TRUE,,http://crowdresearch.stanford.edu/w/index.php?title=Main_Page,team member,,2016-02-01,,
-Pitt iSchool inclusion institute,Experience,TRUE,I3,http://www.i3-inclusion.org,research mentor,,2015-05-01,2018-05-01,
-KAIST Cultural Technology,Experience,TRUE,CT,https://ct.kaist.ac.kr,visiting scholar,,2012-09-01,2012-12-01,Under [Meeyoung Cha](https://ds.kaist.ac.kr/professor.html)
-Adaptive Equipment,Experience,FALSE,,http://www.adaptivequipment.com,various positions,,2004-11-01,2006-02-01, 
-Adaptive Equipment,Experience,TRUE,,http://www.adaptivequipment.com,design lead,,2008-01-01,2012-08-15, 
+Eastside High School,Academic positions,FALSE,EHS,https://www.sbac.edu/eastside,International Baccalaureate,,1999-08-01,2003-05-01,
+University of Florida,Academic positions,FALSE,UF,https://uf.edu,non-degree study,,2001-05-01,2003-12-01,Focus on mathematics
+Royal Melbourne Institute of Technology,Academic positions,TRUE,RMIT,https://rmit.edu.au,BDes,industrial design,2004-03-01,2007-12-01,With first class honors
+Zhejiang University,Academic positions,TRUE,ZJU,,exchange student,industrial design,2006-01-01,2006-12-01,
+Korea Advanced Institute of Science and Technology,Academic positions,TRUE,KAIST,https://kaist.ac.kr,MS,industrial design,2009-02-01,2010-12-24,Under [Youn-kyung Lim](http://cixd.kaist.ac.kr) & [Tek-jin Nam](http://cidr.kaist.ac.kr)
+Carnegie Mellon University,Academic positions,TRUE,CMU,https://CMU.edu,PhD,mechanical engineering,2013-01-01,2017-07-28,"Under [Jon Cagan](http://www.cmu.edu/me/idig/index.html) & [Phil R. Leduc](http://www.andrew.cmu.edu/user/prl), with [Manuela M. Veloso](https://www.cs.cmu.edu/%7Emmv) & [Yongjie Jessica Zhang](https://www.meche.engineering.cmu.edu/faculty/zhang.html) on the committee"
+Stanford,Academic positions,TRUE,,https://stanford.edu,postdoc,computer science,2017-08-22,2019-09-30,Under [Michael S. Bernstein](http://hci.stanford.edu/msb/) in the [HCI group](http://hci.stanford.edu)
+University of Pennsylvania,Academic positions,TRUE,U Penn,https://upenn.edu,postdoc,computer science & business,2019-10-01,,"Under [Duncan J. Watts](https://en.wikipedia.org/wiki/Duncan_J._Watts) in [CIS](https://www.cis.upenn.edu/index.php) at [SEAS](https://www.seas.upenn.edu) & [OID](https://oid.wharton.upenn.edu) at [Wharton](https://www.wharton.upenn.edu)"
+IDEO CoLab,Other roles,TRUE,,https://www.ideocolab.com,fellow,,2018-01-01,2018-02-01,
+Stanford crowd research collective,Other roles,TRUE,,http://crowdresearch.stanford.edu/w/index.php?title=Main_Page,team member,,2016-02-01,2019-05-01,
+Pitt iSchool inclusion institute,Other roles,TRUE,I3,http://www.i3-inclusion.org,research mentor,,2015-05-01,2018-05-01,
+KAIST Cultural Technology,Academic positions,TRUE,CT,https://ct.kaist.ac.kr,visiting scholar,,2012-09-01,2012-12-01,Under [Meeyoung Cha](https://ds.kaist.ac.kr/professor.html)
+Adaptive Equipment,Other roles,FALSE,,http://www.adaptivequipment.com,various positions,,2004-11-01,2006-02-01, 
+Adaptive Equipment,Other roles,TRUE,,http://www.adaptivequipment.com,design lead,,2008-01-01,2012-08-15, 
 Stanford Office of Postdoctoral Affairs,Teaching,TRUE,,https://postdocs.stanford.edu/events/series/postdoc-teaching-certificate,postdoc teaching certificate,,2018-01-01,,
 CMU Eberly Center for Teaching Excellence,Teaching,TRUE,,http://www.eberly.cmu.edu/services/graduate-students,future faculty program,,2013-05-01,2017-07-01,
 CMU Mechanical Engineering,Teaching,TRUE,,,teaching assistant,Senior design,2013-09-01,2014-05-01,Nominated for teaching assistance award
@@ -22,7 +22,7 @@ Red Dot,Awards,TRUE,,http://en.red-dot.org,design award,,2009-11-01,2009-11-01,
 Australian China Business Council,Awards,TRUE,,http://acbc.com.au,youth delegation,,2007-07-01,2007-07-01,Invitee of president Hu Jintau
 FIRST Robotics Competition,Awards,TRUE,FRC,https://www.firstinspires.org/robotics/frc,first prize alliance,south east region,2002-04-01,2002-04-01,
 Mozilla Open Leaders,Leadership,TRUE,,https://foundation.mozilla.org/en/opportunity/mozilla-open-leaders/round-6/mentors,mentor,cohort 6,2018-08-01,2018-11-01,
-Cultured Fit,Leadership,TRUE,,https://cultured.fit,president & co-founder,,2016-03-01,,
+Cultured Fit,Leadership,TRUE,,https://cultured.fit,president & co-founder,,2016-03-01,2019-12-31,
 National Association of Graduate and Professional Students,Leadership,TRUE,NAGPS,http://nagps.org,chief financial officer,,2015-01-01,2015-12-01,
 CMU Graduate Student Assembly,Leadership,TRUE,GSA,https://www.cmu.edu/stugov/gsa/,vice president of finance,,2014-07-01,2015-06-01,
 TEDxKAIST,Leadership,TRUE,,http://tedxkaist.com,founder & director,,2009-10-01,2012-05-01,Also supported other [TEDx](https://www.ted.com/about/programs-initiatives/tedx-program) in Korea
