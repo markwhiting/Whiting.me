@@ -10,6 +10,7 @@
 - name: Paulina Paiz
   institution: U Penn
   dateStart: 2019-12-01
+  dateEnd: 2020-04-01
   URL: https://www.linkedin.com/in/paulina-m-paiz-0a13a9142/
 
 - name: N'Godjigui Junior Diarrassouba
@@ -123,6 +124,7 @@
   notes: research scientist
   institution: Stanford
   dateStart: 2019-01-01
+  dateEnd: 2019-09-01
 
 - name: Emily Hu
   institution: Stanford
