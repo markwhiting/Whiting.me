@@ -1,18 +1,18 @@
 institutionFull,type,include,institutionShort,institutionURL,position,focus,dateStart,dateEnd,notes
-Eastside High School,Academic positions,FALSE,EHS,https://www.sbac.edu/eastside,International Baccalaureate,,1999-08-01,2003-05-01,
-University of Florida,Academic positions,FALSE,UF,https://uf.edu,non-degree study,,2001-05-01,2003-12-01,Focus on mathematics
-Royal Melbourne Institute of Technology,Academic positions,TRUE,RMIT,https://rmit.edu.au,BDes,industrial design,2004-03-01,2007-12-01,With first class honors
-Zhejiang University,Academic positions,TRUE,ZJU,,exchange student,industrial design,2006-01-01,2006-12-01,
-Korea Advanced Institute of Science and Technology,Academic positions,TRUE,KAIST,http://kaist.ac.kr,MS,industrial design,2009-02-01,2010-12-24,With [Youn-kyung Lim](http://cixd.kaist.ac.kr) & [Tek-jin Nam](http://cidr.kaist.ac.kr)
-Carnegie Mellon University,Academic positions,TRUE,CMU,https://CMU.edu,PhD,mechanical engineering,2013-01-01,2017-07-28,"With [Jon Cagan](http://www.cmu.edu/me/idig/index.html) & [Phil R. Leduc](http://www.andrew.cmu.edu/user/prl). Committee: [Manuela M. Veloso](https://www.cs.cmu.edu/%7Emmv) & [Yongjie Jessica Zhang](https://www.meche.engineering.cmu.edu/faculty/zhang.html)"
-Stanford,Academic positions,TRUE,,https://stanford.edu,postdoc,[HCI group](http://hci.stanford.edu) in computer science,2017-08-22,2019-09-30,With [Michael S. Bernstein](http://hci.stanford.edu/msb/)
-University of Pennsylvania,Academic positions,TRUE,U Penn,https://upenn.edu,postdoc,[CIS](https://www.cis.upenn.edu/index.php) at [SEAS](https://www.seas.upenn.edu) & [OID](https://oid.wharton.upenn.edu) at [Wharton](https://www.wharton.upenn.edu),2019-10-01,,"With [Duncan J. Watts](https://en.wikipedia.org/wiki/Duncan_J._Watts)"
-IDEO CoLab,Other roles,TRUE,,https://www.ideocolab.com,fellow,,2018-01-01,2018-02-01,
-Stanford crowd research collective,Other roles,TRUE,,http://crowdresearch.stanford.edu/w/index.php?title=Main_Page,team member,,2016-02-01,2019-05-01,
-Pitt iSchool inclusion institute,Other roles,TRUE,I3,http://www.i3-inclusion.org,research mentor,,2015-05-01,2018-05-01,
-KAIST,Academic positions,TRUE,,http://kaist.ac.kr,visiting scholar,[Cultural Technology](http://ct.kaist.ac.kr),2012-09-01,2012-12-01,With [Meeyoung Cha](http://ds.kaist.ac.kr/professor.html)
-Adaptive Equipment,Other roles,FALSE,,http://www.adaptivequipment.com,various positions,,2004-11-01,2006-02-01, 
-Adaptive Equipment,Other roles,TRUE,,http://www.adaptivequipment.com,design lead,,2008-01-01,2012-08-15, 
+Eastside High School,Education,FALSE,EHS,https://www.sbac.edu/eastside,International Baccalaureate,,1999-08-01,2003-05-01,
+University of Florida,Education,FALSE,UF,https://uf.edu,non-degree study,,2001-05-01,2003-12-01,Focus on mathematics
+Royal Melbourne Institute of Technology,Education,TRUE,RMIT,https://rmit.edu.au,BDes,industrial design,2004-03-01,2007-12-01,With first class honors
+Zhejiang University,Education,TRUE,ZJU,,exchange student,industrial design,2006-01-01,2006-12-01,
+Korea Advanced Institute of Science and Technology,Education,TRUE,KAIST,http://kaist.ac.kr,MS,industrial design,2009-02-01,2010-12-24,With [Youn-kyung Lim](http://cixd.kaist.ac.kr) & [Tek-jin Nam](http://cidr.kaist.ac.kr)
+Carnegie Mellon University,Education,TRUE,CMU,https://CMU.edu,PhD,mechanical engineering,2013-01-01,2017-07-28,"With [Jon Cagan](http://www.cmu.edu/me/idig/index.html) & [Phil R. Leduc](http://www.andrew.cmu.edu/user/prl). Committee: [Manuela M. Veloso](https://www.cs.cmu.edu/%7Emmv) & [Yongjie Jessica Zhang](https://www.meche.engineering.cmu.edu/faculty/zhang.html)"
+Stanford,Experience,TRUE,,https://stanford.edu,postdoc,[HCI group](http://hci.stanford.edu) in computer science,2017-08-22,2019-09-30,With [Michael S. Bernstein](http://hci.stanford.edu/msb/)
+University of Pennsylvania,Experience,TRUE,U Penn,https://upenn.edu,postdoc,[CIS](https://www.cis.upenn.edu/index.php) at [SEAS](https://www.seas.upenn.edu) & [OID](https://oid.wharton.upenn.edu) at [Wharton](https://www.wharton.upenn.edu),2019-10-01,,"With [Duncan J. Watts](https://en.wikipedia.org/wiki/Duncan_J._Watts)"
+IDEO CoLab,Experience,TRUE,,https://www.ideocolab.com,fellow,,2018-01-01,2018-02-01,
+Stanford crowd research collective,Experience,TRUE,,http://crowdresearch.stanford.edu/w/index.php?title=Main_Page,team member,,2016-02-01,2019-05-01,
+Pitt iSchool inclusion institute,Experience,TRUE,I3,http://www.i3-inclusion.org,research mentor,,2015-05-01,2018-05-01,
+KAIST,Education,TRUE,,http://kaist.ac.kr,visiting scholar,[Cultural Technology](http://ct.kaist.ac.kr),2012-09-01,2012-12-01,With [Meeyoung Cha](http://ds.kaist.ac.kr/professor.html)
+Adaptive Equipment,Experience,FALSE,,http://www.adaptivequipment.com,various positions,,2004-11-01,2006-02-01, 
+Adaptive Equipment,Experience,TRUE,,http://www.adaptivequipment.com,design lead,,2008-01-01,2012-08-15, 
 Stanford Office of Postdoctoral Affairs,Teaching,TRUE,,https://postdocs.stanford.edu/events/series/postdoc-teaching-certificate,postdoc teaching certificate,,2018-01-01,,
 CMU Eberly Center for Teaching Excellence,Teaching,TRUE,,http://www.eberly.cmu.edu/services/graduate-students,future faculty program,,2013-05-01,2017-07-01,
 CMU Mechanical Engineering,Teaching,TRUE,,,teaching assistant,Senior design,2013-09-01,2014-05-01,Nominated for teaching assistance award
