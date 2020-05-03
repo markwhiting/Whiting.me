@@ -7,7 +7,7 @@ permalink: /faq
 ## Frequently asked questions
 
 ### Can we talk?
-Perhaps — I am having to reduce meetings due to a tight schedule. [Email me](mailto:mark@whiting.me) your questions and a phone number at which I can reach you. I'll probably respond via email, but if it makes more sense, I'll call.
+Perhaps — I am reducing meetings due to a tight schedule. [Email me](mailto:mark@whiting.me) your question and a phone number at which I can reach you. I'll probably respond via email, but if it makes more sense, I'll call.
 
 ### Can I have your CV?
 Yes — my [CV is here](https://whiting.me/cv). It's printer friendly and can be used to save a PDF.
