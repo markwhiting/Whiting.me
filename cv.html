@@ -32,14 +32,16 @@ yearShort = site.minima.date_format | default: "%y" -%}
       }} {%- else -%} {{ "→" }} {%- endif -%} {%- endif -%}
     </td>
     <td class="row">
-      {% if experience.institutionURL %}<a href="{{ experience.institutionURL }}">{%endif%}
+      {% if experience.position %}<strong>{{ experience.position }}</strong>{% if
+      experience.focus %} in {{ experience.focus | markdownify | remove: '<p>' | remove: '</p>' }}{% endif %} at {%endif%} {% if experience.institutionURL %}<a href="{{ experience.institutionURL }}">{%endif%}
         <strong>{{ experience.institutionFull }}</strong>{% if
         experience.institutionURL %}</a>{%endif%}{% if experience.institutionShort %}
       <span class="smallCaps">({{ experience.institutionShort }})</span>{% endif
-      %}{% if experience.position %}, {{ experience.position }}{% if
-      experience.focus %} in {{ experience.focus | markdownify | remove: '<p>' | remove: '</p>' }}{% endif %}{%endif%}
-      {% if experience.notes %}
-      <span class="light note">{{ experience.notes | markdownify }}</span>{%endif%}
+      %}{% if experience.notes %} 
+      <span class="light note">
+        {{ experience.notes | markdownify | remove: '<p>' | remove: '</p>' }}
+      </span>
+      {%endif%}
     </td>
   </tr>
 
