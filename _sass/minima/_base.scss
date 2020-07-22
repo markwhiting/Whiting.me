@@ -39,6 +39,10 @@ body {
     $base-font-family;
   color: var(--text-color);
   background-color: var(--background-color);
+  // background-image: url('/assets/background2S.jpg');
+  // background-repeat: no-repeat;
+  // background-attachment: fixed; 
+  // background-size: cover;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;

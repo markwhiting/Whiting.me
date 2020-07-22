@@ -171,8 +171,8 @@
   padding: 0;
   flex: 1;
   p > img {
-    border-radius: 1.5 * $spacing-unit;
-    max-width: 20rem;
+    border-radius: 1 * $spacing-unit;
+    max-width: 30rem;
     box-shadow: var(--shadow-color) 0px 25px 70px -14px;
   }
   h3 {
