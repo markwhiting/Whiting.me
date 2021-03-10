@@ -2,11 +2,13 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper note light clean noPrint">
-    © 2016–{{site.time | date: "%Y"}} <a href="mailto:{{site.email | escape }}">{{ site.title | escape }}</a> | Updated
+    © 2016–{{site.time | date: "%Y"}} <a href="mailto:{{site.email | escape }}" rel="me">{{ site.title | escape }}</a> | Updated
     <span class="upDate"></span> | <a href="https://github.com/markwhiting/Whiting.me/issues/new">Report issue</a>
     <link href="https://github.com/markwhiting" rel="me">
     <link href="https://twitter.com/markwhiting" rel="me">
     <link href="mailto:{{site.email}}" rel="me">
+    <link rel="webmention" href="https://webmention.io/whiting.me/webmention" />
+    <link rel="pingback" href="https://webmention.io/whiting.me/xmlrpc" />
     <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
     <div class="footer-col-wrapper">
