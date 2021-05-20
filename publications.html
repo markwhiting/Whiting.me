@@ -1,0 +1,25 @@
+---
+layout: none
+permalink: /bib
+---
+
+{%- assign pubs = site.data.publications | sort: "year" | reverse -%}
+{%- for pub in pubs -%}
+{%- assign authors = pub.authors | replace: " and ", "; " | split: ";" -%}
+@{%- if pub.type -%}{{-pub.type | downcase -}}{% else %}article{% endif %}{ {{- authors | first | split: "," | reverse | join:" " | split: " " | last | downcase}}{{-pub.year-}}{{-pub.Title | truncatewords: 2, "" | remove: " " | remove: ":" | truncate: 10 , ""| downcase -}}<br>
+  title={ {{-pub.title-}} },<br>
+  author={
+{%- for author in authors -%}
+{%- if forloop.first -%}{% else %} and {% endif %}
+{{- author | split: "," | reverse |  array_to_sentence_string:" " | lstrip}}
+{%- endfor -%}},<br>
+{%- if pub.venue -%}journal={ {{- pub.venue -}} },<br>{% endif %}
+{%- if pub.year -%}year={ {{- pub.year -}} },<br>{% endif %}
+{%- if pub.volume -%}volume={ {{- pub.volume -}} },<br>{% endif %}
+{%- if pub.number -%}number={ {{- pub.number -}} },<br>{% endif %}
+{%- if pub.pages -%}pages={ {{- pub.pages -}} },<br>{% endif %}
+{%- if pub.publisher -%}publisher={ {{- pub.publisher -}} },<br>{% endif %}
+{%- if pub.url -%}url={ {{- pub.url -}} },<br>{% endif %}
+{%- if pub.doi -%}doi={ {{- pub.doi -}} },<br>{% endif %}
+}<br><br>
+{% endfor %}
