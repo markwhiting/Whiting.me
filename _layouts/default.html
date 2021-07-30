@@ -17,7 +17,7 @@
 
   <script>
   var xmlhttp = new XMLHttpRequest();
-  var url = "https://api.github.com/repos/markwhiting/Whiting.me/events";
+  const url = "https://api.github.com/repos/markwhiting/Whiting.me/events";
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var events = JSON.parse(this.responseText);
@@ -55,7 +55,17 @@
     var commit = latestEvent.payload.commits[0];
     Array.from(document.getElementsByClassName('upDate')).forEach(element => {
       element.innerHTML = '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" ></a><a href=https://github.com/markwhiting/Whiting.me/commit/' + commit.sha + ">" + upDate + "</a>"
-    })
+    })  
+  }
+  
+  if (window.matchMedia){
+    const body = document.getElementsByTagName("body")[0]
+    const pick_color = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? `hsla(${Math.random()*360},${Math.random()*25}%,${Math.random()*20}%,1)` : `hsla(${Math.random()*360},${Math.random()*25}%,${Math.random()*20+80}%,1)`
+    body.style.backgroundColor = pick_color()
+    
+    window
+    .matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', () => {body.style.backgroundColor = pick_color()})
   }
   </script>
 
