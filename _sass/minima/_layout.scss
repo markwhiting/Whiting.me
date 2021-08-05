@@ -172,6 +172,7 @@
   flex: 1;
   p > img {
     border-radius: 1 * $spacing-unit;
+    width: 100%;
     max-width: 30rem;
     box-shadow: var(--shadow-color) 0px 25px 70px -14px;
   }
@@ -215,7 +216,9 @@
 .post-image {
   margin: auto;
   display: block;
-  height: 6rem;
+  max-height: 6rem;
+  width: auto;
+  height: auto;
 }
 
 /**
