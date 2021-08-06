@@ -189,12 +189,15 @@
 .post-list {
   margin-left: 0;
   list-style: none;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  display: flex; 
 
   > li {
     margin: 0;
     display: inline-block;
     margin-bottom: $spacing-unit;
-    width: 25%;
+    min-width: 25%;
     text-align: center;
   }
 }
