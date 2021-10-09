@@ -7,8 +7,64 @@
 #   dateStart: yyyy-mm-dd (if you don't know the day, just put 01)
 #   dateEnd: yyyy-mm-dd (if you don't know the day, just put 01)
 
+- name: Katelyn R Bottcher
+  institution: University of Pennsylvania
+  dateStart: 2021-01-28
+  dateEnd: 2021-05-30
+
+- name: Rafael Gehrke
+  institution: University of Pennsylvania
+  dateStart: 2021-01-28
+  dateEnd: 2021-05-30
+
+- name: Vikram Balasubramanian
+  institution: University of Pennsylvania
+  dateStart: 2021-01-28
+  dateEnd: 2021-05-30
+
+- name: Ashley(Nicole) Fernandez
+  institution: University of Pennsylvania
+  dateStart: 2021-01-28
+  dateEnd: 2021-05-30
+
+- name: Sarika Subramaniam
+  institution: University of Pennsylvania
+  dateStart: 2021-02-01
+  URL: https://www.linkedin.com/in/sarikasubramaniam/
+
+- name: Henry Ge
+  institution: University of Pennsylvania
+  dateStart: 2021-02-01
+  URL: https://www.linkedin.com/in/hg8/
+
+- name: Karan Sampath
+  institution: University of Pennsylvania
+  dateStart: 2021-02-25
+
+- name: Arina Paniukhina
+  institution: University of Pennsylvania
+  dateStart: 2021-02-25
+  dateEnd: 2021-05-30
+  
+- name: Andrew Cullen
+  institution: University of Pennsylvania
+  dateStart: 2021-01-28
+  dateEnd: 2021-05-30
+
+- name: Vivian Dinh
+  institution: University of Pennsylvania
+  dateStart: 2021-03-07
+
+- name: Dafna Yavetz
+  institution: Princeton
+  dateStart: 2021-05-24
+
+- name: Ryan Gibbons
+  institution: Princeton
+  dateStart: 2021-05-24
+  
 - name: Paulina Paiz
-  institution: U Penn
+  institution: University of Pennsylvania
   dateStart: 2019-12-01
   dateEnd: 2020-04-01
   URL: https://www.linkedin.com/in/paulina-m-paiz-0a13a9142/
@@ -160,56 +216,56 @@
   dateEnd: 2017-12-01
 
 - name: Monique Jeffrey
-  institution: i3
+  institution: i3 Inclusion Institute, University of Pittsburgh
   notes: UMBC
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
 
 - name: Abrere Sophie Kozolan
-  institution: i3
+  institution: i3 Inclusion Institute, University of Pittsburgh
   notes: UMBC
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
 
 - name: Samuel Osei-Afriyie
-  institution: i3
+  institution: i3 Inclusion Institute, University of Pittsburgh
   notes: <span class="smallCaps">SUNY</span> Oneonta
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
 
 - name: Imauri Motorin
-  institution: i3
+  institution: i3 Inclusion Institute, University of Pittsburgh
   notes: UMBC
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
   URL: http://www.motorin.me
 
 - name: Jeremiah Azurin
-  institution: i3
+  institution: i3 Inclusion Institute, University of Pittsburgh
   notes: Harvard
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
 
 - name: Alex Selimov
-  institution: i3
+  institution: i3 Inclusion Institute, University of Pittsburgh
   notes: UCF
   dateStart: 2014-06-20
   dateEnd: 2016-03-20
 
 - name: Simon Smith
-  institution: i3
+  institution: i3 Inclusion Institute, University of Pittsburgh
   notes: University of Wisconsin-Madison
   dateStart: 2014-06-20
   dateEnd: 2016-03-20
 
 - name: Laurel Rawley
-  institution: i3
+  institution: i3 Inclusion Institute, University of Pittsburgh
   notes: University of Houston
   dateStart: 2014-06-20
   dateEnd: 2016-03-20
 
 - name: Jose Valderrama
-  institution: i3
+  institution: i3 Inclusion Institute, University of Pittsburgh
   notes: UCF
   dateStart: 2014-06-20
   dateEnd: 2016-03-20
