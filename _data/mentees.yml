@@ -7,6 +7,24 @@
 #   dateStart: yyyy-mm-dd (if you don't know the day, just put 01)
 #   dateEnd: yyyy-mm-dd (if you don't know the day, just put 01)
 
+
+- name: Skylar Rearick
+  institution: University of Pennsylvania
+  dateStart: 2022-05-01
+
+- name: Sumant Shringari
+  institution: University of Pennsylvania
+  dateStart: 2021-09-01
+  dateEnd: 2022-05-30
+
+- name: Kaily Liu
+  institution: University of Pennsylvania
+  dateStart: 2022-01-01
+
+- name: Sarah Batta
+  institution: University of Pennsylvania
+  dateStart: 2022-05-01
+
 - name: Katelyn R Bottcher
   institution: University of Pennsylvania
   dateStart: 2021-01-28
