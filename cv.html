@@ -104,8 +104,8 @@ yearShort = site.minima.date_format | default: "%y" -%}
         {%- if author contains "Whiting" and author contains "Mark" -%}<strong>{% endif %}{{author | split: "," | reverse |  array_to_sentence_string:" "}}{%- if author contains "Whiting" and author contains "Mark" -%}</strong>{% endif %}
         {%- if forloop.last -%}<br>{% endif %}
         {%- endfor -%} 
-        {%- if pub.venue -%}{{pub.venue}} {% endif %} {{pub.Date}}
-        {%- if pub.doi -%}<a href="https://doi.org/{{pub.doi}}">{{pub.doi}}</a> {% endif %} <strong>{{pub.award}}</strong>
+        {%- if pub.venue -%}{{pub.venue}}{% endif %}{%- if pub.venue & pub.year -%}, {% endif %}{%- if pub.year -%}{{pub.year}}{% endif %}
+        {%- if pub.doi -%}, <a href="https://doi.org/{{pub.doi}}">{{pub.doi}}</a> {% endif %} <strong>{{pub.award}}</strong>
       </p>
     </td>
     </tr>
