@@ -8,11 +8,13 @@
 #   dateEnd: yyyy-mm-dd (if you don't know the day, just put 01)
 
 - name: Nitya Kaku
-  institution: Independent
+  notes: Independent researcher
+  institution: University of Pennsylvania
   dateStart: 2022-11-01
 
 - name: Amirhossein Nakhaei
-  institution: Independent
+  notes: Independent researcher
+  institution: University of Pennsylvania
   dateStart: 2022-11-15
 
 - name: Bryan Yao
