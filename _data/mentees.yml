@@ -7,10 +7,37 @@
 #   dateStart: yyyy-mm-dd (if you don't know the day, just put 01)
 #   dateEnd: yyyy-mm-dd (if you don't know the day, just put 01)
 
-
-- name: Skylar Rearick
+- name: Bryan Yao
   institution: University of Pennsylvania
-  dateStart: 2022-05-01
+  dateStart: 2022-10-01
+
+- name: Arnab Sircar
+  institution: University of Pennsylvania
+  dateStart: 2023-01-01
+
+- name: Alan Qiao
+  institution: University of Pennsylvania
+  dateStart: 2022-06-01
+  dateEnd: 2022-08-01
+
+- name: Daniel Xue
+  institution: University of Pennsylvania
+  dateStart: 2022-01-01
+  dateEnd: 2022-06-01
+  
+- name: Jason Ren
+  institution: University of Pennsylvania
+  dateStart: 2022-10-01
+  
+- name: Vincent Cai
+  institution: University of Pennsylvania
+  dateStart: 2022-01-01
+  dateEnd: 2022-07-01
+
+- name: Huifang Ye
+  institution: University of Pennsylvania
+  dateStart: 2022-10-01
+  dateEnd: 2023-01-01
 
 - name: Sumant Shringari
   institution: University of Pennsylvania
@@ -38,7 +65,6 @@
 - name: Vikram Balasubramanian
   institution: University of Pennsylvania
   dateStart: 2021-01-28
-  dateEnd: 2021-05-30
 
 - name: Ashley(Nicole) Fernandez
   institution: University of Pennsylvania
