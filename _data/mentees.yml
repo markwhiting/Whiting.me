@@ -1,3 +1,5 @@
+# @format
+
 # To update mentees, please make a pull request or contact Mark with the changes you'd like to see.
 
 # Adhere to the format:
@@ -35,11 +37,11 @@
   institution: University of Pennsylvania
   dateStart: 2022-01-01
   dateEnd: 2022-06-01
-  
+
 - name: Jason Ren
   institution: University of Pennsylvania
   dateStart: 2022-10-01
-  
+
 - name: Vincent Cai
   institution: University of Pennsylvania
   dateStart: 2022-01-01
@@ -103,7 +105,7 @@
   institution: University of Pennsylvania
   dateStart: 2021-02-25
   dateEnd: 2021-05-30
-  
+
 - name: Andrew Cullen
   institution: University of Pennsylvania
   dateStart: 2021-01-28
@@ -116,11 +118,13 @@
 - name: Dafna Yavetz
   institution: Princeton
   dateStart: 2021-05-24
+  dateEnd: 2021-09-01
 
 - name: Ryan Gibbons
   institution: Princeton
   dateStart: 2021-05-24
-  
+  dateEnd: 2021-09-01
+
 - name: Paulina Paiz
   institution: University of Pennsylvania
   dateStart: 2019-12-01

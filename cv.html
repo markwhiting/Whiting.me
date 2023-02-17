@@ -53,15 +53,12 @@ yearShort = site.minima.date_format | default: "%y" -%}
       <h2 class="section">Mentees&emsp;<span class="light bottom small noPrint right"><a href="https://github.com/markwhiting/Whiting.me/blob/gh-pages/_data/mentees.yml">Submit an update.</a></span></h2>
     </td>
   </tr>
-  {%- assign menteeSet = site.data.mentees | sort: "dateStart" | reverse -%} {%-
-  assign institutions = menteeSet | group_by:"institution" -%} {%- for
-  institution in institutions -%}
+  {%- assign institutions = menteeSet | group_by:"institution" -%} {%- for institution in institutions -%}
   <tr>
-    {%- assign startOrderedMentees = institution.items | sort: "startDate" |
-    reverse -%}{%- capture startDate -%} {{ startOrderedMentees.last.dateStart |
+    {%- assign startOrderedMentees = institution.items | sort: "startDate" -%}{%- capture startDate -%} {{ startOrderedMentees.first.dateStart |
     date: yearFull }} {%- endcapture -%}{%- assign endOrderedMentees =
-    institution.items | sort: "endDate" | reversed -%}{%- capture endDate -%} {{
-    startOrderedMentees.first.dateEnd | date: yearFull }}{%- endcapture -%}
+    institution.items | sort: "endDate" -%}{%- capture endDate -%} {{
+    startOrderedMentees.last.dateEnd | date: yearFull }}{%- endcapture -%}
     <td class="left light small">
       {{ startDate }}{% if startDate != endDate %}{% if endDate != "" %}–{{
       endDate | slice: -2, 2 }}{% else %}→{% endif %}{% endif %}
@@ -97,14 +94,13 @@ yearShort = site.minima.date_format | default: "%y" -%}
     <td colspan="2" >
       <strong class=""><span class="noPrint">{%- if pub.award -%}{%- if pub.award contains "Best" -%}🏆{% else %}🏅{% endif %}{% endif %}</span>{%- if pub.url-%}<a href="{{pub.url}}">{% elsif pub.doi %}<a href="https://doi.org/{{pub.doi}}">{% endif %}{{pub.title}}{%- if pub.url or pub.doi-%}</a>{% endif %}</strong>
       <p class="light note">
-        
         {%- assign authors = pub.authors | replace: " and ", "; " | split: ";" -%}
-        {%- for author in authors -%}
+        {%- for author in authors -%}s
         {%- if forloop.first -%}{% elsif forloop.last %} & {% else %}, {% endif %}
         {%- if author contains "Whiting" and author contains "Mark" -%}<strong>{% endif %}{{author | split: "," | reverse |  array_to_sentence_string:" "}}{%- if author contains "Whiting" and author contains "Mark" -%}</strong>{% endif %}
         {%- if forloop.last -%}<br>{% endif %}
         {%- endfor -%} 
-        {%- if pub.venue -%}{{pub.venue}}{% endif %}{%- if pub.venue & pub.year -%}, {% endif %}{%- if pub.year -%}{{pub.year}}{% endif %}
+        {%- if pub.venue -%}<strong>{{pub.venue}}</strong>{% endif %}{%- if pub.venue and pub.year -%}, {% endif %}{%- if pub.year -%}{{pub.year}}{% endif %}
         {%- if pub.doi -%}, <a href="https://doi.org/{{pub.doi}}">{{pub.doi}}</a> {% endif %} <strong>{{pub.award}}</strong>
       </p>
     </td>
