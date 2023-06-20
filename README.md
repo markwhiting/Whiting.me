@@ -1,4 +1,4 @@
-This is my personal site.
+This is my personal site. It's built with Jekyll and hosted on GitHub Pages.
 
 ## To run
 
