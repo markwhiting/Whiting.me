@@ -5,23 +5,31 @@ layout: default
 <div class="home">
   <!-- {%- if page.title -%}<h1 class="page-heading">{{ page.title }}</h1>{%- endif -%} -->
 
-  {{
-"**I'm a Senior Computational Social Scientist at the [CSSLab](https://css.seas.upenn.edu) at [Penn](https://www.upenn.edu)**, working with [Duncan J. Watts](https://en.wikipedia.org/wiki/Duncan_J._Watts) and with affiliation in both [Computer & Information Science](https://www.cis.upenn.edu/index.php) in [Engineering and Applied Science](https://www.seas.upenn.edu) and [Operations, Information and Decisions](https://oid.wharton.upenn.edu) at [Wharton](https://www.wharton.upenn.edu)."
-| markdownify
-}}
-<p><img src="/assets/ci27.jpeg" alt="Mark Whiting at Collective Intelligence 2017" /></p>
+  {{ "**I'm a Senior Computational Social Scientist at the
+  [CSSLab](https://css.seas.upenn.edu) at [Penn](https://www.upenn.edu)**,
+  working with [Duncan J. Watts](https://en.wikipedia.org/wiki/Duncan_J._Watts)
+  and with affiliation in both [Computer & Information
+  Science](https://www.cis.upenn.edu/index.php) in [Engineering and Applied
+  Science](https://www.seas.upenn.edu) and [Operations, Information and
+  Decisions](https://oid.wharton.upenn.edu) at
+  [Wharton](https://www.wharton.upenn.edu)." | markdownify }}
 
- {{ 
-"## I build systems to study how people behave and coordinate at scale.
+  <p>
+    <img
+      src="/assets/ci27.jpeg"
+      alt="Mark Whiting at Collective Intelligence 2017"
+    />
+  </p>
 
-I believe that learning to be better together is the single most important thing we can do to facilitate our longterm success; as individuals, and as a species."
-
-| markdownify
-}}
-
-  {%- if site.posts.size > 0 -%}
-
-  <h2>Recent work<h2>
+  {{ "### I build systems to study how people behave and coordinate at scale. I
+  believe that learning to be better together is the single most important thing
+  we can do to facilitate our longterm success; as individuals, and as a
+  species." | markdownify }} {%- if site.posts.size > 0 -%}
+  <h2>
+    Recent work&emsp;<span class="light bottom small noPrint right"
+      ><a href="/all">All</a></span
+    >
+  </h2>
   <ul class="post-list">
     {%- for post in site.posts limit:4 -%}
     <li>
@@ -38,5 +46,5 @@ I believe that learning to be better together is the single most important thing
     </li>
     {%- endfor -%}
   </ul>
-  {%- endif -%}
+  <!-- {%- endif -%} -->
 </div>
