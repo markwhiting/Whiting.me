@@ -354,3 +354,9 @@ margin: $spacing-unit / 2;
   background-image: none;
   background-color: var(--brand-color);
 }
+
+.altmetric-box {
+  background: white;
+  padding: $spacing-unit;
+  border-radius: 1 * $spacing-unit;
+} 
