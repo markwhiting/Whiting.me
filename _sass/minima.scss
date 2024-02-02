@@ -5,8 +5,10 @@
 $base-font-family: -apple-system, "Helvetica Neue", system-ui, sans-serif !default; 
   // system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
 $base-font-size: 14px !default;
+$light-font-weight: 100 !default;
 $base-font-weight: 400 !default;
-$light-font-weight: 200 !default;
+$heavy-font-weight: 800 !default;
+// $very-light-font-weight: 100 !default;
 $small-font-size: $base-font-size * 0.875 !default;
 $base-line-height: 1.7 !default;
 

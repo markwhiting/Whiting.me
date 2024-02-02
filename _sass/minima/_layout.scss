@@ -10,7 +10,7 @@
 
 .site-title {
   @include relative-font-size(2);
-  font-weight: $light-font-weight * 3;
+  font-weight: $heavy-font-weight;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
   margin-bottom: 0;
@@ -222,6 +222,7 @@
   max-height: 6rem;
   width: auto;
   height: auto;
+  border-radius: 1 * $spacing-unit;
 }
 
 /**
@@ -314,10 +315,8 @@
 
 .note,
 .note p {
-  font-size: $small-font-size;
-  font-style: italic;
+  font-weight: $light-font-weight;
   font-variant-numeric: oldstyle-nums;
-  margin-bottom: 0;
 }
 
 // .clean a,
@@ -336,3 +335,28 @@
 h2 {
   @include relative-font-size(1.2);
 }
+
+.altmetric *{
+border-radius: 100%;
+background-image: radial-gradient(inherit 10%, transparent 100%);
+@media (prefers-color-scheme: dark) {
+    background-image: radial-gradient(var(--light) 10%, transparent 100%);
+  }
+width: $spacing-unit * 9;
+height: $spacing-unit * 9;
+margin: $spacing-unit / 2;
+}
+
+.altmetric a:hover {
+  border-radius: 100%;
+  margin: 0;
+  padding: $spacing-unit / 2;
+  background-image: none;
+  background-color: var(--brand-color);
+}
+
+.altmetric-box {
+  background: white;
+  padding: $spacing-unit;
+  border-radius: 1 * $spacing-unit;
+} 
