@@ -18,10 +18,43 @@
   notes: Aachen University
   institution: University of Pennsylvania
   dateStart: 2022-11-15
+  URL: https://amirrr.github.io
+
+- name: Parth Goel
+  notes: Dubai College
+  institution: University of Pennsylvania
+  dateStart: 2024-01-25
+  URL: https://www.linkedin.com/in/goel-parth/
+
+- name: Dan Kim
+  institution: University of Pennsylvania
+  dateStart: 2024-05-01
+  dateEnd: 2024-08-31
+
+- name: Angie Cao
+  institution: University of Pennsylvania
+  dateStart: 2024-05-01
+  dateEnd: 2024-08-31
+
+- name: Adil Shahid
+  institution: University of Pennsylvania
+  dateStart: 2023-05-01
+  dateEnd: 2024-08-31
+
+- name: Anna Vazhaeparambil
+  institution: University of Pennsylvania
+  dateStart: 2023-05-01
+  dateEnd: 2023-08-31
+
+- name: Eda Orakci
+  institution: University of Pennsylvania
+  dateStart: 2023-05-01
+  dateEnd: 2023-08-31
 
 - name: Bryan Yao
   institution: University of Pennsylvania
   dateStart: 2022-10-01
+  dateEnd: 2024-01-01
 
 - name: Arnab Sircar
   institution: University of Pennsylvania

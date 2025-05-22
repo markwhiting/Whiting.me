@@ -5,30 +5,20 @@ layout: default
 <div class="home">
   <!-- {%- if page.title -%}<h1 class="page-heading">{{ page.title }}</h1>{%- endif -%} -->
 
-  {{ "**I'm a Senior Computational Social Scientist at the
-  [CSSLab](https://css.seas.upenn.edu) at [Penn](https://www.upenn.edu)**,
-  working with [Duncan J. Watts](https://en.wikipedia.org/wiki/Duncan_J._Watts). 
-  I am affiliated in both [Computer & Information
-  Science](https://www.cis.upenn.edu/index.php) in [Engineering and Applied
-  Science](https://www.seas.upenn.edu) and [Operations, Information and
-  Decisions](https://oid.wharton.upenn.edu) at
-  [Wharton](https://www.wharton.upenn.edu)." | markdownify }}
+  {{ "**I'm CTO at [Pareto](https://pareto.ai) and a research fellow at the [CSSLab](https://css.seas.upenn.edu) at
+  the [University of Pennsylvania](https://www.upenn.edu).**
+
+  I believe that learning to be better together is the single most important thing we can do to facilitate ou
+  longterm success; as individuals, and as a
+  species." | markdownify }}
 
   <p>
-    <img
-      src="/assets/ci27.jpeg"
-      alt="Mark Whiting at Collective Intelligence 2017"
-    />
+    <img src="/assets/ci27.jpeg" alt="Mark Whiting at Collective Intelligence 2017" />
   </p>
 
-  {{ "## I build systems to study how people behave and coordinate at scale.
-  I believe that learning to be better together is the single most important thing
-  we can do to facilitate our longterm success; as individuals, and as a
-  species." | markdownify }} {%- if site.posts.size > 0 -%}
+  {{ "" | markdownify }} {%- if site.posts.size > 0 -%}
   <h2>
-    Latest work&emsp;<span class="light bottom small noPrint right"
-      ><a href="/all">All</a></span
-    >
+    Latest work&emsp;<span class="light bottom small noPrint right"><a href="/all">All</a></span>
   </h2>
   <ul class="post-list">
     {%- for post in site.posts limit:4 -%}
@@ -36,11 +26,7 @@ layout: default
       <a class="post-link" href="{{ post.url | relative_url }}" target="_self">
         {%- if post.image -%} {% assign images = site.static_files | where:
         "name", post.image %} {% for image in images %}
-        <img
-          class="post-image"
-          src="{{ image.path }}"
-          alt="{{ post.title | escape }}"
-        />
+        <img class="post-image" src="{{ image.path }}" alt="{{ post.title | escape }}" />
         {% endfor %} {%- endif -%}{{post.title | escape }}
       </a>
     </li>

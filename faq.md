@@ -10,7 +10,7 @@ permalink: /faq
 
 I am trying to reduce meetings, so if we don't already have a scheduled meeting, please first [email me](mailto:mark@whiting.me) your question, including a phone number at which I can reach you. I generally prefer to respond via email, but if it makes more sense, I'll call or find a time to meet.
 
-### Reccomendation letters and references
+### Recommendation letters and references
 
 I am eager to support the careers of my research students, interns and colleagues with letters or references. In general, 2 weeks before the application deadline, [email me](mailto:mark@whiting.me?subject=Reference request) the details of the application, my letter deadline, your application essays, your CV and an informal paragraph about our work together — use this to let me know if there's anything you'd like me to highlight. 
 
