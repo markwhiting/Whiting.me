@@ -1,5 +1,5 @@
 # Whiting.me
-This is my personal website. It will make more sense if you go to [Whiting.me](http://whiting.me).
+This is my personal website. It will make more sense if you go to [Whiting.me](https://whiting.me).
 
 If using [LiveReload](http://livereload.com), add the following to the header:
 ```html
