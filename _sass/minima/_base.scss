@@ -313,7 +313,7 @@ pre {
     font-size: $small-font-size;
     color: var(--text-color);
     font-weight: $light-font-weight;
-    z-index: 9999;
+    z-index: 100;
   }
 
   .wrapper {
