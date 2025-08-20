@@ -305,7 +305,7 @@ pre {
 
   /* Safari-compatible page numbers using body pseudo-element */
   body::after {
-    content: "Page " counter(page);
+    content: counter(page);
     position: fixed;
     bottom: 1cm;
     right: 1cm;
