@@ -1,0 +1,12 @@
+{
+  "name": "whiting-me-tests",
+  "version": "1.0.0",
+  "description": "Automated tests for Mark Whiting's website",
+  "scripts": {
+    "test": "playwright test",
+    "test:pdf": "playwright test --project=chromium tests/pdf-page-numbers.spec.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}

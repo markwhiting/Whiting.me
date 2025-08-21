@@ -5,3 +5,10 @@ _site
 .DS_Store
 vendor/
 .bundle/
+
+# Node.js and testing
+node_modules/
+npm-debug.log*
+test-output.pdf
+playwright-report/
+test-results/
