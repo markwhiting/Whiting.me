@@ -25,7 +25,7 @@ async function testBasicFunctionality() {
   testsTotal++;
   try {
     console.log('Test 1: Checking Jekyll server accessibility...');
-    const response = await makeRequest('http://localhost:4000/');
+    const response = await makeRequest('http://127.0.0.1:4000/');
     
     if (response.statusCode === 200) {
       console.log('✓ Jekyll server is running and responding');
@@ -41,7 +41,7 @@ async function testBasicFunctionality() {
   testsTotal++;
   try {
     console.log('\nTest 2: Validating homepage content...');
-    const response = await makeRequest('http://localhost:4000/');
+    const response = await makeRequest('http://127.0.0.1:4000/');
     
     if (response.data.includes('Mark E. Whiting')) {
       console.log('✓ Homepage contains expected content');
@@ -57,7 +57,7 @@ async function testBasicFunctionality() {
   testsTotal++;
   try {
     console.log('\nTest 3: Checking CSS stylesheet references...');
-    const response = await makeRequest('http://localhost:4000/');
+    const response = await makeRequest('http://127.0.0.1:4000/');
     
     if (response.data.includes('assets/main.css') || response.data.includes('minima')) {
       console.log('✓ CSS stylesheet references found in HTML');
@@ -73,7 +73,7 @@ async function testBasicFunctionality() {
   testsTotal++;
   try {
     console.log('\nTest 4: Checking CV page accessibility...');
-    const response = await makeRequest('http://localhost:4000/cv');
+    const response = await makeRequest('http://127.0.0.1:4000/cv');
     
     if (response.statusCode === 200 && response.data.length > 1000) {
       console.log('✓ CV page is accessible and has substantial content');
@@ -89,7 +89,7 @@ async function testBasicFunctionality() {
   testsTotal++;
   try {
     console.log('\nTest 5: Checking Bio page accessibility...');
-    const response = await makeRequest('http://localhost:4000/bio');
+    const response = await makeRequest('http://127.0.0.1:4000/bio');
     
     if (response.statusCode === 200 && response.data.length > 500) {
       console.log('✓ Bio page is accessible and has content');
@@ -143,7 +143,7 @@ async function testBasicFunctionality() {
   testsTotal++;
   try {
     console.log('\nTest 7: Checking CSS compilation...');
-    const response = await makeRequest('http://localhost:4000/assets/main.css');
+    const response = await makeRequest('http://127.0.0.1:4000/assets/main.css');
     
     if (response.statusCode === 200 && response.data.includes('@page')) {
       console.log('✓ Compiled CSS includes print styles');
