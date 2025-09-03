@@ -94,11 +94,15 @@
 - name: Kaily Liu
   institution: University of Pennsylvania
   dateStart: 2022-01-01
+  dateEnd: 2024-08-01
   URL: https://www.linkedin.com/in/kaily-liu/
 
 - name: Sarah Batta
   institution: University of Pennsylvania
   dateStart: 2022-05-01
+  dateEnd: 2022-12-01
+  URL: https://www.linkedin.com/in/sarah-batta/
+
 
 - name: Katelyn R Bottcher
   institution: University of Pennsylvania
@@ -133,6 +137,7 @@
 - name: Karan Sampath
   institution: University of Pennsylvania
   dateStart: 2021-02-25
+  URL: https://www.linkedin.com/in/karansampath/
 
 - name: Arina Paniukhina
   institution: University of Pennsylvania
