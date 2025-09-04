@@ -41,7 +41,7 @@ body {
   background-color: var(--background-color);
   // background-image: url('/assets/background2S.jpg');
   // background-repeat: no-repeat;
-  // background-attachment: fixed; 
+  // background-attachment: fixed;
   // background-size: cover;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -294,41 +294,8 @@ pre {
 }
 
 @media print {
-  /* Page setup with proper counter management */
   @page {
-    margin: 2.5cm 2cm 3cm 2cm; /* top, right, bottom, left - extra bottom for page numbers */
-    counter-increment: page;
-  }
-  
-  /* Reset counter on first page */
-  @page :first {
-    counter-reset: page 1;
-  }
-
-  /* Standard CSS Paged Media approach for page numbers */
-  @page {
-    @bottom-right {
-      content: "Page " counter(page);
-      font-family: $base-font-family;
-      font-size: $small-font-size;
-      color: black;
-      font-weight: normal;
-    }
-  }
-
-  /* Alternative approach for browsers that don't support @bottom-right */
-  body::after {
-    content: "Page " counter(page, decimal);
-    position: fixed;
-    bottom: 1.5cm;
-    right: 2cm;
-    font-family: $base-font-family;
-    font-size: $small-font-size;
-    color: black;
-    font-weight: normal;
-    z-index: 9999;
-    background: white;
-    padding: 2px 4px;
+    margin: 2.5cm 2cm 2.5cm 2cm; /* top, right, bottom, left */
   }
 
   .wrapper {
