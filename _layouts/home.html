@@ -5,20 +5,24 @@ layout: default
 <div class="home">
   <!-- {%- if page.title -%}<h1 class="page-heading">{{ page.title }}</h1>{%- endif -%} -->
 
-  {{ "**I'm CTO at [Pareto](https://pareto.ai) and a research fellow at the [CSSLab](https://css.seas.upenn.edu) at
-  the [University of Pennsylvania](https://www.upenn.edu).**
-
-  I believe that learning to be better together is the single most important thing we can do to facilitate our
-  longterm success; as individuals, and as a
-  species." | markdownify }}
+  {{ "**I'm Chief Scientist at [Pareto](https://pareto.ai) and a research fellow
+  at the [CSSLab](https://css.seas.upenn.edu) at the [University of
+  Pennsylvania](https://www.upenn.edu).** I believe that learning to be better
+  together is the single most important thing we can do to facilitate our
+  longterm success; as individuals, and as a species." | markdownify }}
 
   <p>
-    <img src="/assets/ci27.jpeg" alt="Mark Whiting at Collective Intelligence 2017" />
+    <img
+      src="/assets/ci27.jpeg"
+      alt="Mark Whiting at Collective Intelligence 2017"
+    />
   </p>
 
   {{ "" | markdownify }} {%- if site.posts.size > 0 -%}
   <h2>
-    Latest work&emsp;<span class="light bottom small noPrint right"><a href="/all">All</a></span>
+    Latest work&emsp;<span class="light bottom small noPrint right"
+      ><a href="/all">All</a></span
+    >
   </h2>
   <ul class="post-list">
     {%- for post in site.posts limit:4 -%}
@@ -26,7 +30,11 @@ layout: default
       <a class="post-link" href="{{ post.url | relative_url }}" target="_self">
         {%- if post.image -%} {% assign images = site.static_files | where:
         "name", post.image %} {% for image in images %}
-        <img class="post-image" src="{{ image.path }}" alt="{{ post.title | escape }}" />
+        <img
+          class="post-image"
+          src="{{ image.path }}"
+          alt="{{ post.title | escape }}"
+        />
         {% endfor %} {%- endif -%}{{post.title | escape }}
       </a>
     </li>

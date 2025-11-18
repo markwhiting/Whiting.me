@@ -11,9 +11,10 @@ IDEO CoLab,Service & Community,TRUE,,https://www.ideocolab.com,Fellow,,2018-01-0
 Stanford crowd research collective,Service & Community,TRUE,,https://github.com/crowdresearch,Team member,,2016-02-01,2019-05-01,
 Pitt iSchool inclusion institute,Service & Community,TRUE,I3,http://www.i3-inclusion.org,Research mentor,,2015-05-01,2018-05-01,
 KAIST,Employment,TRUE,,http://kaist.ac.kr,Visiting scholar,[Cultural Technology](http://ct.kaist.ac.kr),2012-09-01,2012-12-01,under [Meeyoung Cha](https://ds.ibs.re.kr/index.php/ci/)
-Adaptive Equipment,Employment,TRUE,,http://www.adaptivequipment.com,Design lead,,2008-01-01,2012-08-15, 
-Pareto,Employment,FALSE,,https://pareto.ai,Advisor,,2023-09-01,, 
-Pareto,Employment,TRUE,,https://pareto.ai,CTO,,2025-01-06,, 
+Adaptive Equipment,Employment,TRUE,,http://www.adaptivequipment.com,Design lead,,2008-01-01,2012-08-15,
+Pareto,Employment,TRUE,,https://pareto.ai,Advisor,,2023-09-01,2025-01-0,
+Pareto,Employment,TRUE,,https://pareto.ai,CTO,,2025-01-06,2025-11-17,
+Pareto,Employment,TRUE,,https://pareto.ai,Chief Scientist,,2025-11-18,,
 Stanford Office of Postdoctoral Affairs,Teaching,TRUE,,https://postdocs.stanford.edu/events/series/postdoc-teaching-certificate,Postdoc teaching certificate program,,2018-01-01,2019-09-30,
 SEPAL,Teaching,TRUE,,https://www.sfsusepal.org,Stanford Scientific Teaching Summer Institute,,2019-07-09,2019-07-11,
 The Carpentries,Teaching,TRUE,,https://carpentries.org,Software Instructor Training,,2018-10-22,2018-10-23,
@@ -43,8 +44,8 @@ Design team fracture,Invited talks,TRUE,,,,,2019-09-10,2019-09-10,at Hasso Platt
 Resetting remote team dynamics,Invited talks,TRUE,,,,,2020-12-08,2021-1-30,"at [BayCHI](https://baychi.org/calendar/20201208), [Data Science Group](https://www.ibs.re.kr/eng/sub02_02_02_02.do) at the Korean [Institute for Basic Science](https://www.ibs.re.kr/eng.do), [HCI@KAIST](https://hci.kaist.ac.kr), [Comm](http://communication.snu.ac.kr/?lang=en) at [Seoul National University](https://en.snu.ac.kr/index.html)"
 Eastside High School,Education,FALSE,EHS,https://www.sbac.edu/eastside,International Baccalaureate,,1999-08-01,2003-05-01,
 University of Florida,Education,FALSE,UF,https://uf.edu,Non-degree study,,2001-05-01,2003-12-01,Focus on mathematics
-Adaptive Equipment,Employment,FALSE,,http://www.adaptivequipment.com,Various positions,,2004-11-01,2006-02-01, 
-Summer Institute in Computational Social Science,Service & Community,TRUE,SICSS,https://compsocialscience.github.io/summer-institute/2020/duke/people,Participant,the Duke chapter,2020-06-14,2020-06-26, 
+Adaptive Equipment,Employment,FALSE,,http://www.adaptivequipment.com,Various positions,,2004-11-01,2006-02-01,
+Summer Institute in Computational Social Science,Service & Community,TRUE,SICSS,https://compsocialscience.github.io/summer-institute/2020/duke/people,Participant,the Duke chapter,2020-06-14,2020-06-26,
 Hasso Plattner Institute-Stanford Design Thinking Research Program,Grants,TRUE,HPDTRP,https://hpi.de/en/dtrp/projects,Research grant,,2020-10-01,2021-09-01,"Re-DNA II: Re-designing nonverbal actions in video conferencing — $100,000"
 Program on Democracy and the Internet,Grants,TRUE,PDI,https://pacscenter.stanford.edu,Research grant,,2020-05-01,2020-12-30,"It should have gone another way: Evaluating Consistency in Democratic Decision-Making via Online Juries — $50,000"
 HPDTRP,Grants,TRUE,,https://hpi.de/en/dtrp/projects/projects-201920/re-dna-re-designing-nonverbal-actions-for-design-team-collaborations.html,Research grant,,2019-10-01,2020-09-01,"Re-DNA: Re-designing nonverbal actions for design team collaborations — $110,000"
