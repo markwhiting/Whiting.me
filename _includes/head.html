@@ -7,4 +7,66 @@
   }}"> {%- feed_meta -%} {%- if jekyll.environment == 'production' and
   site.google_analytics -%} {%- include google-analytics.html -%} {%- endif -%}
   <base target="_blank" />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mark E. Whiting",
+    "url": "{{ site.url }}",
+    "email": "{{ site.email }}",
+    "image": "{{ site.url }}/assets/Headshot.jpeg",
+    "jobTitle": "Chief Scientist",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Pareto"
+    },
+    "affiliation": [
+      {
+        "@type": "Organization",
+        "name": "University of Pennsylvania",
+        "url": "https://www.upenn.edu"
+      },
+      {
+        "@type": "ResearchOrganization",
+        "name": "CSSLab",
+        "url": "https://css.seas.upenn.edu"
+      }
+    ],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Carnegie Mellon University"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "KAIST"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "RMIT University"
+      }
+    ],
+    "sameAs": [
+      "https://twitter.com/{{ site.twitter_username }}",
+      "https://github.com/{{ site.github_username }}",
+      "https://scholar.google.com/citations?user=9BeIX-0AAAAJ",
+      "https://orcid.org/0000-0002-6395-7833"
+    ]
+  }
+  </script>
+  {%- if page.url == "/" -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Mark E. Whiting",
+      "url": "{{ site.url }}"
+    }
+  }
+  </script>
+  {%- endif -%}
 </head>

@@ -5,7 +5,7 @@ permalink: /all
 ---
 
 <p class="light bottom small right"><a>Post</a></p>
-<h2>Archive</h2>
+<h1>Archive</h1>
 <table class="clean">
   {% for post in site.posts %}
   <tr>
@@ -22,8 +22,6 @@ permalink: /all
       <a href="{{ post.url }}" target="_self"
         ><strong>{{ post.title }}</strong></a
       >
-      <!-- in {{ post.categories | array_to_sentence_string }}. -->
-      <!-- <span class="light note">{{ post.excerpt | markdownify }}</span> -->
     </td>
   </tr>
   {% endfor %}
