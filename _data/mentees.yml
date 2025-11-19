@@ -49,16 +49,19 @@
   institution: University of Pennsylvania
   dateStart: 2023-05-01
   dateEnd: 2023-08-31
+  URL: https://www.linkedin.com/in/anna-vazhaeparambil-421744229/
 
 - name: Eda Orakci
   institution: University of Pennsylvania
   dateStart: 2023-05-01
   dateEnd: 2023-08-31
+  URL: https://www.linkedin.com/in/eda-orakci/
 
 - name: Bryan Yao
   institution: University of Pennsylvania
   dateStart: 2022-10-01
   dateEnd: 2024-01-01
+  URL: https://www.linkedin.com/in/bryao/
 
 - name: Arnab Sircar
   institution: University of Pennsylvania
@@ -69,25 +72,30 @@
   institution: University of Pennsylvania
   dateStart: 2022-06-01
   dateEnd: 2022-08-01
+  URL: https://www.linkedin.com/in/alan-qiao/
 
 - name: Daniel Xue
   institution: University of Pennsylvania
   dateStart: 2022-01-01
   dateEnd: 2022-06-01
+  URL: https://www.linkedin.com/in/daniel-l-xue/
 
 - name: Jason Ren
   institution: University of Pennsylvania
   dateStart: 2022-10-01
+  URL: https://www.linkedin.com/in/jasonrendev/
 
 - name: Vincent Cai
   institution: University of Pennsylvania
   dateStart: 2022-01-01
   dateEnd: 2022-07-01
+  URL: https://www.linkedin.com/in/caiv/
 
 - name: Huifang Ye
   institution: University of Pennsylvania
-  dateStart: 2022-10-01
+  dateStart: 2022-09-01
   dateEnd: 2023-01-01
+  URL: https://www.linkedin.com/in/huifang-ye/
 
 - name: Sumant Shringari
   institution: University of Pennsylvania
@@ -107,16 +115,17 @@
   dateEnd: 2022-12-01
   URL: https://www.linkedin.com/in/sarah-batta/
 
-
 - name: Katelyn R Bottcher
   institution: University of Pennsylvania
   dateStart: 2021-01-28
   dateEnd: 2021-05-30
+  URL: https://www.linkedin.com/in/katelyn-bottcher-75298b19a/
 
 - name: Rafael Gehrke
   institution: University of Pennsylvania
   dateStart: 2021-01-28
   dateEnd: 2021-05-30
+  URL: https://www.linkedin.com/in/rafael-gehrke/
 
 - name: Vikram Balasubramanian
   institution: University of Pennsylvania
@@ -235,29 +244,29 @@
   dateEnd: 2018-09-01
 
 - name: Wing Tung Wong
-  URL: https://www.linkedin.com/in/wingtungwong/
   institution: CMU
   dateStart: 2013-01-01
   dateEnd: 2016-01-01
+  URL: https://www.linkedin.com/in/wingtungwong/
 
 - name: Pheobe Kimm
-  URL: https://www.linkedin.com/in/phoebekimm/
   institution: Stanford
   dateStart: 2018-07-01
   dateEnd: 2018-12-20
+  URL: https://www.linkedin.com/in/phoebekimm/
 
 - name: Nik Marda
-  URL: https://www.linkedin.com/in/nmarda/
   institution: Stanford
   dateStart: 2018-04-01
   dateEnd: 2018-09-01
+  URL: https://www.linkedin.com/in/nmarda/
 
 - name: Allie Blaising
-  URL: https://www.linkedin.com/in/allie-blaising-b6a91b115/
   notes: Cal Poly-San Luis Obispo
   institution: Stanford
   dateStart: 2018-07-01
   dateEnd: 2019-04-01
+  URL: https://www.linkedin.com/in/allie-blaising-b6a91b115/
 
 - name: Kevin Lin
   institution: Stanford
@@ -274,20 +283,21 @@
 - name: Phoebe Yao
   institution: Stanford
   dateStart: 2018-12-01
+  dateEnd: 2020-01-01
   URL: https://www.linkedin.com/in/phoebexyao/
 
 - name: Chloe Barreau
-  URL: https://chloebarreau.github.io
   institution: Stanford
   dateStart: 2018-12-01
   dateEnd: 2019-04-01
+  URL: https://chloebarreau.github.io
 
 - name: Laura Fiuza
-  URL: https://www.linkedin.com/in/laura-fiuza-ba1077b4/
   notes: research scientist
   institution: Stanford
   dateStart: 2019-01-01
   dateEnd: 2019-09-01
+  URL: https://www.linkedin.com/in/laura-fiuza-dubugras-ba1077b4/
 
 - name: Emily Hu
   institution: Stanford
@@ -298,6 +308,7 @@
   institution: Stanford
   dateStart: 2019-01-01
   dateEnd: 2019-06-20
+  URL: https://www.linkedin.com/in/grant-hugh/
 
 - name: Abhay Kumar Agarwal
   institution: Stanford
@@ -318,6 +329,7 @@
   institution: Stanford
   dateStart: 2017-09-20
   dateEnd: 2017-12-01
+  URL: https://www.linkedin.com/in/catherinehuijiang/
 
 - name: Monique Jeffrey
   institution: i3 Inclusion Institute, University of Pittsburgh
@@ -342,6 +354,7 @@
   notes: UMBC
   dateStart: 2016-06-20
   dateEnd: 2018-03-20
+  URL: https://www.linkedin.com/in/imaurih/
 
 - name: Jeremiah Azurin
   institution: i3 Inclusion Institute, University of Pittsburgh
@@ -366,9 +379,11 @@
   notes: University of Houston
   dateStart: 2014-06-20
   dateEnd: 2016-03-20
+  URL: https://www.linkedin.com/in/laurelrawley/
 
 - name: Jose Valderrama
   institution: i3 Inclusion Institute, University of Pittsburgh
   notes: UCF
   dateStart: 2014-06-20
   dateEnd: 2016-03-20
+  URL: https://www.linkedin.com/in/jose--valderrama/
