@@ -62,11 +62,11 @@ yearShort = site.minima.date_format | default: "%y" -%}
   </tr>
   {%- assign institutions = menteeSet | group_by:"institution" -%} {%- for institution in institutions -%}
   <tr>
-    {%- assign startOrderedMentees = institution.items | sort: "startDate" -%}{%- capture startDate -%} {{
+    {%- assign startOrderedMentees = institution.items | sort: "dateStart" -%}{%- capture startDate -%} {{
     startOrderedMentees.first.dateStart |
     date: yearFull }} {%- endcapture -%}{%- assign endOrderedMentees =
-    institution.items | sort: "endDate" -%}{%- capture endDate -%} {{
-    startOrderedMentees.last.dateEnd | date: yearFull }}{%- endcapture -%}
+    institution.items | sort: "dateEnd" -%}{%- capture endDate -%} {{
+    endOrderedMentees.last.dateEnd | date: yearFull }}{%- endcapture -%}
     <td class="left light small">
       {{ startDate }}{% if startDate != endDate %}{% if endDate != "" %}–{{
       endDate | slice: -2, 2 }}{% else %}→{% endif %}{% endif %}
