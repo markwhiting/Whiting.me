@@ -49,35 +49,7 @@ jobs:
           bundle exec jekyll serve --host 127.0.0.1 --port 4000 &
           # Wait for server to start
           sleep 10
-          # Run basic tests
-          npm run test:basic
+          # Run tests
+          npm test
           # Stop Jekyll server
           pkill -f jekyll || true
-
-      - name: Install Playwright Browsers (with fallback)
-        run: |
-          # Try to install Playwright browsers, but don't fail if it doesn't work
-          npx playwright install --with-deps chromium || echo "Playwright browser installation failed, skipping browser tests"
-
-      - name: Run Playwright tests (if browsers available)
-        run: |
-          export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
-          # Check if chromium is available
-          if npx playwright --version && npx playwright test --list | grep -q "pdf-page-numbers"; then
-            echo "Running Playwright tests..."
-            npm run test:playwright
-          else
-            echo "Playwright browsers not available, skipping browser tests"
-            echo "Basic tests have already verified core functionality"
-          fi
-        continue-on-error: true
-
-      - name: Upload test results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: test-results
-          path: |
-            playwright-report/
-            test-results/
-          retention-days: 30

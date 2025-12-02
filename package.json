@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "description": "Automated tests for Mark Whiting's website",
   "scripts": {
-    "test": "npm run test:basic && npm run test:playwright",
+    "test": "npm run test:basic && npm run test:cv",
     "test:basic": "node tests/basic-test.js",
-    "test:playwright": "playwright test",
-    "test:pdf": "playwright test --project=chromium tests/pdf-page-numbers.spec.js"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.39.0"
+    "test:cv": "node tests/cv-test.js"
   }
 }
