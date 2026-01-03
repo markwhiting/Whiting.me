@@ -22,7 +22,8 @@ if (files.length === 0) {
 
 // Extract URL slugs from filenames
 // Jekyll filename format: YYYY-MM-DD-title.md
-// With permalink: /:title/, the URL becomes /title/
+// Note: With `permalink: /:title/`, Jekyll uses the post's front matter `title` to generate the URL.
+// This script approximates potential collisions by deriving a slug from the filename's title portion.
 const slugs = new Map()
 
 for (const file of files) {
