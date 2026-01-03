@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Automated tests for Mark Whiting's website",
   "scripts": {
-    "test": "npm run test:basic && npm run test:cv",
+    "test": "npm run test:urls && npm run test:basic && npm run test:cv",
+    "test:urls": "node tests/url-collision-test.js",
     "test:basic": "node tests/basic-test.js",
     "test:cv": "node tests/cv-test.js"
   }
