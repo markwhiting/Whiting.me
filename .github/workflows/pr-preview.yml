@@ -60,22 +60,6 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Update deployment status
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const prNumber = context.payload.pull_request.number;
-            const previewUrl = `https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${prNumber}`;
-
-            await github.rest.repos.createDeploymentStatus({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              deployment_id: '${{ steps.deployment.outputs.deployment_id }}',
-              state: 'success',
-              environment_url: previewUrl,
-              description: 'PR Preview deployed successfully'
-            });
-
       - name: Comment PR
         uses: actions/github-script@v7
         with:

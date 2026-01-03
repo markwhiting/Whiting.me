@@ -24,6 +24,9 @@ github_username: markwhiting
 google_analytics: UA-298094-21
 lang: en
 
+# URL settings
+permalink: /:title/
+
 # Build settings
 markdown: kramdown
 theme: minima
