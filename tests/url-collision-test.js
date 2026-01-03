@@ -41,10 +41,13 @@ function extractFrontMatter(filePath) {
   // Parse YAML front matter (simple key: value pairs)
   const lines = frontMatterText.split('\n')
   for (const line of lines) {
+    // Skip empty lines
+    if (!line.trim()) continue
+    
     // Match "key: value" pattern, handling quoted and unquoted values
-    const match = line.match(/^(\w+):\s*(.+)$/)
+    const match = line.match(/^([^:]+?):\s*(.+)$/)
     if (match) {
-      const key = match[1]
+      const key = match[1].trim()
       let value = match[2].trim()
       
       // Remove quotes if present
@@ -68,10 +71,10 @@ function extractFrontMatter(filePath) {
 function slugifyTitle(title) {
   return title
     .toLowerCase()
-    .replace(/[^\w\s-]/g, '') // Remove special characters except hyphens and spaces
-    .replace(/\s+/g, '-')      // Replace spaces with hyphens
-    .replace(/-+/g, '-')       // Replace multiple hyphens with single hyphen
-    .replace(/^-+|-+$/g, '')   // Trim hyphens from start and end
+    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters (including underscores)
+    .replace(/\s+/g, '-')          // Replace spaces with hyphens
+    .replace(/-+/g, '-')           // Replace multiple hyphens with single hyphen
+    .replace(/^-+|-+$/g, '')       // Trim hyphens from start and end
 }
 
 // Extract URL slugs from post titles in front matter
