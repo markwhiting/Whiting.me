@@ -45,7 +45,7 @@ function extractFrontMatter(filePath) {
     if (!line.trim()) continue
     
     // Match "key: value" pattern, handling quoted and unquoted values
-    const match = line.match(/^([^:]+?):\s*(.+)$/)
+    const match = line.match(/^([^:]+?):\s*(.*)$/)
     if (match) {
       const key = match[1].trim()
       let value = match[2].trim()
