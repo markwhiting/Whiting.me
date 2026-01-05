@@ -16,7 +16,10 @@ concurrency:
 
 jobs:
   build-and-deploy:
-    if: github.event.action != 'closed'
+    # Disabled: PR previews are incompatible with custom domain GitHub Pages deployments
+    # because actions/deploy-pages@v4 can only deploy to one path at a time.
+    # This workflow would overwrite the main site deployment.
+    if: false && github.event.action != 'closed'
     runs-on: ubuntu-latest
     environment:
       name: pr-preview-${{ github.event.pull_request.number }}
@@ -99,7 +102,8 @@ jobs:
             }
 
   cleanup:
-    if: github.event.action == 'closed'
+    # Disabled: PR previews are disabled for custom domain sites
+    if: false && github.event.action == 'closed'
     runs-on: ubuntu-latest
     steps:
       - name: Delete environment
