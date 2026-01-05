@@ -136,10 +136,15 @@ gem "webrick", "~> 1.8"
 
 The repository uses GitHub Actions for continuous integration:
 
-- **Trigger**: Every push to any branch
-- **Action**: `.github/workflows/jekyll.yml` 
-- **Process**: Uses Docker with `jekyll/builder:latest` image
-- **Command**: `jekyll build --future`
-- **Deploy**: Automatic to GitHub Pages on push to `gh-pages` branch
+- **Trigger**: Every push to `gh-pages` branch
+- **Action**: `.github/workflows/jekyll.yml`
+- **Process**: Uses `ruby/setup-ruby@v1` with Ruby 3.2 and bundler caching
+- **Build Command**: `bundle exec jekyll build --future`
+- **Deploy**: Automatic to GitHub Pages using `actions/deploy-pages@v4`
 
-The CI uses Docker to ensure consistent build environment, so local builds may have minor differences but should generally match.
+The CI pipeline consists of three jobs:
+1. **Build**: Sets up Ruby environment, builds the Jekyll site, and uploads the artifact
+2. **Deploy**: Deploys the built site to GitHub Pages
+3. **Test**: Runs automated tests to verify site functionality
+
+The workflow uses bundler caching to speed up builds and ensures consistency with local development environment.
