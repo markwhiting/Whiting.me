@@ -69,7 +69,7 @@
     const upDate = "" + month + " " + date.getDate() + ", " + date.getFullYear();
     const commit = latestEvent.payload.commits[0];
     const commitUrl = "https://github.com/markwhiting/Whiting.me/commit/" + commit.sha;
-    const linkHtml = '<a href="https://github.com/markwhiting/WhitingME/tree/gh-pages" ></a><a href="' + commitUrl + '">' + upDate + "</a>";
+    const linkHtml = '<a href="https://github.com/markwhiting/Whiting.me/tree/gh-pages" ></a><a href="' + commitUrl + '">' + upDate + "</a>";
 
     Array.from(document.getElementsByClassName('upDate')).forEach(element => {
       element.innerHTML = linkHtml;
