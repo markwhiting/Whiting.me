@@ -19,12 +19,16 @@
   const xmlhttp = new XMLHttpRequest();
   const url = "https://api.github.com/repos/markwhiting/Whiting.me/events";
   xmlhttp.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
-      try {
-        const events = JSON.parse(this.responseText);
-        lastUpdated(events);
-      } catch (e) {
-        console.error('Failed to parse GitHub events:', e);
+    if (this.readyState === 4) {
+      if (this.status === 200) {
+        try {
+          const events = JSON.parse(this.responseText);
+          lastUpdated(events);
+        } catch (e) {
+          console.error('Failed to parse GitHub events:', e);
+        }
+      } else {
+        console.log('GitHub API unavailable (status: ' + this.status + '), using fallback date');
       }
     }
   };
@@ -42,11 +46,13 @@
 
     // Exit early if no PushEvent found
     if (!latestEvent || !latestEvent.created_at) {
+      console.log('No PushEvent found in GitHub events, using fallback date');
       return;
     }
 
     // Verify commits exist before accessing
     if (!latestEvent.payload || !latestEvent.payload.commits || latestEvent.payload.commits.length === 0) {
+      console.log('No commits found in PushEvent, using fallback date');
       return;
     }
 
