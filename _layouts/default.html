@@ -58,7 +58,7 @@
       case 10: month = "Nov"; break;
       case 11: month = "Dec"; break;
     }
-    const upDate = "" + month + " " + date.getDate() + ", " + date.getFullYear();
+    const upDate = `${month} ${date.getDate()}, ${date.getFullYear()}`;
     const commitUrl = "https://github.com/markwhiting/Whiting.me/commit/" + commit.sha;
     const linkHtml = '<a href="https://github.com/markwhiting/Whiting.me/tree/gh-pages" ></a><a href="' + commitUrl + '">' + upDate + "</a>";
 
