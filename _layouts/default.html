@@ -16,65 +16,103 @@
     {%- include footer.html -%}
 
   <script>
-  const xmlhttp = new XMLHttpRequest();
-  const url = "https://api.github.com/repos/markwhiting/Whiting.me/events";
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
-      try {
-        const events = JSON.parse(this.responseText);
-        lastUpdated(events);
-      } catch (e) {
-        console.error('Failed to parse GitHub events:', e);
+  // Client-side caching for rate limit protection
+  const CACHE_KEY = 'gh_commit_cache';
+  const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+
+  function getCachedData() {
+    try {
+      const cached = localStorage.getItem(CACHE_KEY);
+      if (cached) {
+        const { data, timestamp } = JSON.parse(cached);
+        if (Date.now() - timestamp < CACHE_DURATION) {
+          return data;
+        }
       }
+    } catch (e) {
+      console.warn('Failed to read cache:', e);
     }
-  };
-  xmlhttp.open("GET", url, true);
-  xmlhttp.send();
-
-  function lastUpdated(events) {
-    let latestEvent = null;
-    for (let i = 0; i < events.length; i++) {
-      if (events[i].type === "PushEvent") {
-        latestEvent = events[i];
-        break;
-      }
-    }
-
-    // Exit early if no PushEvent found
-    if (!latestEvent || !latestEvent.created_at) {
-      return;
-    }
-
-    // Verify commits exist before accessing
-    if (!latestEvent.payload || !latestEvent.payload.commits || latestEvent.payload.commits.length === 0) {
-      return;
-    }
-
-    const date = new Date(latestEvent.created_at);
-    let month;
-    switch (date.getMonth()) {
-      case 0: month = "Jan"; break;
-      case 1: month = "Feb"; break;
-      case 2: month = "Mar"; break;
-      case 3: month = "Apr"; break;
-      case 4: month = "May"; break;
-      case 5: month = "Jun"; break;
-      case 6: month = "Jul"; break;
-      case 7: month = "Aug"; break;
-      case 8: month = "Sep"; break;
-      case 9: month = "Oct"; break;
-      case 10: month = "Nov"; break;
-      case 11: month = "Dec"; break;
-    }
-    const upDate = "" + month + " " + date.getDate() + ", " + date.getFullYear();
-    const commit = latestEvent.payload.commits[0];
-    const commitUrl = "https://github.com/markwhiting/Whiting.me/commit/" + commit.sha;
-    const linkHtml = '<a href="https://github.com/markwhiting/Whiting.me/tree/gh-pages" ></a><a href="' + commitUrl + '">' + upDate + "</a>";
-
-    Array.from(document.getElementsByClassName('upDate')).forEach(element => {
-      element.innerHTML = linkHtml;
-    })
+    return null;
   }
+
+  function setCacheData(data) {
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({
+        data: data,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      console.warn('Failed to write cache:', e);
+    }
+  }
+
+  function fetchCommitData() {
+    const cached = getCachedData();
+    if (cached) {
+      lastUpdated(cached);
+      return;
+    }
+
+    const xmlhttp = new XMLHttpRequest();
+    const url = "https://api.github.com/repos/markwhiting/Whiting.me/commits/gh-pages";
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState === 4) {
+        if (this.status === 200) {
+          try {
+            const commit = JSON.parse(this.responseText);
+            setCacheData(commit);
+            lastUpdated(commit);
+          } catch (e) {
+            console.error('Failed to parse GitHub commit data:', e);
+          }
+        } else {
+          console.log(`GitHub API unavailable (status: ${this.status}), using fallback date`);
+        }
+      }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+  }
+
+  function lastUpdated(commit) {
+    // Verify commit data exists
+    if (!commit || !commit.commit || !commit.commit.committer || !commit.commit.committer.date) {
+      console.log('Invalid commit data from GitHub API, using fallback date');
+      return;
+    }
+
+    // Validate commit SHA format (40 hex characters)
+    if (!commit.sha || !/^[0-9a-f]{40}$/i.test(commit.sha)) {
+      console.warn('Invalid commit SHA format, using fallback date');
+      return;
+    }
+
+    const date = new Date(commit.commit.committer.date);
+    // Use toLocaleDateString for simpler month formatting
+    const upDate = date.toLocaleDateString('en-US', { 
+      month: 'short', 
+      day: 'numeric', 
+      year: 'numeric' 
+    });
+    
+    const commitUrl = `https://github.com/markwhiting/Whiting.me/commit/${commit.sha}`;
+
+    // Use safer DOM manipulation instead of innerHTML
+    Array.from(document.getElementsByClassName('upDate')).forEach(element => {
+      // Clear existing content
+      element.textContent = '';
+      
+      // Create link to commit
+      const commitLink = document.createElement('a');
+      commitLink.href = commitUrl;
+      commitLink.textContent = upDate;
+      
+      element.appendChild(commitLink);
+    });
+  }
+
+  // Fetch commit data on page load
+  fetchCommitData();
   
   if (window.matchMedia){
     const body = document.getElementsByTagName("body")[0]
