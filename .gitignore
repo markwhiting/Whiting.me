@@ -3,6 +3,7 @@ _site
 .jekyll-metadata
 .nova
 .DS_Store
+.claude/
 vendor/
 .bundle/
 
