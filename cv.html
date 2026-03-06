@@ -134,7 +134,7 @@ yearShort = site.minima.date_format | default: "%y" -%}
   {%- assign years = site.data.publications | sort: "year" | reverse | map: "year" | uniq -%}
   {%- for focal_year in years -%}
   {%- if focal_year == nil -%}{%- continue -%}{%- endif -%}
-  {%- assign yearly_pubs = site.data.publications | where:"year", focal_year | where: "type", "draft" | uniq -%}
+  {%- assign yearly_pubs = site.data.publications | where:"year", focal_year | where: "type", "unpublished" | uniq -%}
   {%- for pub in yearly_pubs -%}
   <tr>
     {% if pub.year != "Upcoming" %}
@@ -183,7 +183,7 @@ yearShort = site.minima.date_format | default: "%y" -%}
   </tr>
   {%- assign years = site.data.publications | sort: "year" | reverse | map: "year" | uniq -%}
   {%- for focal_year in years -%}
-  {%- assign yearly_pubs = site.data.publications | where:"year", focal_year | where_exp:"pub", "pub.type != 'draft'" |
+  {%- assign yearly_pubs = site.data.publications | where:"year", focal_year | where_exp:"pub", "pub.type != 'unpublished'" |
   where_exp:"pub",
   "pub.type != 'patent'" | uniq -%}
   {%- for pub in yearly_pubs -%}
