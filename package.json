@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "Automated tests for Mark Whiting's website",
   "scripts": {
-    "test": "npm run test:urls && npm run test:basic && npm run test:footer && npm run test:cv && npm run test:print && npm run test:colors",
+    "test": "npm run test:urls && npm run test:basic && npm run test:footer && npm run test:cv && npm run test:print && npm run test:colors && npm run test:family",
     "test:urls": "node tests/url-collision-test.js",
     "test:basic": "node tests/basic-test.js",
     "test:footer": "node tests/footer-test.js",
     "test:cv": "node tests/cv-test.js",
     "test:print": "node tests/print-styles-test.js",
-    "test:colors": "node tests/color-space-test.js"
+    "test:colors": "node tests/color-space-test.js",
+    "test:family": "node tests/family-page-test.js"
   }
 }
