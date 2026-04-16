@@ -2,7 +2,7 @@
 
 // Define defaults for each variable.
 
-$base-font-family: -apple-system, "Helvetica Neue", system-ui, sans-serif !default; 
+$base-font-family: -apple-system, "Helvetica Neue", system-ui, sans-serif !default;
   // system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
 $base-font-size: 14px !default;
 $light-font-weight: 100 !default;
@@ -67,6 +67,31 @@ $spacing-unit: $visual-space;
     --transparent-alt-brand-color: var(--very-transparent-blue);
     --dark-brand-color: var(--dark-orange);
     --shadow-color: var(--shadow-light);
+  }
+}
+
+@supports ((color: lab(50% 0 0)) and (color: lch(50% 0 0))) {
+  :root {
+    --light: lab(100% 0 0);
+    --dark: lab(17.351% 1.104 -0.311);
+
+    --dark-grey: lab(37.513% 2.032 -0.571);
+    --dark-grey-dark: lab(26.668% 1.536 -0.432);
+    --dark-grey-light: lab(47.830% 2.500 -0.702);
+
+    --light-grey: lab(72.759% 0 0);
+    --light-grey-dark: lab(63.223% 0 0);
+    --light-grey-light: lab(82.046% 0 0);
+
+    --blue: lch(53.287% 46.213 254.619deg);
+    --transparent-blue: lch(53.287% 46.213 254.619deg / 0.7);
+    --very-transparent-blue: lch(53.287% 46.213 254.619deg / 0.3);
+    --dark-blue: lch(30.818% 30.160 252.174deg);
+
+    --orange: lch(57.892% 85.784 52.131deg);
+    --transparent-orange: lch(57.892% 85.784 52.131deg / 0.7);
+    --very-transparent-orange: lch(57.892% 85.784 52.131deg / 0.3);
+    --dark-orange: lch(49.612% 75.681 52.487deg);
   }
 }
 

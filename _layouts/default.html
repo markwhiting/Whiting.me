@@ -89,39 +89,68 @@
 
     const date = new Date(commit.commit.committer.date);
     // Use toLocaleDateString for simpler month formatting
-    const upDate = date.toLocaleDateString('en-US', { 
-      month: 'short', 
-      day: 'numeric', 
-      year: 'numeric' 
+    const upDate = date.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
     });
-    
+
     const commitUrl = `https://github.com/markwhiting/Whiting.me/commit/${commit.sha}`;
 
     // Use safer DOM manipulation instead of innerHTML
     Array.from(document.getElementsByClassName('upDate')).forEach(element => {
       // Clear existing content
       element.textContent = '';
-      
+
       // Create link to commit
       const commitLink = document.createElement('a');
       commitLink.href = commitUrl;
       commitLink.textContent = upDate;
-      
+
       element.appendChild(commitLink);
     });
   }
 
   // Fetch commit data on page load
   fetchCommitData();
-  
-  if (window.matchMedia){
-    const body = document.getElementsByTagName("body")[0]
-    const pick_color = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? `hsla(${Math.random()*360},${Math.random()*25}%,${Math.random()*20}%,1)` : `hsla(${Math.random()*360},${Math.random()*25}%,${Math.random()*20+80}%,1)`
-    body.style.backgroundColor = pick_color()
-    
-    window
-    .matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', () => {body.style.backgroundColor = pick_color()})
+
+  if (window.matchMedia) {
+    const body = document.getElementsByTagName("body")[0];
+    const colorSchemeMedia = window.matchMedia("(prefers-color-scheme: dark)");
+    const supportsLch =
+      window.CSS &&
+      typeof window.CSS.supports === "function" &&
+      window.CSS.supports("color", "lch(50% 20 180deg)");
+
+    const randomHue = () => Math.random() * 360;
+    const randomChroma = () => Math.random() * 12;
+    const randomLightness = isDarkMode =>
+      isDarkMode ? Math.random() * 20 : Math.random() * 20 + 80;
+    const randomSaturation = () => Math.random() * 25;
+
+    const pickColor = () => {
+      const isDarkMode = colorSchemeMedia.matches;
+
+      if (supportsLch) {
+        return `lch(${randomLightness(isDarkMode)}% ${randomChroma()} ${randomHue()}deg)`;
+      }
+
+      return isDarkMode
+        ? `hsla(${randomHue()},${randomSaturation()}%,${Math.random() * 20}%,1)`
+        : `hsla(${randomHue()},${randomSaturation()}%,${Math.random() * 20 + 80}%,1)`;
+    };
+
+    const applyBackgroundColor = () => {
+      body.style.backgroundColor = pickColor();
+    };
+
+    applyBackgroundColor();
+
+    if (typeof colorSchemeMedia.addEventListener === "function") {
+      colorSchemeMedia.addEventListener("change", applyBackgroundColor);
+    } else if (typeof colorSchemeMedia.addListener === "function") {
+      colorSchemeMedia.addListener(applyBackgroundColor);
+    }
   }
   </script>
     <script
