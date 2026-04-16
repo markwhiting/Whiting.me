@@ -313,6 +313,12 @@ pre {
     margin: 2.5cm 2cm 2.5cm 2cm; /* top, right, bottom, left */
   }
 
+  html,
+  body {
+    background: #fff !important;
+    background-image: none !important;
+  }
+
   .wrapper {
     font-size: smaller;
     // max-width: 900px;
