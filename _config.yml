@@ -25,6 +25,7 @@ google_analytics: UA-298094-21
 lang: en
 
 # URL settings
+# Use clean title-based permalinks so post URLs stay short, readable, and consistent across the site.
 permalink: /:title/
 
 # Build settings

@@ -1,116 +1,145 @@
-const fs = require('fs')
-const path = require('path')
+const fs = require("fs")
+const path = require("path")
+const { spawnSync } = require("child_process")
 
-console.log('Running URL collision test...')
+console.log("Running URL collision test...")
 
-const postsDir = path.join(__dirname, '..', '_posts')
+const repoRoot = path.join(__dirname, "..")
+const postsDir = path.join(repoRoot, "_posts")
 
 // Check if _posts directory exists
 if (!fs.existsSync(postsDir)) {
-  console.log('SKIP: No _posts directory found')
+  console.log("SKIP: No _posts directory found")
   process.exit(0)
 }
 
-const files = fs.readdirSync(postsDir).filter(f =>
-  f.endsWith('.markdown') || f.endsWith('.md')
-)
+const files = fs
+  .readdirSync(postsDir)
+  .filter(file => file.endsWith(".markdown") || file.endsWith(".md"))
 
 if (files.length === 0) {
-  console.log('SKIP: No posts found')
+  console.log("SKIP: No posts found")
   process.exit(0)
 }
 
 /**
- * Extract YAML front matter from a post file
- * @param {string} filePath - Full path to the post file
- * @returns {object|null} - Parsed front matter object or null if not found
+ * Ask Jekyll for the canonical post URLs instead of reimplementing
+ * front matter parsing and slug generation in JavaScript.
+ * @returns {Array<{file: string, title: string | null, url: string}>}
  */
-function extractFrontMatter(filePath) {
-  const content = fs.readFileSync(filePath, 'utf8')
-  
-  // Match YAML front matter between --- delimiters
-  const frontMatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/)
-  
-  if (!frontMatterMatch) {
-    return null
-  }
-  
-  const frontMatterText = frontMatterMatch[1]
-  const frontMatter = {}
-  
-  // Parse YAML front matter (simple key: value pairs)
-  const lines = frontMatterText.split('\n')
-  for (const line of lines) {
-    // Skip empty lines
-    if (!line.trim()) continue
-    
-    // Match "key: value" pattern, handling quoted and unquoted values
-    const match = line.match(/^([^:]+?):\s*(.*)$/)
-    if (match) {
-      const key = match[1].trim()
-      let value = match[2].trim()
-      
-      // Remove quotes if present
-      if ((value.startsWith('"') && value.endsWith('"')) ||
-          (value.startsWith("'") && value.endsWith("'"))) {
-        value = value.slice(1, -1)
-      }
-      
-      frontMatter[key] = value
+function getPostUrlsFromJekyll() {
+  const rubyScript = `
+require 'json'
+require 'tmpdir'
+require 'jekyll'
+
+source = ARGV.fetch(0)
+
+Dir.mktmpdir('whiting-url-collision-') do |destination|
+  config = Jekyll.configuration(
+    'source' => source,
+    'destination' => destination,
+    'quiet' => true
+  )
+
+  site = Jekyll::Site.new(config)
+  site.process
+
+  posts = site.posts.docs.map do |post|
+    {
+      'file' => post.relative_path,
+      'title' => post.data['title'],
+      'url' => post.url
     }
+  end
+
+  puts '__URL_COLLISION_JSON_START__'
+  puts JSON.generate(posts)
+  puts '__URL_COLLISION_JSON_END__'
+end
+`.trim()
+
+  const result = spawnSync(
+    "bundle",
+    ["exec", "ruby", "-e", rubyScript, repoRoot],
+    {
+      cwd: repoRoot,
+      encoding: "utf8"
+    }
+  )
+
+  if (result.error) {
+    throw result.error
   }
-  
-  return frontMatter
+
+  if (result.status !== 0) {
+    const details = [result.stderr, result.stdout]
+      .filter(Boolean)
+      .join("\n")
+      .trim()
+
+    throw new Error(
+      details || `Jekyll URL lookup failed with exit code ${result.status}`
+    )
+  }
+
+  const output = result.stdout || ""
+  const jsonMatch = output.match(
+    /__URL_COLLISION_JSON_START__\n([\s\S]*?)\n__URL_COLLISION_JSON_END__/
+  )
+
+  if (!jsonMatch) {
+    throw new Error("Could not find Jekyll URL JSON markers in Ruby output")
+  }
+
+  return JSON.parse(jsonMatch[1])
 }
 
-/**
- * Slugify a title the same way Jekyll does
- * @param {string} title - The post title
- * @returns {string} - The slugified title
- */
-function slugifyTitle(title) {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters (including underscores)
-    .replace(/\s+/g, '-')          // Replace spaces with hyphens
-    .replace(/-+/g, '-')           // Replace multiple hyphens with single hyphen
-    .replace(/^-+|-+$/g, '')       // Trim hyphens from start and end
+let posts
+
+try {
+  posts = getPostUrlsFromJekyll()
+} catch (error) {
+  console.error(
+    `FAIL: Unable to read canonical post URLs from Jekyll: ${error.message}`
+  )
+  process.exit(1)
 }
 
-// Extract URL slugs from post titles in front matter
-// Jekyll filename format: YYYY-MM-DD-title.md
-// With permalink: /:title/, Jekyll uses the post's front matter `title` to generate the URL
-const slugs = new Map()
+if (!Array.isArray(posts) || posts.length === 0) {
+  console.error("FAIL: Jekyll did not return any post URLs to validate")
+  process.exit(1)
+}
 
-for (const file of files) {
-  const filePath = path.join(postsDir, file)
-  const frontMatter = extractFrontMatter(filePath)
-  
-  if (!frontMatter) {
-    console.warn(`WARN: File "${file}" has no valid front matter`)
-    continue
-  }
-  
-  if (!frontMatter.title) {
-    console.warn(`WARN: File "${file}" has no title in front matter`)
-    continue
-  }
-  
-  // Slugify the title from front matter
-  const slug = slugifyTitle(frontMatter.title)
-  
-  if (slugs.has(slug)) {
-    console.error(`FAIL: URL collision detected!`)
-    console.error(`  Slug: /${slug}/`)
-    console.error(`  Title: "${frontMatter.title}"`)
-    console.error(`  File 1: ${slugs.get(slug)}`)
-    console.error(`  File 2: ${file}`)
-    console.error(`Both posts have the same title and would generate the same URL.`)
+const urls = new Map()
+
+for (const post of posts) {
+  if (!post.url) {
+    console.error(`FAIL: Post "${post.file}" did not produce a URL`)
     process.exit(1)
   }
-  
-  slugs.set(slug, file)
+
+  if (urls.has(post.url)) {
+    const existingPost = urls.get(post.url)
+
+    console.error("FAIL: URL collision detected!")
+    console.error(`  URL: ${post.url}`)
+    if (existingPost.title) {
+      console.error(`  Title 1: "${existingPost.title}"`)
+    }
+    console.error(`  File 1: ${existingPost.file}`)
+    if (post.title) {
+      console.error(`  Title 2: "${post.title}"`)
+    }
+    console.error(`  File 2: ${post.file}`)
+    console.error("Both posts resolve to the same canonical Jekyll URL.")
+    process.exit(1)
+  }
+
+  urls.set(post.url, post)
 }
 
-console.log(`PASS: No URL collisions found (${files.length} posts checked)`)
+console.log(
+  `PASS: No URL collisions found (${posts.length} posts checked with Jekyll)`
+)
 process.exit(0)
