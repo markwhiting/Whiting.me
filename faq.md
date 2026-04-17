@@ -20,4 +20,10 @@ I'll email you when I submit the letter, but if you don't hear from me by the da
 
 It's fine to ask me what I will say about you. If there is any chance my letter could be seen as negative or surprising, I will let you know before I write it, so that you can decide if you would rather I don't submit on your behalf.
 
+## People I'm related to
+
+- [Ruth Whiting](http://ruthwhiting.com) is an artist and illustrator — and my sister.
+- [Bridget Whiting](https://bridget.whiting.me) is a puppeteer and mime — and also my sister.
+- [Bernard Whiting](https://phys.ufl.edu/people/faculty/bernard-whiting/) is a theoretical physics professor — and my father.
+
 <!-- It's heavily inspired by sites from great people around the internet, especially [Scott Klemmer](https://d.ucsd.edu/srk/) and [Michael Bernstein](https://hci.stanford.edu/msb/). [Add an issue on Github](https://github.com/markwhiting/Whiting.me/issues/new) if you have a suggestion to improve it. -->
