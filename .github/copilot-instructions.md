@@ -78,6 +78,33 @@ gem "jekyll-feed", "~> 0.11"
 gem "webrick", "~> 1.8"
 ```
 
+### CV Data Authoring Rules (`_data/CV.csv`)
+
+The CV template renders each row as:
+
+```
+{position} [in {focus}] at {institutionFull} ({institutionShort}) {notes}
+```
+
+The **institutionFull is always the host/parent body** — the organisation or conference that is ultimately responsible for the event. Specific event details belong in **position** or **focus**, never in institutionFull.
+
+#### Field usage by case
+
+| Case | position | focus | institutionFull | institutionShort | notes |
+|---|---|---|---|---|---|
+| Simple role at an org | `Senior Scientist` | — | `University of Pennsylvania` | `U Penn` | extra detail |
+| Role at a sub-event of a conference | `Panelist at AAAI 2025 Workshop on A Translational Institute for Knowledge Axiomatization` | — | `The 39th Annual AAAI Conference on Artificial Intelligence` | `AAAI` | — |
+| Role within a track at a conference | `Doctoral Colloquium Mentor` | — | `AAAI Conference on Human Computation and Crowdsourcing` | `HCOMP` | — |
+| Role in a specific chapter/sub-group | `Participant` | `the Duke chapter` | `Summer Institute in Computational Social Science` | `SICSS` | — |
+| Role at a workshop hosted by an external org | `Panelist at the Changing Nature of Work Workshop` | — | `Center for Work Technology and Organization` | `WTO` | `at Stanford University` |
+
+#### Key rules
+- **Never put a workshop or sub-event name as institutionFull.** Put it in position instead (e.g. `Panelist at [Workshop Name]`).
+- **institutionShort is the abbreviation of institutionFull** (the host), never the abbreviation of the sub-event or workshop. Never include the year in the short name (use `AAAI` not `AAAI-25`).
+- **focus** is only used for a sub-track/chapter/specialisation within the institution (rendered as `in {focus}`).
+- **notes** is for additional location or context that doesn't fit the main pattern (e.g. `at Stanford University`). Don't use it to re-state the institution or workshop.
+- **Date range**: if both dateStart and dateEnd are in the same calendar year, only that year is shown. If dateEnd is empty, an arrow (→) appears indicating ongoing. Set dateEnd = dateStart for one-off events to avoid the arrow.
+
 ### Content Management
 
 - Blog posts go in `_posts/` using format: `YYYY-MM-DD-title.markdown`
