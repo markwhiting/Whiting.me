@@ -3,7 +3,18 @@ _site
 .jekyll-metadata
 .nova
 .DS_Store
-.claude/
+# Claude workspace: track only the post-figure skill definition and
+# scripts; everything else (per-slug generated references, etc.) stays
+# local.
+.claude/*
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/post-figure/
+.claude/skills/post-figure/references/*/
+
+# Python bytecode
+__pycache__/
+*.pyc
 vendor/
 .bundle/
 
@@ -13,3 +24,4 @@ npm-debug.log*
 test-output.pdf
 playwright-report/
 test-results/
+.env

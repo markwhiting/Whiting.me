@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Post figure template for whiting.me.
+  Copy to assets/<slug>.svg and replace the placeholder content.
+
+  Palette (use 2-4 per figure, not all six):
+    #5FA8A0  teal      (primary)
+    #F2C94C  yellow    (accent)
+    #B79CD9  violet    (accent)
+    #6C8EBF  blue      (accent)
+    #E57373  coral     (accent)
+    #2C2C2C  charcoal  (line work)
+
+  Rules:
+    - No full-canvas background rect.
+    - Stroke width 4, round caps and joins, charcoal.
+    - Keep >=64px breathing room on all sides.
+    - 3-8 elements total. Fewer is better.
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1024 1024"
+     width="1024" height="1024"
+     fill="none"
+     stroke="#2C2C2C"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+  <defs>
+    <!-- Reusable arrow marker. Apply with marker-end="url(#arrow)". -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2C2C2C" stroke="none"/>
+    </marker>
+  </defs>
+
+  <!-- Optional soft wash behind the subject. Delete if not needed. -->
+  <!-- <ellipse cx="512" cy="512" rx="360" ry="280"
+              fill="#5FA8A0" fill-opacity="0.18" stroke="none"/> -->
+
+  <!-- Subject goes here. Example placeholder: -->
+  <circle cx="512" cy="512" r="120" fill="#5FA8A0"/>
+
+</svg>

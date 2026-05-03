@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Running experiments at scale"
+categories: Empirica infrastructure virtual lab MIT Penn
+image: empirica.png
+---
+
+Most of the empirical work I do with collaborators needs infrastructure that doesn't really exist off the shelf. Running a single behavioral experiment with a handful of people is well supported; running thousands of them, each with groups of participants interacting in real time, is not.
+
+Lead by [Abdullah Almaatouq](http://amaatouq.io), and with [Joshua Becker](https://joshua-a-becker.com), [James Houghton](https://jhoughton.com), [Nicolas Paton](https://github.com/npaton), and [Duncan Watts](https://css.seas.upenn.edu/people/duncan-watts/), we built and extended [Empirica](https://empirica.ly), an open-source virtual lab designed for exactly this kind of high-throughput, macro-level experimentation. Empirica handles the hard parts — synchronization, treatment randomization, real-time interaction, and iterative design — so researchers can focus on the experiment itself <a class="button smallCaps" href="https://doi.org/10.3758/s13428-020-01535-9">BRM'21</a>.
+
+Empirica was one piece of a broader conversation, across many labs, about what it would take to actually scale up behavioral and social science. In a working paper with a large group of collaborators we laid out a vision for shared infrastructure, shared protocols, and shared participant access as the missing middle of the field <a class="button smallCaps" href="https://doi.org/10.17605/OSF.IO/KNVJS">OSF'21</a>.
+
+This infrastructure turned out to be essential to the work on [integrative experiments](/2022/12/21/Integrative-experiments.html) that came next — you can't run a design space full of experiments if each one costs you a month of engineering.
