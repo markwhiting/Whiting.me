@@ -201,6 +201,26 @@
     min-width: 0; // allow cells to shrink so the row stays on one line
     text-align: center;
   }
+
+  // Tablet / small laptop: 4 across gets too cramped. Switch to a 2x2
+  // grid by allowing the row to wrap and giving each cell ~50% basis.
+  @include media-query($on-laptop) {
+    flex-wrap: wrap;
+
+    > li {
+      flex: 1 1 calc(50% - 0.5rem);
+      min-width: calc(50% - 0.5rem);
+    }
+  }
+
+  // Phone: 2x2 still works at most phone widths, but drop to a single
+  // column below ~400px where titles+thumbnails would otherwise crowd.
+  @media screen and (max-width: 400px) {
+    > li {
+      flex: 1 1 100%;
+      min-width: 100%;
+    }
+  }
 }
 
 .post-meta {
