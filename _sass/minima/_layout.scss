@@ -189,15 +189,16 @@
 .post-list {
   margin-left: 0;
   list-style: none;
-  flex-wrap:wrap;
-  justify-content:space-around;
-  display: flex; 
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 0.5rem;
 
   > li {
     margin: 0;
-    display: inline-block;
     margin-bottom: $spacing-unit;
-    min-width: 25%;
+    flex: 1 1 0;
+    min-width: 0; // allow cells to shrink so the row stays on one line
     text-align: center;
   }
 }
@@ -220,6 +221,7 @@
   margin: auto;
   display: block;
   max-height: 6rem;
+  max-width: 100%; // don't overflow the cell on narrow viewports
   width: auto;
   height: auto;
   border-radius: 1 * $spacing-unit;
@@ -359,4 +361,4 @@ margin: $spacing-unit / 2;
   background: white;
   padding: $spacing-unit;
   border-radius: 1 * $spacing-unit;
-} 
+}
