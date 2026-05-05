@@ -213,9 +213,9 @@
     }
   }
 
-  // Phone: 2x2 still works at most phone widths, but drop to a single
-  // column below ~400px where titles+thumbnails would otherwise crowd.
-  @media screen and (max-width: 400px) {
+  // Only drop to a single column on very narrow viewports (<300px);
+  // at typical phone widths the 2x2 layout still reads fine.
+  @media screen and (max-width: 300px) {
     > li {
       flex: 1 1 100%;
       min-width: 100%;
