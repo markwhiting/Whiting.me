@@ -292,6 +292,69 @@
   margin: $visual-space 0 0 0;
 }
 
+/**
+ * Section links
+ *
+ * Anchors are added to headings by assets/js/section-links.js. They reserve
+ * their space at all times so revealing one never shifts the heading.
+ */
+h2,
+h3,
+h4,
+h5,
+h6 {
+  scroll-margin-top: 4 * $visual-space;
+}
+
+// Colour and hover come from the default link styles; this only sets the
+// de-emphasis the rest of the site uses for secondary text (light and small).
+.heading-anchor {
+  position: relative;
+  margin-left: 0.3em;
+  font-size: $small-font-size;
+  font-weight: $light-font-weight;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+h2:hover > .heading-anchor,
+h3:hover > .heading-anchor,
+h4:hover > .heading-anchor,
+h5:hover > .heading-anchor,
+h6:hover > .heading-anchor,
+.heading-anchor:focus,
+.heading-anchor.copied {
+  opacity: 1;
+}
+
+// Touch devices never hover, so keep the anchor faintly visible.
+@media (hover: none) {
+  .heading-anchor {
+    opacity: 0.4;
+  }
+}
+
+// Reuses the highlight pill that links get on hover.
+.heading-anchor.copied::after {
+  content: "copied";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.4em;
+  padding: 0 0.4em;
+  border-radius: $spacing-unit / 2;
+  font-size: $small-font-size;
+  font-weight: $base-font-weight;
+  font-variant: all-small-caps;
+  line-height: 1.5;
+  white-space: nowrap;
+  color: var(--background-color);
+  background-color: var(--transparent-brand-color);
+}
+
 .row,
 .row p {
   padding-bottom: $visual-space * 1/10;

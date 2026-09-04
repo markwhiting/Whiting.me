@@ -7,6 +7,10 @@
   }}"> {%- feed_meta -%} {%- if jekyll.environment == 'production' and
   site.google_analytics -%} {%- include google-analytics.html -%} {%- endif -%}
   <base target="_blank" />
+  <script
+    defer
+    src="{{ '/assets/js/section-links.js' | relative_url }}"
+  ></script>
 
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
