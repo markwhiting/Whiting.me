@@ -128,8 +128,9 @@ yearShort = site.minima.date_format | default: "%y" -%}
         {%- endfor -%}
         {%- assign display_venue = pub.venue_short | default: pub.venue -%}
         {%- if display_venue -%}<strong>{{display_venue}}</strong>{% endif %}{%- if display_venue and pub.year -%}, {% endif %}{%-
-        if pub.year and pub.year != "Upcoming" -%}{{pub.year}}{%- if pub.doi -%}, {% endif %}{% endif %}
-        {%- if pub.doi -%} <a href="https://doi.org/{{pub.doi}}">{{pub.doi}}</a> {% endif %}
+        if pub.year and pub.year != "Upcoming" -%}{{pub.year}}{% endif %}
+        {%- if pub.number -%}, {% if pub.url %}<a href="{{pub.url}}">{{pub.number}}</a>{% else %}{{pub.number}}{% endif %}{% endif %}
+        {%- if pub.doi -%}, <a href="https://doi.org/{{pub.doi}}">{{pub.doi}}</a>{% endif %}
         <strong>{{pub.award}}</strong>
       </p>
 

@@ -126,6 +126,19 @@ async function main() {
   }
   console.log("PASS: audited title corrections and repaired links in CV and BibTeX")
 
+  const patentUrl = "https://patents.google.com/patent/US11899669B2/en"
+  const patentSection = cv.split("<!-- Patents -->")[1].split("<!-- Working papers -->")[0]
+  assert(patentSection.includes(`<a href="${patentUrl}">US11899669B2</a>`))
+  const patentText = unescapeHtml(patentSection.replace(/<[^>]*>/g, " ")).replace(/\s+/g, " ")
+  assert(patentText.includes("USPTO , 2024, US11899669B2"))
+  assert(!patentSection.includes("doi.org/US11899669B2"))
+  const patentEntry = entries.find(entry => entry.startsWith("@patent{"))
+  assert(patentEntry.includes("number={US11899669B2}"))
+  assert(patentEntry.includes(`url={${patentUrl}}`))
+  assert(patentEntry.includes("publisher={United States Patent and Trademark Office}"))
+  assert(!patentEntry.includes("publisher={US Patent"))
+  console.log("PASS: linked patent number on CV and structured number in BibTeX")
+
   const metacognition = entries.find(entry => entry.includes(title))
   for (const field of [
     "journal={Conference on Neural Information Processing Systems}",
