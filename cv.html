@@ -114,7 +114,8 @@ yearShort = site.minima.date_format | default: "%y" -%}
           -%}</strong>{% endif %}
         {%- if forloop.last -%}<br>{% endif %}
         {%- endfor -%}
-        {%- if pub.venue -%}<strong>{{pub.venue}}</strong>{% endif %}{%- if pub.venue and pub.year -%}, {% endif %}{%-
+        {%- assign display_venue = pub.venue_short | default: pub.venue -%}
+        {%- if display_venue -%}<strong>{{display_venue}}</strong>{% endif %}{%- if display_venue and pub.year -%}, {% endif %}{%-
         if pub.year and pub.year != "Upcoming" -%}{{pub.year}}{%- if pub.doi -%}, {% endif %}{% endif %}
         {%- if pub.doi -%} <a href="https://doi.org/{{pub.doi}}">{{pub.doi}}</a> {% endif %}
         <strong>{{pub.award}}</strong>
@@ -158,7 +159,8 @@ yearShort = site.minima.date_format | default: "%y" -%}
           -%}</strong>{% endif %}
         {%- if forloop.last -%}<br>{% endif %}
         {%- endfor -%}
-        {%- if pub.venue -%}<strong>{{pub.venue}}</strong>{% endif %}{%- if pub.venue and pub.year -%}, {% endif %}{%-
+        {%- assign display_venue = pub.venue_short | default: pub.venue -%}
+        {%- if display_venue -%}<strong>{{display_venue}}</strong>{% endif %}{%- if display_venue and pub.year -%}, {% endif %}{%-
         if pub.year and pub.year != "Upcoming" -%}{{pub.year}}{%- if pub.doi -%}, {% endif %}{% endif %}
         {% if pub.doi %} <a href="https://doi.org/{{pub.doi}}">{{pub.doi}}</a> {% endif %}
         <strong>{{pub.award}}</strong>
@@ -174,10 +176,10 @@ yearShort = site.minima.date_format | default: "%y" -%}
       <h2 class="section">
         Publications&emsp;<span class="light bottom small right"><span class="noPrint"><a
               href="https://scholar.google.com/citations?user=9BeIX-0AAAAJ">Scholar</a> | <a
-              href="/bib">BibTeX</a> | </span><span itemscope itemtype="https://schema.org/Person">ORCiD: <a
+              href="/bib">BibTeX</a> | </span><span itemscope itemtype="https://schema.org/Person"><a
               itemprop="sameAs" content="https://orcid.org/0000-0002-6395-7833"
               href="https://orcid.org/0000-0002-6395-7833" target="orcid.widget" rel="me noopener noreferrer"
-              style="vertical-align:top;">0000-0002-6395-7833</a></span></span>
+              style="vertical-align:top;">orcid.org/0000-0002-6395-7833</a></span></span>
       </h2>
     </td>
   </tr>
@@ -209,7 +211,8 @@ yearShort = site.minima.date_format | default: "%y" -%}
           -%}</strong>{% endif %}
         {%- if forloop.last -%}<br>{% endif %}
         {%- endfor -%}
-        {%- if pub.venue -%}<strong>{{pub.venue}}</strong>{% endif %}{%- if pub.venue and pub.year -%}, {% endif %}{%-
+        {%- assign display_venue = pub.venue_short | default: pub.venue -%}
+        {%- if display_venue -%}<strong>{{display_venue}}</strong>{% endif %}{%- if display_venue and pub.year -%}, {% endif %}{%-
         if pub.year and pub.year != "Upcoming" -%}{{pub.year}}{%- if pub.doi -%}, {% endif %}{% endif %}
         {%- if pub.doi -%} <a href="https://doi.org/{{pub.doi}}">{{pub.doi}}</a> {% endif %}
         <strong>{{pub.award}}</strong>
