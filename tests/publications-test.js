@@ -35,16 +35,16 @@ async function main() {
   const rows = published.match(/<tr>[\s\S]*?<\/tr>/g)
   const cases = [
     ["Boomerang:", "UIST"],
-    ["Crowd guilds:", "CSCW"],
+    ["Crowd Guilds:", "CSCW"],
     ["Did It Have To End This Way?", "CSCW"],
     ["Parallel Worlds:", "CSCW"],
     ["My Team Will Go On:", "CSCW"],
     ["Can Online Juries Make Consistent, Repeatable Decisions?", "CHI"],
     ["Are Deepfakes Concerning?", "CHI"],
     ["A framework for quantifying individual and collective common sense", "PNAS"],
-    ["Insights into accuracy of social scientists", "Nature Human Behaviour"],
+    ["Insights into the accuracy of social scientists", "Nature Human Behaviour"],
     ["COVID-19 non-pharmaceutical interventions", "Scientific Data"],
-    ["Beyond Playing 20 Questions with Nature:", "Behavioral and Brain Sciences"],
+    ["Beyond playing 20 questions with nature:", "Behavioral and Brain Sciences"],
     ["Designing A Constitution", "Collective Intelligence Conference, Brooklyn, NY, USA"],
     ["Empirica:", "Behavior Research Methods"],
     ["Automated Induction of General Grammars", "Design Computing and Cognition"]
@@ -104,6 +104,27 @@ async function main() {
   }
   assert(published.indexOf(title) < published.indexOf("The Task Space:"))
   console.log("PASS: numeric year/month ordering with blank months first in CV and BibTeX")
+
+  const correctedTitles = [
+    ["10.1038/s41562-022-01517-1", "Insights into the accuracy of social scientists’ forecasts of societal change"],
+    ["10.48550/arXiv.2509.10956", "Beyond the Personal Assistant: How Expectations for Enterprise AI in Teamwork Diverged as Generative AI Took Shape, 2023-2025"]
+  ]
+  for (const [doi, correctedTitle] of correctedTitles) {
+    const entry = entries.find(entry => entry.includes(`doi={${doi}}`))
+    assert(entry?.includes(`title={${correctedTitle}}`), `Corrected title for ${doi}`)
+    assert(unescapeHtml(cv).includes(correctedTitle))
+  }
+  const repairedLinks = [
+    ["Fair Work: Crowd Work Minimum Wage with One Line of Code", "https://ojs.aaai.org/index.php/HCOMP/article/view/5283"],
+    ["A formal approach for the interpretation of cultural content(s): evolution of a Korean traditional pattern, Bosangwhamun", "https://oro.open.ac.uk/37881/"]
+  ]
+  for (const [paperTitle, url] of repairedLinks) {
+    const row = rows.find(row => unescapeHtml(row).includes(paperTitle))
+    assert(row?.includes(`href="${url}"`), `Repaired link for ${paperTitle}`)
+    const entry = entries.find(entry => entry.includes(`title={${paperTitle}}`))
+    assert(entry?.includes(`url={${url}}`))
+  }
+  console.log("PASS: audited title corrections and repaired links in CV and BibTeX")
 
   const metacognition = entries.find(entry => entry.includes(title))
   for (const field of [
