@@ -3,6 +3,7 @@ layout: none
 permalink: /bib
 ---
 
+{%- capture bibliography -%}
 {%- assign pubs = site.data.publications | sort: "year" | reverse -%}
 {%- for pub in pubs -%}
 {%- assign authors = pub.authors | replace: " and ", "; " | split: ";" -%}
@@ -11,32 +12,19 @@ permalink: /bib
   author={
 {%- for author in authors -%}
 {%- if forloop.first -%}{% else %} and {% endif %}
-{{- author | split: "," | reverse |  array_to_sentence_string:" " | lstrip}}
+{{- author | split: "," | reverse | array_to_sentence_string:" " | lstrip}}
 {%- endfor -%}},
-{%- if pub.venue -%}
-  journal={ {{- pub.venue -}} },
-{% endif %}
-{%- if pub.year -%}
-  year={ {{- pub.year -}} },
-{% endif %}
-{%- if pub.volume -%}
-  volume={ {{- pub.volume -}} },
-{% endif %}
-{%- if pub.number -%}
-  number={ {{- pub.number -}} },
-{% endif %}
-{%- if pub.pages -%}
-  pages={ {{- pub.pages -}} },
-{% endif %}
-{%- if pub.publisher -%}
-  publisher={ {{- pub.publisher -}} },
-{% endif %}
-{%- if pub.url -%}
-  url={ {{- pub.url -}} },
-{% endif %}
-{%- if pub.doi -%}
-  doi={ {{- pub.doi -}} },
-{% endif %}
-}
+{% if pub.venue %}  journal={ {{- pub.venue -}} },
+{% endif %}{% if pub.year %}  year={ {{- pub.year -}} },
+{% endif %}{% if pub.month %}  month={ {{- pub.month -}} },
+{% endif %}{% if pub.volume %}  volume={ {{- pub.volume -}} },
+{% endif %}{% if pub.number %}  number={ {{- pub.number -}} },
+{% endif %}{% if pub.pages %}  pages={ {{- pub.pages -}} },
+{% endif %}{% if pub.publisher %}  publisher={ {{- pub.publisher -}} },
+{% endif %}{% if pub.url %}  url={ {{- pub.url -}} },
+{% endif %}{% if pub.doi %}  doi={ {{- pub.doi -}} },
+{% endif %}}
 
-{% endfor %}
+{% endfor -%}
+{%- endcapture -%}
+<pre style="white-space: pre-wrap; overflow-wrap: anywhere;">{{ bibliography | escape }}</pre>
