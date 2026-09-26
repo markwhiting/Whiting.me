@@ -4,8 +4,21 @@ permalink: /bib
 ---
 
 {%- capture bibliography -%}
-{%- assign pubs = site.data.publications | sort: "year" | reverse -%}
-{%- for pub in pubs -%}
+{%- assign month_sorted_pubs = "" | split: "," -%}
+{%- comment -%}Unknown months rank ahead of December; compare CSV months numerically.{%- endcomment -%}
+{%- for month in (1..13) reversed -%}
+  {%- for pub in site.data.publications -%}
+    {%- assign pub_month = pub.month | default: 13 | plus: 0 -%}
+    {%- if pub_month == month -%}
+      {%- assign matched_pub = site.data.publications | slice: forloop.index0, 1 -%}
+      {%- assign month_sorted_pubs = month_sorted_pubs | concat: matched_pub -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- assign years = site.data.publications | sort: "year" | reverse | map: "year" | uniq -%}
+{%- for year in years -%}
+{%- assign yearly_pubs = month_sorted_pubs | where: "year", year -%}
+{%- for pub in yearly_pubs -%}
 {%- assign authors = pub.authors | replace: " and ", "; " | split: ";" -%}
 @{%- if pub.type -%}{{-pub.type | downcase -}}{% else %}article{% endif %}{ {{- authors | first | split: "," | reverse | join:" " | split: " " | last | downcase}}{{-pub.year-}}{{-pub.title | truncatewords: 2, "" | remove: " " | remove: ":" | truncate: 10 , ""| downcase -}},
   title={ {{-pub.title-}} },
@@ -25,6 +38,6 @@ permalink: /bib
 {% endif %}{% if pub.doi %}  doi={ {{- pub.doi -}} },
 {% endif %}}
 
-{% endfor -%}
+{% endfor %}{% endfor -%}
 {%- endcapture -%}
 <pre style="white-space: pre-wrap; overflow-wrap: anywhere;">{{ bibliography | escape }}</pre>

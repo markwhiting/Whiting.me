@@ -85,6 +85,18 @@ yearShort = site.minima.date_format | default: "%y" -%}
   </tr>
   {%- endfor -%}{%- endif -%}
 
+  {%- assign month_sorted_pubs = "" | split: "," -%}
+  {%- comment -%}Unknown months rank ahead of December; compare CSV months numerically.{%- endcomment -%}
+  {%- for month in (1..13) reversed -%}
+    {%- for pub in site.data.publications -%}
+      {%- assign pub_month = pub.month | default: 13 | plus: 0 -%}
+      {%- if pub_month == month -%}
+        {%- assign matched_pub = site.data.publications | slice: forloop.index0, 1 -%}
+        {%- assign month_sorted_pubs = month_sorted_pubs | concat: matched_pub -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+
   <!-- Patents -->
   <tr>
     <td colspan="2">
@@ -93,7 +105,7 @@ yearShort = site.minima.date_format | default: "%y" -%}
   </tr>
   {%- assign years = site.data.publications | sort: "year" | reverse | map: "year" | uniq -%}
   {%- for focal_year in years -%}
-  {%- assign yearly_pubs = site.data.publications | where:"year", focal_year | where: "type", "patent" | uniq -%}
+  {%- assign yearly_pubs = month_sorted_pubs | where:"year", focal_year | where: "type", "patent" | uniq -%}
   {%- for pub in yearly_pubs -%}
   <tr>
     {% if pub.year != "Upcoming" %}
@@ -135,7 +147,7 @@ yearShort = site.minima.date_format | default: "%y" -%}
   {%- assign years = site.data.publications | sort: "year" | reverse | map: "year" | uniq -%}
   {%- for focal_year in years -%}
   {%- if focal_year == nil -%}{%- continue -%}{%- endif -%}
-  {%- assign yearly_pubs = site.data.publications | where:"year", focal_year | where: "type", "unpublished" | uniq -%}
+  {%- assign yearly_pubs = month_sorted_pubs | where:"year", focal_year | where: "type", "unpublished" | uniq -%}
   {%- for pub in yearly_pubs -%}
   <tr>
     {% if pub.year != "Upcoming" %}
@@ -185,7 +197,7 @@ yearShort = site.minima.date_format | default: "%y" -%}
   </tr>
   {%- assign years = site.data.publications | sort: "year" | reverse | map: "year" | uniq -%}
   {%- for focal_year in years -%}
-  {%- assign yearly_pubs = site.data.publications | where:"year", focal_year | where_exp:"pub", "pub.type != 'unpublished'" |
+  {%- assign yearly_pubs = month_sorted_pubs | where:"year", focal_year | where_exp:"pub", "pub.type != 'unpublished'" |
   where_exp:"pub",
   "pub.type != 'patent'" | uniq -%}
   {%- for pub in yearly_pubs -%}
